@@ -1,0 +1,23 @@
+{
+  "name": "creatour",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/css/style.scss:assets/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinbrg/creatour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alinbrg/creatour/issues"
+  },
+  "homepage": "https://github.com/alinbrg/creatour#readme",
+  "dependencies": {
+    "sass": "^1.43.3"
+  }
+}

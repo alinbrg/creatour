@@ -1,0 +1,105 @@
+@import "vars";
+@import "fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  border: 0;
+  resize: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: $secondary;
+  font-family: "fira-reg";
+}
+
+body {
+  &.grey {
+    background: #f4f7fe;
+  }
+}
+
+.container {
+  padding: 0 140px;
+
+  @include xl {
+    padding: 0 100px;
+  }
+  @include lg {
+    padding: 0 60px;
+  }
+  @include tab {
+    padding: 0 35px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "crystal-caps-bold";
+}
+
+@import "header";
+@import "button";
+@import "main-slider";
+@import "main-about";
+@import "main-projects";
+@import "main-sparta";
+@import "main-businessgeo";
+@import "main-businesswrld";
+@import "main-smeguide";
+@import "main-partner";
+@import "main-employment";
+@import "main-membership";
+@import "main-reg";
+@import "main-funding";
+@import "main-events";
+@import "main-contacts";
+@import "block-title";
+@import "join";
+@import "about-us";
+@import "about-text";
+@import "group";
+@import "management";
+@import "benefits";
+@import "vishegrad";
+@import "partners-blocks";
+@import "starta";
+@import "partners-inside";
+@import "start-your-business";
+@import "start-business-inside";
+@import "sme-news";
+@import "sme-inside";
+@import "events";
+@import "events-inside";
+@import "education";
+@import "searching-partners";
+@import "jobs";
+@import "membership-page";
+@import "membership-inside";
+@import "contact-page";
+@import "funding-sources";
+@import "footer";
+@import "profile";
+@import "eap-countries";
+@import "eap-countries-inside";
+@import "sme-tendencies";
+@import "registration";
+@import "professional-services";
+@import "legal-acts";
+@import "sme-claster";
+@import "claster-inisde";
+@import "projects";
+@import "projects-inside";
+@import "law";
+@import "footer";

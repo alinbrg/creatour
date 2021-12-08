@@ -1,0 +1,75 @@
+.block-title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  margin-bottom: 60px;
+  font-size: clamp(20px, 1.6vw, 30px);
+  @include tab {
+    margin-bottom: 40px;
+  }
+  &--white {
+    &::after {
+      background: url("../img/icons/title-arrow-white.svg") center center/cover
+        no-repeat !important;
+    }
+  }
+  &:hover {
+    margin-left: 10px;
+
+    &::after {
+      right: -20px;
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 0;
+    background: url("../img/icons/title-arrow.svg") center center/cover
+      no-repeat;
+    transition: right 0.3s, opacity 0.3s;
+  }
+
+  &__logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+
+    img {
+      width: 70%;
+    }
+  }
+  &--starta{
+    pointer-events: none;
+    font-size: clamp(18px, 1.6vw, 30px);
+    margin-top:7px;
+    color:#000000;
+    @include tab{
+      margin-left:30px;
+    }
+    @include sm{
+      margin-left:initial;
+    }
+  }
+  &--partner{
+    pointer-events: none;
+    color:#000000;
+    font-size: clamp(18px, 2.5vw, 48px);
+    margin-bottom: 33px;
+    @include tab{
+      margin-bottom: 20px;
+    }
+  }
+}

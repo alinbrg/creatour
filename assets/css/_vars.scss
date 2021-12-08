@@ -1,0 +1,131 @@
+$main: #7649fd;
+$secondary: #707070;
+$blue: #05a0a5;
+$yellow: #eeb61e;
+$starta: #14e7b0;
+$lblack: #5b5b5b;
+$black7c: #7c7c7c;
+$newBlue: #4270E0;
+
+$xl: 1600px;
+$lg: 1280px;
+$tab: 1024px;
+$sm: 700px;
+
+@mixin rwd($screen) {
+  @media (max-width: $screen+"px") {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: #{$sm}) {
+    @content;
+  }
+}
+@mixin maxcolumn($num) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+@mixin centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin uppercase() {
+  text-transform: uppercase;
+  font-feature-settings: "case" on;
+}
+
+@mixin userselect($none: text) {
+  -webkit-user-select: $none !important;
+  -khtml-user-select: $none !important;
+  -moz-user-select: $none !important;
+  -ms-user-select: $none !important;
+  user-select: $none !important;
+}
+
+@mixin scrollSetup($thumbcolor, $width: 2px, $bgcolor: transparent) {
+  &::-webkit-scrollbar {
+    width: $width;
+    background-color: $bgcolor;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background-color: $thumbcolor;
+  }
+  &::-webkit-scrollbar-track {
+    margin: 15px 0;
+    background-color: $bgcolor;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-family: firago;
+  cursor: pointer;
+  font-weight: 500;
+  color: #9F9E9E;
+  background-color: transparent;
+  span {
+    color: #9F9E9E;
+    font-size: 14px;
+    font-family: firago;
+    font-weight: 500;
+    margin-right: 12px;
+  }
+  path {
+    fill: #9F9E9E;
+  }
+  &:hover, &:focus {
+    color: white;
+    background-color: $main;
+    span {
+      color: white;
+    }
+    path {
+      fill: white;
+    }
+  }
+}
+
+
+.fira_title {
+  font-family: firago;
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 46px;
+  @include tab {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+}
