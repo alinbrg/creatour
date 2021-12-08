@@ -1,0 +1,78 @@
+header{
+    position: absolute;
+    width:100%;
+    top:50px;
+    z-index: 10;
+    &:before{
+        content: "";
+        position: absolute;
+        top: -50px;
+        width:1px;
+        height: 60px;
+        background-color: $main;
+        @include tab{
+            top: -20px;
+            left:100px;
+            height: 150px;
+        }
+    }
+    @include tab{
+        top: 20px;
+    }
+    a, p{
+        color: $white;
+    }
+    .slogan{
+        p{
+            font-family: "caslon-bold";
+        }
+        @include tab{
+            display: none;
+        }
+    }
+    .header__burger{
+        display: none;
+        @include tab{
+            display: block;
+        }
+        span{
+            width: 32px;
+            height: 2px;
+            background-color: $white;
+            display: block;
+            margin:5px;
+        }
+    }
+    nav{
+        @include tab{
+            display: none;
+        }
+        a{
+            font-size: 18px;
+            font-family: "caslon-bold";
+        }
+        li{
+            margin-left: 30px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+    .reg-auth{
+        span{
+            margin-left: 15px;
+            @include uppercase;
+            @include tab{
+                display: none;
+            }
+            font-family: "montserrat-semibold";
+        }
+        @include tab{
+            background-color: transparent;
+            path{
+                fill: $white;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,146 @@
+.main-slider{
+    position: relative;
+    height: 100vh;
+    @include sm{
+        position: static;
+        height: auto;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top:50%;
+        left:0;
+        width: 171px;
+        height: 1px;
+        background-color: $main;
+        @include sm{
+            display: none;
+        }
+    }
+    &:after{
+        content: "";
+        width:225px;
+        height: 1px;
+        background-color: $contact;
+        position: absolute;
+        bottom: 100px;
+        left:30%;
+        @include sm{
+            display: none;
+        }
+    }
+    img{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+        @include sm{
+            object-fit: cover;
+            height: 211px;
+        }
+    }
+    p, span, a, h1, h3 {
+        color: $white;
+    }
+    .main-slider__content{
+        position: absolute;
+        top:50%;
+        left:50%;
+        width:40%;
+        transform: translate(-50%, -30%);
+        @include xl{
+            top:45vh;
+        }
+        @include tab{
+            width:80%;
+        }
+        @include sm{
+            position: static;
+            width:100%;
+            top:0;
+            left:0;
+            transform: initial;
+            margin-top: -140px;
+        }
+        &__unchanged{
+            text-align: center;
+            width:100%;
+            margin-bottom: 70px;
+            @include xl{
+                margin-bottom: 30px;
+            }
+            @include sm{
+                margin-bottom: 0;
+            }
+            h1{
+                font-size: clamp(50px, 2vw, 100px);
+                font-family: "caslon-reg";
+            }
+            h3{
+                font-family: "montserrat-semibold";
+                font-size: clamp(20px, 2vw, 24px);
+                position: relative;
+                width: fit-content;
+                margin:0 auto;
+                &:after{
+                    position: absolute;
+                    content: "";
+                    width:100%;
+                    height: 1px;
+                    bottom:0;
+                    background-color: $main;
+                    left:0;
+                    @include sm{
+                        left:-50%;
+                        width:50%;
+                        bottom: 50%;
+                    }
+                }
+            }
+        }
+        .main-slider__swiper{
+            p{
+                font-family: "montserrat-medium";
+                font-size: clamp(14px, 1.6vw, 18px);
+                text-align: center;
+            }
+            @include sm{
+                p{
+                    color:$secondary;
+                    padding: 40px 15px 50px;
+                }
+            }
+        }
+    }
+    
+    .swiper-wrapper{
+        margin-bottom: 70px;
+        @include tab{
+            margin-bottom: 30px;
+        }
+    }
+    .swiper-pagination{
+        @include sm{
+            bottom: 40px;
+        }
+    }
+    .scroll-down{
+        position: absolute;
+        bottom:40px;
+        left:50%;
+        @include centering;
+        flex-direction: column;
+        transform: translateX(-50%);
+        
+        svg{
+            transform:rotate(100grad);
+            margin-top: 10px;
+        }
+        @include xl{
+            bottom:10px;
+        }
+        @include sm{
+            display: none;
+        }
+    }
+
+}

@@ -1,74 +1,96 @@
 @font-face {
-	font-family: "crystal-caps";
-	src: url("../fonts/BPG_SSP_Crystal_Caps.ttf");
+	font-family: "caslon-bold";
+	src: url("../fonts/ACaslonPro-Bold.otf");
 }
 @font-face {
-	font-family: "crystal-caps-bold";
-	src: url("../fonts/BPG_SSP_Crystal_Bold_Caps.ttf");
+	font-family: "caslon-bold-italic";
+	src: url("../fonts/ACaslonPro-BoldItalic.otf");
 }
 @font-face {
-  font-family: "fira-reg";
-  src: url("../fonts/FiraGO-Regular.ttf");
+	font-family: "caslon-italic";
+	src: url("../fonts/ACaslonPro-Italic.otf");
 }
 @font-face {
-  font-family: "fira-extra";
-  src: url("../fonts/FiraGO-ExtraBold.ttf");
+	font-family: "caslon-reg";
+	src: url("../fonts/ACaslonPro-Regular.otf");
 }
 @font-face {
-  font-family: "mtavruli-bold";
-  src: url("../fonts/bpg_nino_mtavruli_bold.ttf");
+	font-family: "caslon-semi-bold";
+	src: url("../fonts/ACaslonPro-Semibold.otf");
 }
 @font-face {
-  font-family: "mtavruli-reg";
-  src: url("../fonts/bpg_nino_mtavruli_normal.ttf");
+	font-family: "caslon-semi-bold-italic";
+	src: url("../fonts/ACaslonPro-SemiboldItalic.otf");
 }
-
-
 @font-face {
-	font-family: firago;
-	font-weight: 400;
-	font-style: normal;
-	src: url(../fonts/FiraGO-Regular.ttf);
+	font-family: "montserrat";
+	src: url("../fonts/Montserrat-Black.ttf");
 }
-
 @font-face {
-	font-family: firago;
-	font-weight: 300;
-	font-style: normal;
-	src: url(../fonts/FiraGO-Book.ttf);
+	font-family: "montserrat-italic";
+	src: url("../fonts/Montserrat-BlackItalic.ttf");
 }
-
 @font-face {
-	font-family: firago;
-	font-weight: 700;
-	font-style: normal;
-	src: url(../fonts/FiraGO-Bold.ttf);
+	font-family: "montserrat-bold";
+	src: url("../fonts/Montserrat-Bold.ttf");
 }
-
 @font-face {
-	font-family: firago;
-	font-weight: 600;
-	font-style: normal;
-	src: url(../fonts/FiraGO-SemiBold.ttf);
+	font-family: "montserrat-bold-italic";
+	src: url("../fonts/Montserrat-BoldItalic.ttf");
 }
-
 @font-face {
-	font-family: firago;
-	font-weight: 100;
-	font-style: normal;
-	src: url(../fonts/FiraGO-Thin.ttf);
+	font-family: "montserrat-extra";
+	src: url("../fonts/Montserrat-ExtraBold.ttf");
 }
-
 @font-face {
-	font-family: firago;
-	font-weight: 100;
-	font-style: italic;
-	src: url(../fonts/FiraGO-ThinItalic.ttf);
+	font-family: "montserrat-extra-italic";
+	src: url("../fonts/Montserrat-ExtraBoldItalic.ttf");
 }
-
 @font-face {
-	font-family: firago;
-	font-weight: 500;
-	font-style: normal;
-	src: url(../fonts/FiraGO-Medium.ttf);
+	font-family: "montserrat-extra-light";
+	src: url("../fonts/Montserrat-ExtraLight.ttf");
+}
+@font-face {
+	font-family: "montserrat-extra-light-italic";
+	src: url("../fonts/Montserrat-ExtraLightItalic.ttf");
+}
+@font-face {
+	font-family: "montserrat-light";
+	src: url("../fonts/Montserrat-Light.ttf");
+}
+@font-face {
+	font-family: "montserrat-italic";
+	src: url("../fonts/Montserrat-Italic.ttf");
+}
+@font-face {
+	font-family: "montserrat-light-italic";
+	src: url("../fonts/Montserrat-LightItalic.ttf");
+}
+@font-face {
+	font-family: "montserrat-medium";
+	src: url("../fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+	font-family: "montserrat-medium-italic";
+	src: url("../fonts/Montserrat-MediumItalic.ttf");
+}
+@font-face {
+	font-family: "montserrat-regular";
+	src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+	font-family: "montserrat-semibold";
+	src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+	font-family: "montserrat-semibold-italic";
+	src: url("../fonts/Montserrat-SemiBoldItalic.ttf");
+}
+@font-face {
+	font-family: "montserrat-thin";
+	src: url("../fonts/Montserrat-Thin.ttf");
+}
+@font-face {
+	font-family: "montserrat-thin-italic";
+	src: url("../fonts/Montserrat-ThinItalic.ttf");
 }

@@ -1,0 +1,61 @@
+footer{
+    .footer-div{
+        border-top: 2px solid $grey;
+        padding: 40px 0 30px;
+        .nav{
+            @include sm{
+                display: none;
+            }
+            li{
+                a{
+                    font-family: "caslon-reg";
+                }
+                margin-left: 30px;
+                @include tab{
+                    margin-left: 15px;
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:hover{
+                    a{
+                        color: $main;
+                    }
+                }
+            }
+        }
+        .add-info{
+            @include sm{
+                width: 100%;
+            }
+        }
+        .soc-icons{
+            @include centering;
+            a{
+                @include centering;
+            }
+            svg{
+                margin-right: 15px;
+                &:hover{
+                    path{
+                        fill: $main;
+                    }
+                }
+                @include sm{
+                    path{
+                        fill: $main;
+                    }
+                }
+            }
+        }
+        .smartweb{
+            p{
+                font-family: "montserrat-medium";
+                .colored-word{
+                    font-family: "montserrat-bold";
+                }
+            }
+        }
+    }
+    
+}
