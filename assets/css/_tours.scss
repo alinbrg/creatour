@@ -1,0 +1,227 @@
+.tours{
+    position: relative;
+    height: 100vh;
+    @include sm{
+        height: 400px;
+    }
+    &__main{
+        &__bg{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &__content{
+            position: absolute;
+            top:60%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            text-align: center;
+            @include sm{
+                width: 90%;
+            }
+            p{
+                color: $white;
+                font-size: clamp(18px, 1.6vw, 32px);
+                font-family: "caslon-reg";
+                
+                margin-top: 80px;
+                @include tab{
+                    margin-top: 30px;
+                    line-height: 1.2;
+                }
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    &__filter{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+        height: 85px;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        // select{
+        //     display: flex;
+        //     overflow: hidden;
+        //     option{
+        //         display: inline-block;
+        //     }
+        // }
+    }
+
+}
+
+.journey-of-europe{
+    padding-top: 86px;
+    padding-bottom: 50px;
+    &__slogan{
+        color: $tours;
+        margin-bottom: 65px;
+    }
+    &__slogan, span{
+        font-size: clamp(30px, 2vw, 48px);
+        font-family: "caslon-reg";
+        font-weight: bold;
+    }
+    &__bg{
+        position: relative;
+    //     width: 100%;
+    //     background-image:
+    // linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    // url('../img/tours-bg.jpg');
+    //     height: 809px;
+    //     background-size: cover;
+    //     background-position: center;
+        img{
+            width: 100%;
+        }
+
+    }
+    &__title{
+        position: absolute;
+        top:74px;
+        text-transform: uppercase;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: clamp(50px, 2vw, 80px);
+        font-family: "caslon-bold";
+        width: fit-content;
+        color: $white;
+    }
+    &__text{
+        position: absolute;
+        bottom: 0;
+        padding: 48px;
+        align-items: flex-start;
+        gap:70px;
+        @include sm{
+            display: none;
+        }
+        p{
+            color: $white;
+            width: 50%;
+            font-family: "montserrat-regular";
+            font-size: clamp(14px, 1.2vw, 18px);
+        }
+    }
+}
+
+.tours-results{
+    .active-tours, .planned-tours{
+        margin-bottom: 110px;
+        & > .colored-word{
+            font-size: 12px;
+            font-family: "montserrat-medium";
+        }
+        & > h5{
+            margin-bottom: 60px;
+            margin-top: 8px;
+            color: $tours-black;
+            font-size: clamp(22px, 1.2vw, 32px);
+            font-family: "caslon-semi-bold";
+            @include tab{
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:25px;
+        grid-template-rows: auto;
+    }
+    .item{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            background-color: rgba($color: #111111, $alpha: 0.6);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h5, span, p, h6, a{
+            color: $white;
+        }
+        &__top{
+            padding:60px 50px 0;
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            align-items: flex-start;
+            @include tab{
+                padding:20px 20px 0;
+            }
+        }
+        &__title{
+            h5{
+                margin-bottom: 16px;
+                font-size: clamp(18px, 1.2vw, 28px);
+                font-family: "caslon-semi-bold";
+                text-transform: capitalize;
+                @include tab{
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+                }
+            }
+            span{
+                font-size: clamp(16px, 1.2vw, 24px);
+                font-family: "caslon-semi-bold";
+                margin-left: 20px;
+                @include tab{
+                    margin-left: 10px;
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+        &__description{
+            position: absolute;
+            padding: 0 50px 60px;
+            bottom:0;
+            @include tab{
+                padding:0 20px 20px;
+            }
+            h6{
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-size: 12px;
+                @include tab{
+                    margin-bottom: 10px;
+                }
+            }
+            p{
+                font-family: "montserrat-medium";
+            }
+            .book-now{
+                display: flex;
+                margin-top: 30px;
+                line-height: 1.2;
+                @include tab{
+                    margin-top: 10px;
+                }
+                img{
+                    width:18px;
+                    margin-left: 10px;
+                }
+            }
+            .book-now, h6{
+                font-family: "caslon-bold";
+            }
+        }
+
+    }
+}

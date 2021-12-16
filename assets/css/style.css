@@ -1,3 +1,34 @@
+header:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  width: 1px;
+  height: 60px;
+  background-color: #E9B520;
+}
+@media screen and (max-width: 1024px) {
+  header:before {
+    top: -20px;
+    left: 30%;
+    height: 160px;
+  }
+}
+
+.main-slider:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 10%;
+  height: 1px;
+  background-color: #E9B520;
+}
+@media screen and (max-width: 700px) {
+  .main-slider:before {
+    display: none;
+  }
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -205,21 +236,6 @@ header {
   top: 50px;
   z-index: 10;
 }
-header:before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  width: 1px;
-  height: 60px;
-  background-color: #E9B520;
-}
-@media screen and (max-width: 1024px) {
-  header:before {
-    top: -20px;
-    left: 30%;
-    height: 150px;
-  }
-}
 @media screen and (max-width: 1600px) {
   header {
     top: 25px;
@@ -328,20 +344,6 @@ header .mob-logo {
     height: auto;
   }
 }
-.main-slider::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  width: 10%;
-  height: 1px;
-  background-color: #E9B520;
-}
-@media screen and (max-width: 700px) {
-  .main-slider::before {
-    display: none;
-  }
-}
 .main-slider:after {
   content: "";
   width: 12%;
@@ -379,10 +381,15 @@ header .mob-logo {
 }
 .main-slider .main-slider__content {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   width: 40%;
   transform: translate(-50%, -25%);
+}
+@media screen and (max-width: 1600px) {
+  .main-slider .main-slider__content {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .main-slider .main-slider__content {
@@ -416,21 +423,25 @@ header .mob-logo {
   }
 }
 .main-slider .main-slider__content__unchanged h1 {
-  font-size: clamp(50px, 2vw, 100px);
+  font-size: 100px;
   font-family: "caslon-reg";
   text-transform: uppercase;
+  line-height: 1.2;
+}
+.main-slider .main-slider__content__unchanged h1 span {
+  font-size: 110px;
 }
 @media screen and (max-width: 700px) {
   .main-slider .main-slider__content__unchanged h1 {
-    line-height: 1.2;
+    font-size: clamp(50px, 2vw, 100px);
   }
-}
-.main-slider .main-slider__content__unchanged h1 span {
-  font-size: clamp(70px, 2vw, 100px);
+  .main-slider .main-slider__content__unchanged h1 span {
+    font-size: clamp(70px, 2vw, 100px);
+  }
 }
 .main-slider .main-slider__content__unchanged h3 {
   font-family: "montserrat-semibold";
-  font-size: clamp(12px, 2vw, 24px);
+  font-size: clamp(12px, 1.3vw, 24px);
   position: relative;
   width: fit-content;
   margin: 0 auto;
@@ -445,12 +456,19 @@ header .mob-logo {
   content: "";
   width: 100%;
   height: 1px;
-  bottom: 0;
+  bottom: 5px;
+  z-index: -1;
   background-color: #E9B520;
   left: 0;
 }
+@media (max-width: 1440px) {
+  .main-slider .main-slider__content__unchanged h3:after {
+    bottom: 3px;
+  }
+}
 @media screen and (max-width: 700px) {
   .main-slider .main-slider__content__unchanged h3:after {
+    z-index: 0;
     left: -95%;
     width: 90%;
     bottom: 50%;
@@ -932,6 +950,231 @@ header .mob-logo {
 }
 .countries [aria-current=true] {
   color: #111111;
+}
+
+.tours {
+  position: relative;
+  height: 100vh;
+}
+@media screen and (max-width: 700px) {
+  .tours {
+    height: 400px;
+  }
+}
+.tours__main__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tours__main__content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .tours__main__content {
+    width: 90%;
+  }
+}
+.tours__main__content p {
+  color: #FFFFFF;
+  font-size: clamp(18px, 1.6vw, 32px);
+  font-family: "caslon-reg";
+  margin-top: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .tours__main__content p {
+    margin-top: 30px;
+    line-height: 1.2;
+  }
+}
+.tours__main__content p:first-child {
+  margin-top: 0;
+}
+.tours__filter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.journey-of-europe {
+  padding-top: 86px;
+  padding-bottom: 50px;
+}
+.journey-of-europe__slogan {
+  color: #751914;
+  margin-bottom: 65px;
+}
+.journey-of-europe__slogan, .journey-of-europe span {
+  font-size: clamp(30px, 2vw, 48px);
+  font-family: "caslon-reg";
+  font-weight: bold;
+}
+.journey-of-europe__bg {
+  position: relative;
+}
+.journey-of-europe__bg img {
+  width: 100%;
+}
+.journey-of-europe__title {
+  position: absolute;
+  top: 74px;
+  text-transform: uppercase;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(50px, 2vw, 80px);
+  font-family: "caslon-bold";
+  width: fit-content;
+  color: #FFFFFF;
+}
+.journey-of-europe__text {
+  position: absolute;
+  bottom: 0;
+  padding: 48px;
+  align-items: flex-start;
+  gap: 70px;
+}
+@media screen and (max-width: 700px) {
+  .journey-of-europe__text {
+    display: none;
+  }
+}
+.journey-of-europe__text p {
+  color: #FFFFFF;
+  width: 50%;
+  font-family: "montserrat-regular";
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.tours-results .active-tours, .tours-results .planned-tours {
+  margin-bottom: 110px;
+}
+.tours-results .active-tours > .colored-word, .tours-results .planned-tours > .colored-word {
+  font-size: 12px;
+  font-family: "montserrat-medium";
+}
+.tours-results .active-tours > h5, .tours-results .planned-tours > h5 {
+  margin-bottom: 60px;
+  margin-top: 8px;
+  color: #171717;
+  font-size: clamp(22px, 1.2vw, 32px);
+  font-family: "caslon-semi-bold";
+}
+@media screen and (max-width: 1024px) {
+  .tours-results .active-tours > h5, .tours-results .planned-tours > h5 {
+    margin-bottom: 30px;
+  }
+}
+.tours-results__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  grid-template-rows: auto;
+}
+.tours-results .item {
+  position: relative;
+}
+.tours-results .item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.6);
+}
+.tours-results .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tours-results .item h5, .tours-results .item span, .tours-results .item p, .tours-results .item h6, .tours-results .item a {
+  color: #FFFFFF;
+}
+.tours-results .item__top {
+  padding: 60px 50px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1024px) {
+  .tours-results .item__top {
+    padding: 20px 20px 0;
+  }
+}
+.tours-results .item__title h5 {
+  margin-bottom: 16px;
+  font-size: clamp(18px, 1.2vw, 28px);
+  font-family: "caslon-semi-bold";
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1024px) {
+  .tours-results .item__title h5 {
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+}
+.tours-results .item__title span {
+  font-size: clamp(16px, 1.2vw, 24px);
+  font-family: "caslon-semi-bold";
+  margin-left: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .tours-results .item__title span {
+    margin-left: 10px;
+  }
+}
+.tours-results .item__title span:first-child {
+  margin-left: 0;
+}
+.tours-results .item__description {
+  position: absolute;
+  padding: 0 50px 60px;
+  bottom: 0;
+}
+@media screen and (max-width: 1024px) {
+  .tours-results .item__description {
+    padding: 0 20px 20px;
+  }
+}
+.tours-results .item__description h6 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 12px;
+}
+@media screen and (max-width: 1024px) {
+  .tours-results .item__description h6 {
+    margin-bottom: 10px;
+  }
+}
+.tours-results .item__description p {
+  font-family: "montserrat-medium";
+}
+.tours-results .item__description .book-now {
+  display: flex;
+  margin-top: 30px;
+  line-height: 1.2;
+}
+@media screen and (max-width: 1024px) {
+  .tours-results .item__description .book-now {
+    margin-top: 10px;
+  }
+}
+.tours-results .item__description .book-now img {
+  width: 18px;
+  margin-left: 10px;
+}
+.tours-results .item__description .book-now, .tours-results .item__description h6 {
+  font-family: "caslon-bold";
 }
 
 footer .footer-div {

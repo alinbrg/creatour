@@ -3,19 +3,7 @@ header{
     width:100%;
     top:50px;
     z-index: 10;
-    &:before{
-        content: "";
-        position: absolute;
-        top: -50px;
-        width:1px;
-        height: 60px;
-        background-color: $main;
-        @include tab{
-            top: -20px;
-            left:30%;
-            height: 150px;
-        }
-    }
+    @extend %header-line;
     @include xl{
         top:25px;
     }

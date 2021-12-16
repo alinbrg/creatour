@@ -100,6 +100,7 @@ if(scrollDown){
 }
 
 let countriesPgn = document.querySelectorAll('.countries__pgn .swiper-pagination-bullet');
+
 if(window.innerWidth < 1280){
   countriesPgn.forEach(element => {
     if(element.innerText == "France" || element.innerText == "france"){
