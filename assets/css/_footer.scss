@@ -17,11 +17,6 @@ footer{
                 &:first-child{
                     margin-left: 0;
                 }
-                &:hover{
-                    a{
-                        color: $main;
-                    }
-                }
             }
         }
         .add-info{
@@ -37,11 +32,6 @@ footer{
             svg{
                 margin-right: 15px;
                 &:hover{
-                    path{
-                        fill: $main;
-                    }
-                }
-                @include sm{
                     path{
                         fill: $main;
                     }

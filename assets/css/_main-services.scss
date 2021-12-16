@@ -1,7 +1,20 @@
 .services{
     padding-top: 130px;
+    position: relative;
     @include sm{
         padding: 0 !important;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width:223px;
+        height: 1px;
+        background-color: $main;
+        @include lg{
+            display: none;
+        }
     }
     .swiper {
         width: 100%;
@@ -31,10 +44,14 @@
             }
             .services__content{
                 position: absolute;
+                width: 35%;
                 top:50%;
                 left:50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
+                @include xl{
+                    width: unset;
+                }
                 h4, p, a{
                     color: $white;
                 }
@@ -66,6 +83,7 @@
                     }
                 }
                 @include sm{
+                    width:90%;
                     h4{
                         margin-bottom: 38px;
                     }
@@ -81,7 +99,7 @@
         height: 20%;
         box-sizing: border-box;
         padding: 10px 0;
-        @include lg{
+        @include sm{
             padding:10px 15px;
             padding-bottom: 70px;
         }
@@ -109,6 +127,8 @@
         h4{
             font-family: "caslon-bold";
             font-size: clamp(14px, 1.6vw, 18px);
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         p{
             font-family: "montserrat-medium";
@@ -116,6 +136,9 @@
         .services-slide-block{
             display: grid;
             grid-template-rows: 80px auto;
+            @include sm{
+                grid-template-rows: 50px auto;
+            }
         }
     }
     .swiper-slide img {

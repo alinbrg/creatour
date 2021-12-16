@@ -35,7 +35,7 @@
                 </li>
                 <li class="nav-li-item">
                     <a href="index.html">
-                        <img src="assets/img/icons/logo.svg" alt="creatour logo">
+                        <img class="nav-site-logo" src="assets/img/icons/logo.svg" alt="creatour logo">
                     </a>
                 </li>
                 <li class="nav-li-item">
@@ -49,6 +49,11 @@
                 </li>
             </ul>
         </nav>
+        <div class="mob-logo">
+            <a href="#">
+                <img src="assets/img/icons/logo.svg" alt="">
+            </a>
+        </div>
         <div class="reg-auth btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21">
                 <path id="Path_2942" data-name="Path 2942" d="M20,22H18V20a3,3,0,0,0-3-3H9a3,3,0,0,0-3,3v2H4V20a5,5,0,0,1,5-5h6a5,5,0,0,1,5,5Zm-8-9a6,6,0,1,1,6-6A6,6,0,0,1,12,13Zm0-2A4,4,0,1,0,8,7,4,4,0,0,0,12,11Z" transform="translate(-4 -1)" fill="#fff"/>
@@ -57,10 +62,12 @@
         </div>
     </header>
     <section class="main-slider">
-        <img src="assets/img/Mask Group 1.jpg" alt="creatour">
+        
+        <!-- <div class="main-slider__bg"></div> -->
+        <img class="main-slider__img-bg" src="assets/img/Mask Group 1.jpg" alt="creatour">
         <div class="main-slider__content">
             <div class="main-slider__content__unchanged">
-                <h1 > CreaTour </h1>
+                <h1 ><span>C</span>rea<span>T</span>our</h1>
                 <h3> Serving Tour of Life Force</h3>
             </div>
             <div class="swiper main-slider__swiper">
@@ -73,17 +80,17 @@
                         </p>
                     </div>
                     <div class="swiper-slide main-slider__slide">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati velit aliquam dolore accusantium rem laborum blanditiis, atque incidunt nobis quam architecto molestias vero impedit quaerat. Et, aspernatur. Inventore ex debitis id totam perspiciatis voluptate, delectus incidunt explicabo cupiditate assumenda qui magni laudantium? Deserunt et sequi esse voluptates 
-                    </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati velit aliquam dolore accusantium rem laborum blanditiis, atque incidunt nobis quam architecto molestias vero impedit quaerat. Et, aspernatur. Inventore ex debitis id totam perspiciatis voluptate, delectus incidunt explicabo cupiditate assumenda qui magni laudantium? Deserunt et sequi esse voluptates 
+                        </p>
                     </div>
                     <div class="swiper-slide main-slider__slide">
-                    <p>
+                        <p>
                         Far from simply following unclear inner instincts of simply going “away, somewhere else” and seeing “New” or “Other”, purpose of CreaTour journey is to channel this vast human energy (drive for exploring the world) within sophisticated and innovative experience combining powerful elements of tourism, education, self-study, personal communication, leisure and entertainment
                         </p>
                     </div>
                     <div class="swiper-slide main-slider__slide">
-                    <p>
+                        <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, ex, nihil exercitationem saepe tenetur explicabo dolores vero laudantium veniam quis facere expedita iure! Illo, quaerat! Consequuntur perspiciatis itaque illo quidem consequatur earum. Similique laboriosam expedita, laborum nihil ea minus enim cumque libero saepe doloremque vitae ab reiciendis consequatur doloribus repellat.
                         </p>
                     </div>
@@ -93,7 +100,7 @@
             </div>
         </div>
 
-        <a href="#services" class="scroll-down">
+        <a href="#" class="scroll-down">
             <span>
                 SCROLL DOWN
             </span>
@@ -106,176 +113,268 @@
             </svg>
         </a>
     </section>
-
     <section class="services container" id="services">
-        <div
-      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;"
-      class="swiper services-swiper2"
-        >
-      <div class="swiper-wrapper services-wrapper">
-        <div class="swiper-slide services-slide">
-          <img src="assets/img/Rectangle 264.jpg" />
-          <div class="services__content">
-            <h4>CreaTour</h4>
-            <p>
-                Adventurous Tour of New-Meaning Creation for the World and the “Self”
-            </p>
-            <a href="#">
-                Explore CreaTour Concept
-                <img src="assets/img/icons/arrow-white.svg" alt="">
-            </a>
-        </div>
-        </div>
-        <div class="swiper-slide  services-slide">
-            <img src="assets/img/Rectangle 264.jpg" />
-            <div class="services__content">
-                <h4>Traveling</h4>
-                <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                </p>
-                <a href="#">
-                    Explore CreaTour Concept
-                    <img src="assets/img/icons/arrow-white.svg" alt="">
-                </a>
+        <div class="swiper services-swiper2">
+            <div class="swiper-wrapper services-wrapper">
+                <div class="swiper-slide services-slide">
+                    <img src="assets/img/Rectangle 264.jpg" />
+                    <div class="services__content">
+                        <h4>CreaTour</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                        <a href="#">
+                            Explore CreaTour Concept
+                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide  services-slide">
+                    <img src="assets/img/Rectangle 264.jpg" />
+                    <div class="services__content">
+                        <h4>Traveling</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                        <a href="#">
+                            Explore CreaTour Concept
+                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <img src="assets/img/Rectangle 264.jpg" />
+                    <div class="services__content">
+                        <h4>CreaTour</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                        <a href="#">
+                            Explore CreaTour Concept
+                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <img src="assets/img/Rectangle 264.jpg" />
+                    <div class="services__content">
+                        <h4>International Experience</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                        <a href="#">
+                            Explore CreaTour Concept
+                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <img src="assets/img/Rectangle 264.jpg" />
+                    <div class="services__content">
+                        <h4>Exploration of  Great Themes</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                        <a href="#">
+                            Explore CreaTour Concept
+                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <img src="assets/img/Rectangle 264.jpg" />
+                    <div class="services__content">
+                        <h4>Irreplaceable Value of  Human Co-Presence </h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                        <a href="#">
+                            Explore CreaTour Concept
+                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="swiper-slide services-slide">
-            <img src="assets/img/Rectangle 264.jpg" />
-            <div class="services__content">
-                <h4>CreaTour</h4>
-                <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                </p>
-                <a href="#">
-                    Explore CreaTour Concept
-                    <img src="assets/img/icons/arrow-white.svg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="swiper-slide services-slide">
-            <img src="assets/img/Rectangle 264.jpg" />
-            <div class="services__content">
-                <h4>CreaTour</h4>
-                <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                </p>
-                <a href="#">
-                    Explore CreaTour Concept
-                    <img src="assets/img/icons/arrow-white.svg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="swiper-slide services-slide">
-            <img src="assets/img/Rectangle 264.jpg" />
-            <div class="services__content">
-                <h4>International Experience</h4>
-                <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                </p>
-                <a href="#">
-                    Explore CreaTour Concept
-                    <img src="assets/img/icons/arrow-white.svg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="swiper-slide services-slide">
-            <img src="assets/img/Rectangle 264.jpg" />
-            <div class="services__content">
-                <h4>Exploration of  Great Themes</h4>
-                <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                </p>
-                <a href="#">
-                    Explore CreaTour Concept
-                    <img src="assets/img/icons/arrow-white.svg" alt="">
-                </a>
-            </div>
-        </div>
-        <div class="swiper-slide services-slide">
-            <img src="assets/img/Rectangle 264.jpg" />
-            <div class="services__content">
-                <h4>Irreplaceable Value of  Human Co-Presence </h4>
-                <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                </p>
-                <a href="#">
-                    Explore CreaTour Concept
-                    <img src="assets/img/icons/arrow-white.svg" alt="">
-                </a>
-            </div>
-        </div>
-      </div>
       <!-- <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div> -->
       
-    </div>
-    <div thumbsSlider="" class="swiper services-swiper">
-        <div class="swiper-wrapper services-wrapper">
-            <div class="swiper-slide services-slide">
-                <div class="services-slide-block">
-                    <h4>CreaTour</h4>
-                    <p>
-                        Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                    </p>
-                </div>
-            </div>
-            <div class="swiper-slide services-slide">
-                <div class="services-slide-block">
-                    <h4>Traveling</h4>
-                    <p>
-                        Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                    </p>
-                </div>
-            </div>
-            <div class="swiper-slide services-slide">
-                <div class="services-slide-block">
-                    <h4>CreaTour</h4>
-                    <p>
-                        Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                    </p>
-                </div>
-            </div>
-            <div class="swiper-slide services-slide">
-                <div class="services-slide-block">
-                    <h4>CreaTour</h4>
-                    <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                    </p>
-                </div>
-            </div>
-            <div class="swiper-slide services-slide">
-                <div class="services-slide-block">
-                    <h4>International Experience</h4>
-                    <p>
-                        Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                    </p>
-                </div>
-            </div>
-            <div class="swiper-slide services-slide">
-                <div class="services-slide-block">
-                    <h4>Exploration of  Great Themes</h4>
-                    <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                    </p>
-                </div>
-            </div>
-            <div class="swiper-slide services-slide">
-                <div class="services-slide-block">
-                    <h4>Irreplaceable Value of  Human Co-Presence </h4>
-                    <p>
-                    Adventurous Tour of New-Meaning Creation for the World and the “Self”
-                    </p>
-                </div>
-            </div>
         </div>
-        <div class="swiper-pagination services-slider__pgn"></div>
-    </div>
-    
+        <div thumbsSlider="" class="swiper services-swiper">
+            <div class="swiper-wrapper services-wrapper">
+                <div class="swiper-slide services-slide">
+                    <div class="services-slide-block">
+                        <h4>CreaTour</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <div class="services-slide-block">
+                        <h4>Traveling</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <div class="services-slide-block">
+                        <h4>CreaTour</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <div class="services-slide-block">
+                        <h4>International Experience</h4>
+                        <p>
+                            Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <div class="services-slide-block">
+                        <h4>Exploration of  Great Themes</h4>
+                        <p>
+                        Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide services-slide">
+                    <div class="services-slide-block">
+                        <h4>Irreplaceable Value of  Human Co-Presence </h4>
+                        <p>
+                        Adventurous Tour of New-Meaning Creation for the World and the “Self”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination services-slider__pgn"></div>
+        </div>
     </section>
 
     <section class="countries container">
+        <div class="swiper countries__swiper">
 
+            <!-- If we need pagination -->
+            <div class="swiper-pagination countries__pgn"></div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                
+                <!-- Slides -->
+                <div class="swiper-slide countries__slide" id="england">
+                    <img class="countries__slide__img" src="assets/img/Group 242.jpg" alt="">
+                    <div class="btn tour-status">
+                        Active Tour
+                    </div>
+                    <div class="countries__slide__content">
+                        <p>
+                            The French Revolution  was a period of social and political upheaval in France and its colonies beginning in 1789 and ending in 1799. The Revolution overthrew the monarchy; established a republic; catalyzed violent periods of political turmoil; and finally culminated in a …
+                        </p>
+                        <a href="#">
+                            See Tour
+                            <img src="assets/img/icons/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide countries__slide" id="greece">
+                    <img class="countries__slide__img" src="assets/img/Group 242.jpg" alt="">
+                    <div class="btn tour-status">
+                        Active Tour
+                    </div>
+                    <div class="countries__slide__content">
+                        <p>
+                            The French Revolution  was a period of social and political upheaval in France and its colonies beginning in 1789 and ending in 1799. The Revolution overthrew the monarchy; established a republic; catalyzed violent periods of political turmoil; and finally culminated in a …
+                        </p>
+                        <a href="#">
+                            See Tour
+                            <img src="assets/img/icons/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide countries__slide" id="georgia">
+                    <img class="countries__slide__img" src="assets/img/Group 242.jpg" alt="">
+                    <div class="btn tour-status">
+                        Active Tour
+                    </div>
+                    <div class="countries__slide__content">
+                        <p>
+                            The French Revolution  was a period of social and political upheaval in France and its colonies beginning in 1789 and ending in 1799. The Revolution overthrew the monarchy; established a republic; catalyzed violent periods of political turmoil; and finally culminated in a …
+                        </p>
+                        <a href="#">
+                            See Tour
+                            <img src="assets/img/icons/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide countries__slide" id="france">
+                    <img class="countries__slide__img" src="assets/img/Group 242.jpg" alt="">
+                    <div class="btn tour-status">
+                        Active Tour
+                    </div>
+                    <div class="countries__slide__content">
+                        <p>
+                            The French Revolution  was a period of social and political upheaval in France and its colonies beginning in 1789 and ending in 1799. The Revolution overthrew the monarchy; established a republic; catalyzed violent periods of political turmoil; and finally culminated in a …
+                        </p>
+                        <a href="#">
+                            See Tour
+                            <img src="assets/img/icons/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide countries__slide" id="spain">
+                    <img class="countries__slide__img" src="assets/img/Group 242.jpg" alt="">
+                    <div class="btn tour-status">
+                        Active Tour
+                    </div>
+                    <div class="countries__slide__content">
+                        <p>
+                            The French Revolution  was a period of social and political upheaval in France and its colonies beginning in 1789 and ending in 1799. The Revolution overthrew the monarchy; established a republic; catalyzed violent periods of political turmoil; and finally culminated in a …
+                        </p>
+                        <a href="#">
+                            See Tour
+                            <img src="assets/img/icons/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide countries__slide" id="russia">
+                    <img class="countries__slide__img" src="assets/img/Group 242.jpg" alt="">
+                    <div class="btn tour-status">
+                        Active Tour
+                    </div>
+                    <div class="countries__slide__content">
+                        <p>
+                            The French Revolution  was a period of social and political upheaval in France and its colonies beginning in 1789 and ending in 1799. The Revolution overthrew the monarchy; established a republic; catalyzed violent periods of political turmoil; and finally culminated in a …
+                        </p>
+                        <a href="#">
+                            See Tour
+                            <img src="assets/img/icons/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide countries__slide" id="germany">
+                    <img class="countries__slide__img" src="assets/img/Group 242.jpg" alt="">
+                    <div class="btn tour-status">
+                        Active Tour
+                    </div>
+                    <div class="countries__slide__content">
+                        <p>
+                            The French Revolution  was a period of social and political upheaval in France and its colonies beginning in 1789 and ending in 1799. The Revolution overthrew the monarchy; established a republic; catalyzed violent periods of political turmoil; and finally culminated in a …
+                        </p>
+                        <a href="#">
+                            See Tour
+                            <img src="assets/img/icons/arrow.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+        </div>
     </section>
+
     <footer class="container">
         <div class="flex footer-div">
             <div class="nav">
@@ -330,7 +429,8 @@
             </div>
         </div>
     </footer>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="assets/js/main-page.js"></script>
 </body>

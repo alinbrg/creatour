@@ -12,15 +12,20 @@ header{
         background-color: $main;
         @include tab{
             top: -20px;
-            left:100px;
+            left:30%;
             height: 150px;
         }
     }
+    @include xl{
+        top:25px;
+    }
     @include tab{
         top: 20px;
+        padding: 0 25px 0 35px !important;
     }
     a, p{
         color: $white;
+        
     }
     .slogan{
         p{
@@ -48,17 +53,24 @@ header{
             display: none;
         }
         a{
-            font-size: 18px;
+            font-size: clamp(16px, 1.2vw, 18px);
             font-family: "caslon-bold";
         }
         li{
             margin-left: 30px;
+            @include xl{
+                margin-left: 20px;
+            }
             &:first-child{
                 margin-left: 0;
+            }
+            .nav-site-logo{
+                width: 80px;
             }
         }
     }
     .reg-auth{
+        margin-left: 55px;
         span{
             margin-left: 15px;
             @include uppercase;
@@ -69,8 +81,21 @@ header{
         }
         @include tab{
             background-color: transparent;
+            padding: 15px;
+            padding-left: 25px;
+            margin:0;
             path{
                 fill: $white;
+            }
+        }
+    }
+    .mob-logo{
+        display: none;
+        @include tab{
+            display: block;
+            width: 75px;
+            img{
+                width: 100%;
             }
         }
     }
