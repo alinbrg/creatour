@@ -50,10 +50,10 @@
             border-radius: 50%;
             transform: translateY(-50%);
             @include xl{
-                left:110px;
+                left:70px;
             }
-            @include rwd(1400){
-                left:150px;
+            @include rwd(1440){
+                left:120px;
             }
             @include lg{
                 display: none;

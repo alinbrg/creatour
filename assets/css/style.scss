@@ -27,10 +27,10 @@ html {
   padding: 0 240px;
 
   @include xl {
-    padding: 0 140px;
+    padding: 0 180px;
   }
   @include rwd(1440){
-    padding:0 100px;
+    padding:0 130px;
   }
   @include lg {
     padding: 0 60px;
@@ -49,4 +49,5 @@ html {
 @import "main-services";
 @import "main-countries";
 @import "tours";
+@import "about-us";
 @import "footer";

@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
     <title>Tours</title>
 </head>
 <body>
-    <header class="container flex">
+    <header class="container flex tours-header">
         <div class="slogan">
             <p>
-                Know <span class="colored-word">Yourself</span>, Know the <span class="colored-word">World</span>
+                Know <span class="colored-word-yellow">Yourself</span>, Know the <span class="colored-word-yellow">World</span>
             </p>
         </div>
         <div class="header__burger">
@@ -21,13 +23,13 @@
         <nav>
             <ul class="nav-optionst flex">
                 <li class="nav-option-item">
-                    <a href="#">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li class="nav-option-item">
                     <a href="#">Concept</a>
                 </li>
                 <li class="nav-option-item">
-                    <a href="#">Tours</a>
+                    <a href="tours.html">Tours</a>
                 </li>
                 <li class="nav-option-item">
                     <a href="index.html">
@@ -35,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav-option-item">
-                    <a href="#">About</a>
+                    <a href="about-us.html">About</a>
                 </li>
                 <li class="nav-option-item">
                     <a href="#">Contact</a>
@@ -46,7 +48,7 @@
             </ul>
         </nav>
         <div class="mob-logo">
-            <a href="#">
+            <a href="index.html">
                 <img src="assets/img/icons/logo.svg" alt="">
             </a>
         </div>
@@ -58,8 +60,9 @@
         </div>
     </header>
     <section class="tours tours__main">
-        <img class="tours__main__bg" src="assets/img/tours-main.jpg" alt="creatour">
-        <div class="tours__main__content">
+        <img class="tours__main__bg__web" src="assets/img/tours-main.jpg" alt="creatour">
+        <img class="tours__main__bg__mob" src="assets/img/tours-mob.jpg" alt="">
+        <div class="tours__main__content__web">
             <p>
                 Each country has it's unique place in the world every cselectture has it's unique story to tell and inspires desire to know it.
             </p>
@@ -67,25 +70,27 @@
                 Our hope is that this tour becomes increasingly inclusive of countries from all over the world as we go forward.
             </p>
         </div>
+        <div class="tours__main__content__mob">
+            <p class="journey-of-europe__slogan container">
+                Each journey has to start somewhere. Creatour's path to the exploration to he world starts with the project of  <span class="colored-word-yellow"> Journey of Europe</span>
+            </p>
+            <div class="journey-of-europe__bg">
+                <img src="assets/img/tours-bg.jpg" alt="">
+                <h2 class="journey-of-europe__title">Journey of Europe</h2>
+            </div>
 
-        <div class="tours__filter container flex">
-            <div class="tours__status">
-                <select id="status">
-                    <option>All tours</option>
+        </div>
+        <div class="tours__filter container">
+            <div class="tours__status filter">
+                <select id="status" class="small open">
+                    <option value="0" selected>All tours</option>
                     <option value="1">Active tours</option>
                     <option value="2">Planned tours</option>
                 </select>
-                <!-- <div class="tours__status__list">
-                    <ul>
-                        <li>All tours</li>
-                        <li data-value="1">Active tours</li>
-                        <li data-value="2">Planned tours</li>
-                    </ul>
-                </div> -->
             </div>
-            <div class="tours__countries">
-                <select id="destination">
-                    <option>All Countries</option>
+            <div class="tours__countries filter" >
+                <select id="destination"  class="small open">
+                    <option value="0" selected>All Countries</option>
                     <option value="1">England</option>
                     <option value="2">France</option>
                     <option value="3">Georgia</option>
@@ -103,7 +108,7 @@
 
     <section class="journey-of-europe container">
         <p class="journey-of-europe__slogan">
-            Each journey has to start somewhere. Creatour's path to the exploration to he world starts with the project of  <span class="colored-word">Journey of Europe</span>
+            Each journey has to start somewhere. Creatour's path to the exploration to he world starts with the project of  <span class="colored-word-yellow"> Journey of Europe</span>
         </p>
         <div class="journey-of-europe__bg">
             <img src="assets/img/tours-bg.jpg" alt="">
@@ -119,9 +124,9 @@
         </div>
     </section>
 
-    <section class="tours-results container">
-        <div class="active-tours">
-            <span class="colored-word">Journey of Europe</span>
+    <section class="tours-results ">
+        <div class="active-tours container">
+            <span class="colored-word-yellow">Journey of Europe</span>
             <h5>Active Tours</h5>
             <div class="tours-results__list">
                 <div class="tours-results__item item">
@@ -146,7 +151,13 @@
                         </p>
                         <a class="book-now" href="#">
                             Book Now
-                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19.162" height="13.256" viewBox="0 0 19.162 13.256">
+                                <g id="Group_97" data-name="Group 97" transform="translate(0.5 0.628)">
+                                  <path id="Path_2" data-name="Path 2" d="M400,528h18" transform="translate(-400 -522)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_3" data-name="Path 3" d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618" transform="translate(-404.064 -528)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_4" data-name="Path 4" d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528" transform="translate(-404.064 -522.064)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>                              
                         </a>
                     </div>
                 </div>
@@ -172,7 +183,13 @@
                         </p>
                         <a class="book-now" href="#">
                             Book Now
-                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19.162" height="13.256" viewBox="0 0 19.162 13.256">
+                                <g id="Group_97" data-name="Group 97" transform="translate(0.5 0.628)">
+                                  <path id="Path_2" data-name="Path 2" d="M400,528h18" transform="translate(-400 -522)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_3" data-name="Path 3" d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618" transform="translate(-404.064 -528)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_4" data-name="Path 4" d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528" transform="translate(-404.064 -522.064)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>  
                         </a>
                     </div>
                 </div>
@@ -198,13 +215,19 @@
                         </p>
                         <a class="book-now" href="#">
                             Book Now
-                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19.162" height="13.256" viewBox="0 0 19.162 13.256">
+                                <g id="Group_97" data-name="Group 97" transform="translate(0.5 0.628)">
+                                  <path id="Path_2" data-name="Path 2" d="M400,528h18" transform="translate(-400 -522)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_3" data-name="Path 3" d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618" transform="translate(-404.064 -528)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_4" data-name="Path 4" d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528" transform="translate(-404.064 -522.064)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>  
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="planned-tours">
+        <div class="planned-tours container">
             <h5>Planned Tours</h5>
             <div class="tours-results__list">
                 <div class="tours-results__item item">
@@ -218,9 +241,6 @@
                                 <span class="item__country">France</span>
                             </div>
                         </div>
-                        <!-- <div class="item__status btn">
-                            Active Tour
-                        </div> -->
                     </div>
                     <div class="item__description">
                         <h6>DESCRIPTION</h6>
@@ -229,7 +249,13 @@
                         </p>
                         <a class="book-now" href="#">
                             Book Now
-                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19.162" height="13.256" viewBox="0 0 19.162 13.256">
+                                <g id="Group_97" data-name="Group 97" transform="translate(0.5 0.628)">
+                                  <path id="Path_2" data-name="Path 2" d="M400,528h18" transform="translate(-400 -522)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_3" data-name="Path 3" d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618" transform="translate(-404.064 -528)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_4" data-name="Path 4" d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528" transform="translate(-404.064 -522.064)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>  
                         </a>
                     </div>
                 </div>
@@ -244,9 +270,6 @@
                                 <span class="item__country">France</span>
                             </div>
                         </div>
-                        <!-- <div class="item__status btn">
-                            Active Tour
-                        </div> -->
                     </div>
                     <div class="item__description">
                         <h6>DESCRIPTION</h6>
@@ -255,7 +278,13 @@
                         </p>
                         <a class="book-now" href="#">
                             Book Now
-                            <img src="assets/img/icons/arrow-white.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19.162" height="13.256" viewBox="0 0 19.162 13.256">
+                                <g id="Group_97" data-name="Group 97" transform="translate(0.5 0.628)">
+                                  <path id="Path_2" data-name="Path 2" d="M400,528h18" transform="translate(-400 -522)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_3" data-name="Path 3" d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618" transform="translate(-404.064 -528)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                  <path id="Path_4" data-name="Path 4" d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528" transform="translate(-404.064 -522.064)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+                                </g>
+                            </svg>  
                         </a>
                     </div>
                 </div>
@@ -268,19 +297,19 @@
             <div class="nav">
                 <ul class="nav-optionst flex">
                     <li class="nav-option-item">
-                        <a href="#">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li class="nav-option-item">
                         <a href="#">Concept</a>
                     </li>
                     <li class="nav-option-item">
-                        <a href="#">Tours</a>
+                        <a href="tours.html">Tours</a>
                     </li>
                     <li class="nav-option-item">
-                        <a href="index.html">Countries</a>
+                        <a href="#">Countries</a>
                     </li>
                     <li class="nav-option-item">
-                        <a href="#">About</a>
+                        <a href="about-us.html">About</a>
                     </li>
                     <li class="nav-option-item">
                         <a href="#">Contact</a>
@@ -311,11 +340,22 @@
                 </div>
                 <div class="smartweb">
                     <p>
-                        Created By <span class="colored-word">Smartweb</span>
+                        Created By <span class="colored-word-yellow">Smartweb</span>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="assets/js/niceSelect.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('select').niceSelect();
+        });
+    </script>
+
 </body>
 </html>

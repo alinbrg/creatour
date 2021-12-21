@@ -94,9 +94,9 @@ $sm: 700px;
     height: 60px;
     background-color: $main;
     @include tab{
-        top: -20px;
-        left:30%;
-        height: 160px;
+      top: -20px;
+      left:28%;
+      height: 160px;
     }
   }
 }
@@ -110,11 +110,82 @@ $sm: 700px;
     width: 10%;
     height: 1px;
     background-color: $main;
-    @include sm{
+    @include lg{
         display: none;
     }
   }
 }
+@mixin before-line-top-left( $top, $left, $width,  $color,) {
+  &:before{
+    content: "";
+    position: absolute;
+    top:$top;
+    left:$left;
+    width: $width;
+    height: 1px;
+    background-color: $color;
+    @include lg{
+      display: none;
+    }
+  }
+}
+@mixin after-line-top-right( $top, $right, $width,  $color,) {
+  &:after{
+    content: "";
+    position: absolute;
+    top:$top;
+    right:$right;
+    width: $width;
+    height: 1px;
+    background-color: $color;
+    @include lg{
+      display: none;
+    }
+  }
+}
+@mixin before-line-bottom-left( $bottom, $left, $width,  $color,) {
+  &:before{
+    content: "";
+    position: absolute;
+    bottom:$bottom;
+    left:$left;
+    width: $width;
+    height: 1px;
+    background-color: $color;
+    @include lg{
+      display: none;
+    }
+  }
+}
+@mixin after-line-bottom-right( $bottom, $right, $width,  $color,) {
+  &:after{
+    content: "";
+    position: absolute;
+    bottom:$bottom;
+    right:$right;
+    width: $width;
+    height: 1px;
+    background-color: $color;
+    @include lg{
+      display: none;
+    }
+  }
+}
+@mixin before-line-top-left-height( $top, $left, $height,  $color,) {
+  &:before{
+    content: "";
+    position: absolute;
+    top:$top;
+    left:$left;
+    height: $height;
+    width: 1px;
+    background-color: $color;
+    @include lg{
+      display: none;
+    }
+  }
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -164,6 +235,6 @@ $sm: 700px;
   }
   background:#E9B520;
 }
-.colored-word{
+.colored-word-yellow{
   color: $main;
 }
