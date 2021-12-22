@@ -1,6 +1,8 @@
 .tours-header{
     &:before{
-        height: 70px;
+        @include sm{
+            height: 70px;
+        }
     }
 }
 
@@ -103,6 +105,11 @@
         
         background-color: rgba($color: #000000, $alpha: 0.7);
         @include after-line-top-right(50%, 0, 7vw, $main);
+        @include xl{
+            &:after{
+                width:5vw;
+            }
+        }
         display: flex;
         align-items: center;
         @include tab{
@@ -129,8 +136,8 @@
     width: auto;
     display: inline-block;
     @include tab{
-        height: unset;
-        
+        height: 50%;
+        display: block;
     }
     &.tours__status{
         width:35%;
@@ -154,16 +161,15 @@
         .list{
             @include centering;
             justify-content: end;
-            margin-top: 10px;
+            margin-top: 10px;   
         }
         @include tab{
             width: 100%;
-
             .list{
                 flex-wrap: nowrap;
                 overflow-x: auto;
                 justify-content: start;
-                margin-top: 0;
+                // margin-top: 0;
                 padding:0;
                 &::-webkit-scrollbar {
                     width: 0px;
@@ -175,7 +181,7 @@
     .nice-select {
         border-radius: 0;
         border: none;
-        height: fit-content;
+        height: unset;
         width: 100%;
         padding: 0;
         &.open:after, &.small:after{
@@ -252,6 +258,11 @@
     position: relative;
     @include before-line-bottom-left(85px, 0, 9vw, $main);
     @include after-line-bottom-right(85px, 0, 9vw, $main);
+    @include xl{
+        &:before, &:after{
+            width:7vw;
+        }
+    }
     @include tab{
         padding-left:0;
         padding-right: 0;
@@ -266,6 +277,11 @@
         margin-bottom: 65px;
         @include before-line-top-left(105px, 0, 9vw, $tours);
         @include after-line-top-right(182px, 0, 9vw, $main);
+        @include xl{
+            &:before, &:after{
+                width:7vw;
+            }
+        }
         @include tab{
             margin: 25px 0 32px;
         }
@@ -377,12 +393,17 @@
     }
     .planned-tours{
         position: relative;
-        @include after-line-top-right(20px, 0, 12%, $tours);
+        @include after-line-top-right(20px, 0, 12vw, $tours);
         @include before-line-top-left-height(-160px, 4%, 317px,  $tours);
+        @include xl{
+            &:after{
+                width:10vw;
+            }
+        }
     }
     &__list{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
         gap:25px;
         grid-template-rows: auto;
         @include tab{

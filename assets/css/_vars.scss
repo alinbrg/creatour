@@ -238,3 +238,62 @@ $sm: 700px;
 .colored-word-yellow{
   color: $main;
 }
+.colored-word-red{
+  color:$contact;
+}
+.container {
+  padding: 0 240px;
+
+  @include xl {
+    padding: 0 180px;
+  }
+  @include rwd(1440){
+    padding:0 130px;
+  }
+  @include lg {
+    padding: 0 60px;
+  }
+  @include tab {
+    padding: 0 35px;
+  }
+  @include sm{
+    padding: 0 15px;
+  }
+}
+.text-container {
+  padding: 0 485px;
+
+  @include xl {
+    padding: 0 380px;
+  }
+  @include rwd(1440){
+    padding:0 330px;
+  }
+  @include lg {
+    padding: 0 150px;
+  }
+  @include tab {
+    padding: 0 80px;
+  }
+  @include sm{
+    padding: 0 15px;
+  }
+}
+.text-container-head{
+  padding-left: 362px;
+  @include xl{
+    padding-left: 280px;
+  }
+  @include rwd(1440){
+    padding-left: 230px;
+  }
+  @include lg {
+    padding-left: 80px;
+  }
+  @include tab {
+    padding: 0 80px;
+  }
+  @include sm{
+    padding: 0 15px;
+  }
+}

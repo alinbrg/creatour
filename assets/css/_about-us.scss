@@ -1,0 +1,96 @@
+.about-us{
+    padding-top: 241px;
+    padding-bottom: 125px;
+    position: relative;
+    &__bg{
+        display: none;
+        @include tab{
+            display: block;
+            background-image: url(../img/g12.png);
+            width:100%;
+            height:60%;
+            background-size: auto;
+            background-position: top;
+            background-repeat: no-repeat;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: -1;
+            opacity: 0.25;
+        }
+    }
+    @include sm{
+        padding-top: 145px;
+        padding-bottom: 30px;
+    }
+    @include before-line-top-left( max(50vh, 550px), 0, 9vw,  $main,);
+    @include after-line-top-right( 240px, 0, 7vw,  $main,);
+    @include lg{
+        &::before, &:after{
+            display: initial;
+        }
+
+    }
+    @include tab{
+        
+        &:after{
+            display: none;
+        }
+    }
+    @include sm{
+        &:before{
+            top: 194px;
+            width: 105px;
+            z-index:-1;
+        }
+    }
+    &__head{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        h2{
+            font-size: clamp(24px, 2vw, 32px);
+            color: $tours-black;
+            font-family: "caslon-semi-bold";
+        }
+        @include sm{
+            display: block;
+            margin-bottom: 30px;
+        }
+        img{
+            // max-width: 707px;
+            width: 65%;
+            @include sm{
+                display: flex;
+                margin-left: auto;
+                width:75%;
+            }
+        }
+    }
+
+    &__text{
+        position: relative;
+        @include before-line-top-left-height( 50%, 85px, 317px,  $contact);
+        &:before{
+            transform: translateY(-50%);
+        }
+        @include after-line-bottom-right( 175px, 0, 12%,  $contact) ;
+        @include lg{
+            &::before, &:after{
+                display: initial;
+            }
+        }
+        @include tab{
+            &:after, &:before{
+                display: none;
+            }
+        }
+        p{
+            font-size: clamp(14px, 2vw, 18px);
+            font-family: "montserrat-medium";
+            color:$tours-black;
+        }
+    }
+}

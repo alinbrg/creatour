@@ -23,25 +23,6 @@
 html {
   scroll-behavior: smooth;
 }
-.container {
-  padding: 0 240px;
-
-  @include xl {
-    padding: 0 180px;
-  }
-  @include rwd(1440){
-    padding:0 130px;
-  }
-  @include lg {
-    padding: 0 60px;
-  }
-  @include tab {
-    padding: 0 35px;
-  }
-  @include sm{
-    padding: 0 15px;
-  }
-}
 
 
 @import "header";

@@ -81,6 +81,97 @@ header:before {
   color: #E9B520;
 }
 
+.colored-word-red {
+  color: #761A14;
+}
+
+.container {
+  padding: 0 240px;
+}
+@media screen and (max-width: 1600px) {
+  .container {
+    padding: 0 180px;
+  }
+}
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 130px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 35px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.text-container {
+  padding: 0 485px;
+}
+@media screen and (max-width: 1600px) {
+  .text-container {
+    padding: 0 380px;
+  }
+}
+@media (max-width: 1440px) {
+  .text-container {
+    padding: 0 330px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .text-container {
+    padding: 0 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .text-container {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .text-container {
+    padding: 0 15px;
+  }
+}
+
+.text-container-head {
+  padding-left: 362px;
+}
+@media screen and (max-width: 1600px) {
+  .text-container-head {
+    padding-left: 280px;
+  }
+}
+@media (max-width: 1440px) {
+  .text-container-head {
+    padding-left: 230px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .text-container-head {
+    padding-left: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .text-container-head {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .text-container-head {
+    padding: 0 15px;
+  }
+}
+
 @font-face {
   font-family: "caslon-bold";
   src: url("../fonts/ACaslonPro-Bold.otf");
@@ -201,45 +292,11 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
-  padding: 0 240px;
-}
-@media screen and (max-width: 1600px) {
-  .container {
-    padding: 0 180px;
-  }
-}
-@media (max-width: 1440px) {
-  .container {
-    padding: 0 130px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .container {
-    padding: 0 60px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .container {
-    padding: 0 35px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .container {
-    padding: 0 15px;
-  }
-}
-
 header {
   position: absolute;
   width: 100%;
   top: 50px;
   z-index: 10;
-}
-@media screen and (max-width: 1600px) {
-  header {
-    top: 25px;
-  }
 }
 @media screen and (max-width: 1024px) {
   header {
@@ -295,6 +352,17 @@ header nav li:first-child {
 }
 header nav li .nav-site-logo {
   width: 80px;
+  margin: 0 40px;
+}
+@media screen and (max-width: 1600px) {
+  header nav li .nav-site-logo {
+    margin: 0 30px;
+  }
+}
+@media (max-width: 1440px) {
+  header nav li .nav-site-logo {
+    margin: 0 20px;
+  }
 }
 header .reg-auth {
   margin-left: 55px;
@@ -335,6 +403,23 @@ header .mob-logo {
     height: 100%;
     object-fit: cover;
   }
+}
+@media screen and (max-width: 1024px) {
+  header.header__dark {
+    top: 45px;
+  }
+  header.header__dark::before {
+    top: -50px;
+  }
+}
+header.header__dark a, header.header__dark p {
+  color: #171717;
+}
+header.header__dark .reg-auth svg path {
+  fill: initial;
+}
+header.header__dark .header__burger span {
+  background-color: #111111;
 }
 
 .main-slider {
@@ -955,8 +1040,10 @@ header .mob-logo {
   color: #111111;
 }
 
-.tours-header:before {
-  height: 70px;
+@media screen and (max-width: 700px) {
+  .tours-header:before {
+    height: 70px;
+  }
 }
 
 .tours {
@@ -1085,6 +1172,11 @@ header .mob-logo {
     display: none;
   }
 }
+@media screen and (max-width: 1600px) {
+  .tours__filter:after {
+    width: 5vw;
+  }
+}
 @media screen and (max-width: 1024px) {
   .tours__filter {
     display: block;
@@ -1110,7 +1202,8 @@ header .mob-logo {
 }
 @media screen and (max-width: 1024px) {
   .filter {
-    height: unset;
+    height: 50%;
+    display: block;
   }
 }
 .filter.tours__status {
@@ -1152,7 +1245,6 @@ header .mob-logo {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: start;
-    margin-top: 0;
     padding: 0;
   }
   .filter.tours__countries .list::-webkit-scrollbar {
@@ -1162,7 +1254,7 @@ header .mob-logo {
 .filter .nice-select {
   border-radius: 0;
   border: none;
-  height: fit-content;
+  height: unset;
   width: 100%;
   padding: 0;
 }
@@ -1274,6 +1366,11 @@ header .mob-logo {
     display: none;
   }
 }
+@media screen and (max-width: 1600px) {
+  .journey-of-europe:before, .journey-of-europe:after {
+    width: 7vw;
+  }
+}
 @media screen and (max-width: 1024px) {
   .journey-of-europe {
     padding-left: 0;
@@ -1315,6 +1412,11 @@ header .mob-logo {
 @media screen and (max-width: 1280px) {
   .journey-of-europe__slogan:after {
     display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .journey-of-europe__slogan:before, .journey-of-europe__slogan:after {
+    width: 7vw;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1451,7 +1553,7 @@ header .mob-logo {
   position: absolute;
   top: 20px;
   right: 0;
-  width: 12%;
+  width: 12vw;
   height: 1px;
   background-color: #751914;
 }
@@ -1474,9 +1576,14 @@ header .mob-logo {
     display: none;
   }
 }
+@media screen and (max-width: 1600px) {
+  .tours-results .planned-tours:after {
+    width: 10vw;
+  }
+}
 .tours-results__list {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
   grid-template-rows: auto;
 }
@@ -1634,6 +1741,158 @@ header .mob-logo {
 }
 .tours-results .item__description .book-now, .tours-results .item__description h6 {
   font-family: "caslon-bold";
+}
+
+.about-us {
+  padding-top: 241px;
+  padding-bottom: 125px;
+  position: relative;
+}
+.about-us__bg {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .about-us__bg {
+    display: block;
+    background-image: url(../img/g12.png);
+    width: 100%;
+    height: 60%;
+    background-size: auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.25;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about-us {
+    padding-top: 145px;
+    padding-bottom: 30px;
+  }
+}
+.about-us:before {
+  content: "";
+  position: absolute;
+  top: max(50vh, 550px);
+  left: 0;
+  width: 9vw;
+  height: 1px;
+  background-color: #E9B520;
+}
+@media screen and (max-width: 1280px) {
+  .about-us:before {
+    display: none;
+  }
+}
+.about-us:after {
+  content: "";
+  position: absolute;
+  top: 240px;
+  right: 0;
+  width: 7vw;
+  height: 1px;
+  background-color: #E9B520;
+}
+@media screen and (max-width: 1280px) {
+  .about-us:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about-us::before, .about-us:after {
+    display: initial;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-us:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .about-us:before {
+    top: 194px;
+    width: 105px;
+    z-index: -1;
+  }
+}
+.about-us__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.about-us__head h2 {
+  font-size: clamp(24px, 2vw, 32px);
+  color: #171717;
+  font-family: "caslon-semi-bold";
+}
+@media screen and (max-width: 700px) {
+  .about-us__head {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+.about-us__head img {
+  width: 65%;
+}
+@media screen and (max-width: 700px) {
+  .about-us__head img {
+    display: flex;
+    margin-left: auto;
+    width: 75%;
+  }
+}
+.about-us__text {
+  position: relative;
+}
+.about-us__text:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 85px;
+  height: 317px;
+  width: 1px;
+  background-color: #761A14;
+}
+@media screen and (max-width: 1280px) {
+  .about-us__text:before {
+    display: none;
+  }
+}
+.about-us__text:before {
+  transform: translateY(-50%);
+}
+.about-us__text:after {
+  content: "";
+  position: absolute;
+  bottom: 175px;
+  right: 0;
+  width: 12%;
+  height: 1px;
+  background-color: #761A14;
+}
+@media screen and (max-width: 1280px) {
+  .about-us__text:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about-us__text::before, .about-us__text:after {
+    display: initial;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about-us__text:after, .about-us__text:before {
+    display: none;
+  }
+}
+.about-us__text p {
+  font-size: clamp(14px, 2vw, 18px);
+  font-family: "montserrat-medium";
+  color: #171717;
 }
 
 footer .footer-div {
