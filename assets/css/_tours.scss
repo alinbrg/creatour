@@ -120,12 +120,16 @@
             &:before{
                 content: "";
                 position: absolute;
-                top: 34px;
+                top: 33px;
                 left: 0;
+                z-index:1;
                 height: 1px;
                 width: 105px;
                 background-color: $main;
             }
+        }
+        @include sm{
+            padding: 0 15px 0 10px;
         }
         
     }
@@ -238,6 +242,9 @@
             width: 100%;
             @include tab{
                 justify-content: start;
+            }
+            @include sm{
+                padding-left: 5px;
             }
         }
         .option:hover, 

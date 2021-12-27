@@ -1187,11 +1187,17 @@ header.header__dark .header__burger span {
   .tours__filter:before {
     content: "";
     position: absolute;
-    top: 34px;
+    top: 33px;
     left: 0;
+    z-index: 1;
     height: 1px;
     width: 105px;
     background-color: #E9B520;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tours__filter {
+    padding: 0 15px 0 10px;
   }
 }
 
@@ -1320,6 +1326,11 @@ header.header__dark .header__burger span {
 @media screen and (max-width: 1024px) {
   .filter .nice-select .list {
     justify-content: start;
+  }
+}
+@media screen and (max-width: 700px) {
+  .filter .nice-select .list {
+    padding-left: 5px;
   }
 }
 .filter .nice-select .option:hover,
@@ -1743,16 +1754,16 @@ header.header__dark .header__burger span {
   font-family: "caslon-bold";
 }
 
-.about-us {
+.about-us, .rules {
   padding-top: 241px;
   padding-bottom: 125px;
   position: relative;
 }
-.about-us__bg {
+.about-us__bg, .rules__bg {
   display: none;
 }
 @media screen and (max-width: 1024px) {
-  .about-us__bg {
+  .about-us__bg, .rules__bg {
     display: block;
     background-image: url(../img/g12.png);
     width: 100%;
@@ -1768,12 +1779,12 @@ header.header__dark .header__burger span {
   }
 }
 @media screen and (max-width: 700px) {
-  .about-us {
+  .about-us, .rules {
     padding-top: 145px;
     padding-bottom: 30px;
   }
 }
-.about-us:before {
+.about-us:before, .rules:before {
   content: "";
   position: absolute;
   top: max(50vh, 550px);
@@ -1783,11 +1794,11 @@ header.header__dark .header__burger span {
   background-color: #E9B520;
 }
 @media screen and (max-width: 1280px) {
-  .about-us:before {
+  .about-us:before, .rules:before {
     display: none;
   }
 }
-.about-us:after {
+.about-us:after, .rules:after {
   content: "";
   position: absolute;
   top: 240px;
@@ -1797,58 +1808,51 @@ header.header__dark .header__burger span {
   background-color: #E9B520;
 }
 @media screen and (max-width: 1280px) {
-  .about-us:after {
+  .about-us:after, .rules:after {
     display: none;
   }
 }
 @media screen and (max-width: 1280px) {
-  .about-us::before, .about-us:after {
+  .about-us::before, .about-us:after, .rules::before, .rules:after {
     display: initial;
   }
 }
 @media screen and (max-width: 1024px) {
-  .about-us:after {
+  .about-us::before, .rules::before {
+    width: 7vw;
+  }
+  .about-us:after, .rules:after {
     display: none;
   }
 }
 @media screen and (max-width: 700px) {
-  .about-us:before {
+  .about-us:before, .rules:before {
     top: 194px;
     width: 105px;
     z-index: -1;
   }
 }
-.about-us__head {
+.about-us__head, .rules__head {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 60px;
 }
-.about-us__head h2 {
+.about-us__head h2, .rules__head h2 {
   font-size: clamp(24px, 2vw, 32px);
   color: #171717;
   font-family: "caslon-semi-bold";
 }
 @media screen and (max-width: 700px) {
-  .about-us__head {
+  .about-us__head, .rules__head {
     display: block;
     margin-bottom: 30px;
   }
 }
-.about-us__head img {
-  width: 65%;
-}
-@media screen and (max-width: 700px) {
-  .about-us__head img {
-    display: flex;
-    margin-left: auto;
-    width: 75%;
-  }
-}
-.about-us__text {
+.about-us__text, .rules__text {
   position: relative;
 }
-.about-us__text:before {
+.about-us__text:before, .rules__text:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1858,14 +1862,14 @@ header.header__dark .header__burger span {
   background-color: #761A14;
 }
 @media screen and (max-width: 1280px) {
-  .about-us__text:before {
+  .about-us__text:before, .rules__text:before {
     display: none;
   }
 }
-.about-us__text:before {
+.about-us__text:before, .rules__text:before {
   transform: translateY(-50%);
 }
-.about-us__text:after {
+.about-us__text:after, .rules__text:after {
   content: "";
   position: absolute;
   bottom: 175px;
@@ -1875,24 +1879,52 @@ header.header__dark .header__burger span {
   background-color: #761A14;
 }
 @media screen and (max-width: 1280px) {
-  .about-us__text:after {
+  .about-us__text:after, .rules__text:after {
     display: none;
   }
 }
 @media screen and (max-width: 1280px) {
-  .about-us__text::before, .about-us__text:after {
+  .about-us__text::before, .about-us__text:after, .rules__text::before, .rules__text:after {
     display: initial;
   }
 }
 @media screen and (max-width: 1024px) {
-  .about-us__text:after, .about-us__text:before {
+  .about-us__text:after, .about-us__text:before, .rules__text:after, .rules__text:before {
     display: none;
   }
 }
-.about-us__text p {
+.about-us__text p, .rules__text p {
   font-size: clamp(14px, 2vw, 18px);
   font-family: "montserrat-medium";
   color: #171717;
+}
+
+.rules .about-us__head {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 700px) {
+  .rules .about-us__head {
+    margin-bottom: 20px;
+  }
+}
+.rules .about-us__text:before {
+  top: unset;
+  bottom: 20px;
+  transform: none;
+}
+.rules .about-us__text:after {
+  bottom: -210px;
+}
+
+.about-us .about-us__head img {
+  width: 65%;
+}
+@media screen and (max-width: 700px) {
+  .about-us .about-us__head img {
+    display: flex;
+    margin-left: auto;
+    width: 75%;
+  }
 }
 
 footer .footer-div {

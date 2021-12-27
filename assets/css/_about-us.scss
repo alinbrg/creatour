@@ -1,4 +1,4 @@
-.about-us{
+.about-us, .rules{
     padding-top: 241px;
     padding-bottom: 125px;
     position: relative;
@@ -32,7 +32,9 @@
 
     }
     @include tab{
-        
+        &::before{
+            width: 7vw;
+        }
         &:after{
             display: none;
         }
@@ -59,15 +61,7 @@
             display: block;
             margin-bottom: 30px;
         }
-        img{
-            // max-width: 707px;
-            width: 65%;
-            @include sm{
-                display: flex;
-                margin-left: auto;
-                width:75%;
-            }
-        }
+        
     }
 
     &__text{
@@ -81,6 +75,7 @@
             &::before, &:after{
                 display: initial;
             }
+            
         }
         @include tab{
             &:after, &:before{
@@ -93,4 +88,36 @@
             color:$tours-black;
         }
     }
+}
+.rules{
+    .about-us__head{
+        margin-bottom: 80px;
+        @include sm{
+            margin-bottom:20px;
+        }
+    }
+    .about-us__text{
+        &:before{
+            top:unset;
+            bottom:20px;
+            transform:none;
+        }
+        &:after{
+            bottom: -210px;
+        }
+    }
+}
+.about-us{
+    .about-us__head{
+        img{
+            // max-width: 707px;
+            width: 65%;
+            @include sm{
+                display: flex;
+                margin-left: auto;
+                width:75%;
+            }
+        }
+    }
+    
 }
