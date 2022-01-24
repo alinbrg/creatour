@@ -2,28 +2,27 @@
 @import "fonts";
 
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  list-style-type: none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  border: 0;
-  resize: none;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  color: $secondary;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	list-style-type: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	border: 0;
+	resize: none;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	color: $secondary;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
-
 
 @import "header";
 @import "main-slider";
@@ -31,4 +30,5 @@ html {
 @import "main-countries";
 @import "tours";
 @import "about-us";
+@import "concept";
 @import "footer";

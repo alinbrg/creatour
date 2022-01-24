@@ -1,120 +1,121 @@
-header{
-    position: absolute;
-    width:100%;
-    top:50px;
-    z-index: 10;
-    @extend %header-line;
-    @include tab{
-        top: 20px;
-        padding: 0 25px 0 35px !important;
-    }
-    a, p{
-        color: $white;
-        
-    }
-    .slogan{
-        p{
-            font-family: "caslon-bold";
-        }
-        @include tab{
-            display: none;
-        }
-    }
-    .header__burger{
-        display: none;
-        @include tab{
-            display: block;
-        }
-        span{
-            width: 32px;
-            height: 2px;
-            background-color: $white;
-            display: block;
-            margin:5px;
-        }
-    }
-    nav{
-        @include tab{
-            display: none;
-        }
-        a{
-            font-size: clamp(16px, 1.2vw, 18px);
-            font-family: "caslon-bold";
-        }
-        li{
-            margin-left: 30px;
-            @include xl{
-                margin-left: 20px;
-            }
-            &:first-child{
-                margin-left: 0;
-            }
-            .nav-site-logo{
-                width: 80px;
-                margin:0 40px;
-                @include xl{
-                    margin:0 30px;
-                }
-                @include rwd(1440){
-                    margin:0 20px;
-                }
-            }
-        }
-    }
-    .reg-auth{
-        margin-left: 55px;
-        span{
-            margin-left: 15px;
-            @include uppercase;
-            @include tab{
-                display: none;
-            }
-            font-family: "montserrat-semibold";
-        }
-        @include tab{
-            background-color: transparent;
-            padding: 15px;
-            padding-right: 19px;
-            margin:0;
-            path{
-                fill: $white;
-            }
-        }
-    }
-    .mob-logo{
-        display: none;
-        @include tab{
-            display: block;
-            width: 74px;
-            height: 55px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-    &.header__dark{
-        @include tab{
-            top:45px;
-            &::before{
-                top:-50px;
-            }
-        }
-        a, p{
-            color: $tours-black;
-        }
-        .reg-auth{
-            svg{
-                path{
-                    fill: initial;
-                };
-            }
-        }
-        .header__burger{
-            span{
-                background-color: $secondary;
-            }
-        }
-    }
+header {
+	position: absolute;
+	width: 100%;
+	top: 50px;
+	z-index: 100;
+	@extend %header-line;
+	@include tab {
+		top: 20px;
+		padding: 0 25px 0 35px !important;
+	}
+	a,
+	p {
+		color: $white;
+	}
+	.slogan {
+		p {
+			font-family: "caslon-bold";
+		}
+		@include tab {
+			display: none;
+		}
+	}
+	.header__burger {
+		display: none;
+		@include tab {
+			display: block;
+		}
+		span {
+			width: 32px;
+			height: 2px;
+			background-color: $white;
+			display: block;
+			margin: 5px;
+		}
+	}
+	nav {
+		@include tab {
+			display: none;
+		}
+		a {
+			font-size: clamp(16px, 1.2vw, 18px);
+			font-family: "caslon-bold";
+		}
+		li {
+			margin-left: 30px;
+			@include xl {
+				margin-left: 20px;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			.nav-site-logo {
+				width: 80px;
+				margin: 0 40px;
+				@include xl {
+					margin: 0 30px;
+				}
+				@include rwd(1440) {
+					margin: 0 20px;
+				}
+			}
+		}
+	}
+	.reg-auth {
+		margin-left: 55px;
+		span {
+			margin-left: 15px;
+			@include uppercase;
+			@include tab {
+				display: none;
+			}
+			font-family: "montserrat-semibold";
+		}
+		@include tab {
+			background-color: transparent;
+			padding: 15px;
+			padding-right: 19px;
+			margin: 0;
+			path {
+				fill: $white;
+			}
+		}
+	}
+	.mob-logo {
+		display: none;
+		@include tab {
+			display: block;
+			width: 74px;
+			height: 55px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&.header__dark {
+		@include tab {
+			top: 45px;
+			&::before {
+				top: -50px;
+			}
+		}
+		a,
+		p {
+			color: $tours-black;
+		}
+		.reg-auth {
+			svg {
+				path {
+					fill: initial;
+				}
+			}
+		}
+		.header__burger {
+			span {
+				background-color: $secondary;
+			}
+		}
+	}
 }
