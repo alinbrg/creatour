@@ -1,163 +1,166 @@
-.main-slider{
-    position: relative;
-    height: 100vh;
-    @include sm{
-        position: static;
-        height: auto;
-    }
-    @extend %first-section-line;
-    &:after{
-        content: "";
-        width:12%;
-        height: 1px;
-        background-color: $contact;
-        position: absolute;
-        bottom: 13%;
-        left:34%;
-        @include sm{
-            display: none;
-        }
-    }
-    &__bg{
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/Mask\ Group\ 1.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    &__img-bg{
-        width:100%;
-        height: 100%;
-        object-fit: cover;
-        @include sm{
-            height: 211px;
-        }
-    }
-    p, span, a, h1, h3 {
-        color: $white;
-    }
-    .main-slider__content{
-        position: absolute;
-        top:40%;
-        left:50%;
-        width:40%;
-        transform: translate(-50%, -25%);
-        @include xl{
-            width: 50%;
-        }
-        @include tab{
-            width:80%;
-        }
-        @include sm{
-            position: static;
-            width:100%;
-            top:0;
-            left:0;
-            transform: initial;
-            margin-top: -140px;
-        }
-        &__unchanged{
-            text-align: center;
-            width:100%;
-            margin-bottom: 70px;
-            @include xl{
-                margin-bottom: 30px;
-            }
-            @include sm{
-                margin-bottom: 0;
-                margin-top: 50px;
-            }
-            h1{
-                font-size: 100px;
-                font-family: "caslon-reg";
-                text-transform: uppercase;
-                line-height: 1.2;
-                span{
-                    font-size: 110px;
-                }
-                @include sm{
-                    font-size: clamp(50px, 2vw, 100px);
-                    span{
-                        font-size: clamp(70px, 2vw, 100px);
-                    }
-                }
-            }
-            h3{
-                font-family: "montserrat-semibold";
-                font-size: clamp(12px, 1.3vw, 24px);
-                position: relative;
-                width: fit-content;
-                margin:0 auto;
-                @include sm{
-                    margin-top: -20px;
-                }
-                &:after{
-                    position: absolute;
-                    content: "";
-                    width:100%;
-                    height: 1px;
-                    bottom:5px;
-                    z-index: -1;
-                    background-color: $main;
-                    left:0;
-                    @include rwd(1440){
-                        bottom: 3px;
-                    }
-                    @include sm{
-                        z-index: 0;
-                        left:-95%;
-                        width:90%;
-                        bottom: 50%;
-                    }
-                }
-            }
-        }
-        .main-slider__swiper{
-            p{
-                font-family: "montserrat-medium";
-                font-size: clamp(14px, 1.6vw, 18px);
-                text-align: center;
-            }
-            @include sm{
-                p{
-                    color:$secondary;
-                    padding: 30px 15px;
-                }
-            }
-        }
-    }
-    
-    .swiper-wrapper{
-        margin-bottom: 70px;
-        @include sm{
-            margin-top: 10px;
-            margin-bottom: 40px;
-        }
-    }
-    .swiper-pagination{
-        @include sm{
-            bottom: 40px;
-        }
-    }
-    .scroll-down{
-        position: absolute;
-        bottom:40px;
-        left:50%;
-        @include centering;
-        flex-direction: column;
-        transform: translateX(-50%);
-        
-        svg{
-            transform:rotate(100grad);
-            margin-top: 10px;
-        }
-        @include xl{
-            bottom:10px;
-        }
-        @include sm{
-            display: none;
-        }
-    }
+.main-slider {
+	position: relative;
+	height: 100vh;
+	@include sm {
+		position: static;
+		height: auto;
+	}
+	@extend %first-section-line;
+	&:after {
+		content: "";
+		width: 12%;
+		height: 1px;
+		background-color: $contact;
+		position: absolute;
+		bottom: 13%;
+		left: 34%;
+		@include sm {
+			display: none;
+		}
+	}
+	&__bg {
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/Mask\ Group\ 1.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&__img-bg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		@include sm {
+			height: 211px;
+		}
+	}
+	p,
+	span,
+	a,
+	h1,
+	h3 {
+		color: $white;
+	}
+	.main-slider__content {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		width: 40%;
+		transform: translate(-50%, -25%);
+		@include xl {
+			width: 50%;
+		}
+		@include tab {
+			width: 80%;
+		}
+		@include sm {
+			position: static;
+			width: 100%;
+			top: 0;
+			left: 0;
+			transform: initial;
+			margin-top: -140px;
+		}
+		&__unchanged {
+			text-align: center;
+			width: 100%;
+			margin-bottom: 70px;
+			@include xl {
+				margin-bottom: 30px;
+			}
+			@include sm {
+				margin-bottom: 0;
+				margin-top: 50px;
+			}
+			h1 {
+				font-size: 100px;
+				font-family: "caslon-reg";
+				text-transform: uppercase;
+				line-height: 1.2;
+				span {
+					font-size: 110px;
+				}
+				@include sm {
+					font-size: clamp(50px, 2vw, 100px);
+					span {
+						font-size: clamp(70px, 2vw, 100px);
+					}
+				}
+			}
+			h3 {
+				font-family: "montserrat-semibold";
+				font-size: clamp(12px, 1.3vw, 24px);
+				position: relative;
+				width: fit-content;
+				margin: 0 auto;
+				@include sm {
+					margin-top: -20px;
+				}
+				&:after {
+					position: absolute;
+					content: "";
+					width: 100%;
+					height: 1px;
+					bottom: 5px;
+					z-index: -1;
+					background-color: $main;
+					left: 0;
+					@include rwd(1440) {
+						bottom: 3px;
+					}
+					@include sm {
+						z-index: 0;
+						left: -95%;
+						width: 90%;
+						bottom: 50%;
+					}
+				}
+			}
+		}
+		.main-slider__swiper {
+			p {
+				font-family: "montserrat-medium";
+				font-size: clamp(14px, 1.6vw, 18px);
+				text-align: center;
+			}
+			@include sm {
+				p {
+					color: $secondary;
+					padding: 30px 15px;
+				}
+			}
+		}
+	}
 
+	.swiper-wrapper {
+		margin-bottom: 70px;
+		@include sm {
+			margin-top: 10px;
+			margin-bottom: 40px;
+		}
+	}
+	.swiper-pagination {
+		@include sm {
+			bottom: 40px;
+		}
+	}
+	.scroll-down {
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		@include centering;
+		flex-direction: column;
+		transform: translateX(-50%);
+
+		svg {
+			transform: rotate(100grad);
+			margin-top: 10px;
+		}
+		@include xl {
+			bottom: 10px;
+		}
+		@include sm {
+			display: none;
+		}
+	}
 }

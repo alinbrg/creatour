@@ -22,15 +22,41 @@ header {
 	}
 	.header__burger {
 		display: none;
+		cursor: pointer;
+		position: relative;
 		@include tab {
 			display: block;
+			width: 32px;
+			height: 10px;
 		}
 		span {
 			width: 32px;
 			height: 2px;
 			background-color: $white;
 			display: block;
-			margin: 5px;
+			position: absolute;
+			&:first-child {
+				top: 0;
+				margin-bottom: 6px;
+			}
+			&:last-child {
+				bottom: 0;
+			}
+		}
+		&.clicked {
+			width: 24px;
+			height: 24px;
+			span {
+				margin: 0;
+				&:first-child {
+					top: unset;
+					transform: translateY(-50%) rotate(-45deg);
+				}
+				&:last-child {
+					bottom: unset;
+					transform: translateY(-50%) rotate(45deg);
+				}
+			}
 		}
 	}
 	nav {

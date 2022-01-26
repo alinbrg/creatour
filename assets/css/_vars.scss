@@ -1,16 +1,16 @@
-$white: #FFFFFF;
-$grey: #E2E2E2;
-$milkWhite :#F9F4E4;
-$pgn:#F3DEA2;
-$main: #E9B520;
-$contact: #761A14;
+$white: #ffffff;
+$grey: #e2e2e2;
+$milkWhite: #f9f4e4;
+$pgn: #f3dea2;
+$main: #e9b520;
+$contact-form: #c5a09e;
+$contact: #761a14;
 $tours: #751914;
 $secondary: #111111;
 $tours-black: #171717;
 
-
-$fireColor: rgb(255,80,0);
-$fireColorT: rgba(255,80,0,0);
+$fireColor: rgb(255, 80, 0);
+$fireColorT: rgba(255, 80, 0, 0);
 $dur: 1s;
 $blur: 0.02em;
 $fireRad: 3em;
@@ -23,277 +23,276 @@ $tab: 1024px;
 $sm: 700px;
 
 @mixin rwd($screen) {
-  @media (max-width: $screen+"px") {
-    @content;
-  }
+	@media (max-width: $screen+"px") {
+		@content;
+	}
 }
 
 @mixin xl {
-  @media screen and (max-width: #{$xl}) {
-    @content;
-  }
+	@media screen and (max-width: #{$xl}) {
+		@content;
+	}
 }
 
 @mixin lg {
-  @media screen and (max-width: #{$lg}) {
-    @content;
-  }
+	@media screen and (max-width: #{$lg}) {
+		@content;
+	}
 }
 
 @mixin tab {
-  @media screen and (max-width: #{$tab}) {
-    @content;
-  }
+	@media screen and (max-width: #{$tab}) {
+		@content;
+	}
 }
 
 @mixin sm {
-  @media screen and (max-width: #{$sm}) {
-    @content;
-  }
+	@media screen and (max-width: #{$sm}) {
+		@content;
+	}
 }
 @mixin maxcolumn($num) {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: $num; /* number of lines to show */
-  -webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $num; /* number of lines to show */
+	-webkit-box-orient: vertical;
 }
 
 @mixin centering {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @mixin uppercase() {
-  text-transform: uppercase;
-  font-feature-settings: "case" on;
+	text-transform: uppercase;
+	font-feature-settings: "case" on;
 }
 
 @mixin scrollSetup($thumbcolor, $width: 2px, $bgcolor: transparent) {
-  &::-webkit-scrollbar {
-    width: $width;
-    background-color: $bgcolor;
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 30px;
-    background-color: $thumbcolor;
-  }
-  &::-webkit-scrollbar-track {
-    margin: 15px 0;
-    background-color: $bgcolor;
-  }
+	&::-webkit-scrollbar {
+		width: $width;
+		background-color: $bgcolor;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 30px;
+		background-color: $thumbcolor;
+	}
+	&::-webkit-scrollbar-track {
+		margin: 15px 0;
+		background-color: $bgcolor;
+	}
 }
 
 %header-line {
-  &:before{
-    content: "";
-    position: absolute;
-    top: -50px;
-    width:1px;
-    height: 60px;
-    background-color: $main;
-    @include tab{
-      top: -20px;
-      left:28%;
-      height: 160px;
-    }
-  }
+	&:before {
+		content: "";
+		position: absolute;
+		top: -50px;
+		width: 1px;
+		height: 60px;
+		background-color: $main;
+		@include tab {
+			top: -20px;
+			left: 28%;
+			height: 160px;
+		}
+	}
 }
 
-%first-section-line{
-  &:before{
-    content: "";
-    position: absolute;
-    top:50%;
-    left:10px;
-    width: 10%;
-    height: 1px;
-    background-color: $main;
-    @include lg{
-        display: none;
-    }
-  }
+%first-section-line {
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		width: 10%;
+		height: 1px;
+		background-color: $main;
+		@include lg {
+			display: none;
+		}
+	}
 }
-@mixin before-line-top-left( $top, $left, $width,  $color,) {
-  &:before{
-    content: "";
-    position: absolute;
-    top:$top;
-    left:$left;
-    width: $width;
-    height: 1px;
-    background-color: $color;
-    @include lg{
-      display: none;
-    }
-  }
+@mixin before-line-top-left($top, $left, $width, $color) {
+	&:before {
+		content: "";
+		position: absolute;
+		top: $top;
+		left: $left;
+		width: $width;
+		height: 1px;
+		background-color: $color;
+		@include lg {
+			display: none;
+		}
+	}
 }
-@mixin after-line-top-right( $top, $right, $width,  $color,) {
-  &:after{
-    content: "";
-    position: absolute;
-    top:$top;
-    right:$right;
-    width: $width;
-    height: 1px;
-    background-color: $color;
-    @include lg{
-      display: none;
-    }
-  }
+@mixin after-line-top-right($top, $right, $width, $color) {
+	&:after {
+		content: "";
+		position: absolute;
+		top: $top;
+		right: $right;
+		width: $width;
+		height: 1px;
+		background-color: $color;
+		@include lg {
+			display: none;
+		}
+	}
 }
-@mixin before-line-bottom-left( $bottom, $left, $width,  $color,) {
-  &:before{
-    content: "";
-    position: absolute;
-    bottom:$bottom;
-    left:$left;
-    width: $width;
-    height: 1px;
-    background-color: $color;
-    @include lg{
-      display: none;
-    }
-  }
+@mixin before-line-bottom-left($bottom, $left, $width, $color) {
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: $bottom;
+		left: $left;
+		width: $width;
+		height: 1px;
+		background-color: $color;
+		@include lg {
+			display: none;
+		}
+	}
 }
-@mixin after-line-bottom-right( $bottom, $right, $width,  $color,) {
-  &:after{
-    content: "";
-    position: absolute;
-    bottom:$bottom;
-    right:$right;
-    width: $width;
-    height: 1px;
-    background-color: $color;
-    @include lg{
-      display: none;
-    }
-  }
+@mixin after-line-bottom-right($bottom, $right, $width, $color) {
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: $bottom;
+		right: $right;
+		width: $width;
+		height: 1px;
+		background-color: $color;
+		@include lg {
+			display: none;
+		}
+	}
 }
-@mixin before-line-top-left-height( $top, $left, $height,  $color,) {
-  &:before{
-    content: "";
-    position: absolute;
-    top:$top;
-    left:$left;
-    height: $height;
-    width: 1px;
-    background-color: $color;
-    @include lg{
-      display: none;
-    }
-  }
+@mixin before-line-top-left-height($top, $left, $height, $color) {
+	&:before {
+		content: "";
+		position: absolute;
+		top: $top;
+		left: $left;
+		height: $height;
+		width: 1px;
+		background-color: $color;
+		@include lg {
+			display: none;
+		}
+	}
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 28px;
-  font-size: 14px;
-  // font-family: firago;
-  cursor: pointer;
-  font-weight: 500;
-  color: $secondary;
-  background-color: $main;
-  span {
-    color: $secondary;
-    font-size: 14px;
-    // font-family: firago;
-    font-weight: 500;
-    margin-right: 12px;
-  }
-  path {
-    fill: $secondary;
-  }
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 28px;
+	font-size: 14px;
+	// font-family: firago;
+	cursor: pointer;
+	font-weight: 500;
+	color: $secondary;
+	background-color: $main;
+	span {
+		color: $secondary;
+		font-size: 14px;
+		// font-family: firago;
+		font-weight: 500;
+		margin-right: 12px;
+	}
+	path {
+		fill: $secondary;
+	}
 }
 
-.flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.swiper-pagination-bullet{
-  background: #F3DEA2;
-  --swiper-theme-color: #E9B520;
-  opacity: 0.9;
-  margin: 8px !important;
-  position: relative;
+.swiper-pagination-bullet {
+	background: #f3dea2;
+	--swiper-theme-color: #e9b520;
+	opacity: 0.9;
+	margin: 8px !important;
+	position: relative;
 }
-.swiper-pagination-bullet-active{
-  position: relative;
-  &:before{
-    content:url("../img/icons/pgn-circle.svg");
-    position: absolute;
-    top: -5.25px;
-    right: -2.9px;
-    width:16px;
-    height: 16px;
-    
-  }
-  background:#E9B520;
+.swiper-pagination-bullet-active {
+	position: relative;
+	&:before {
+		content: url("../img/icons/pgn-circle.svg");
+		position: absolute;
+		top: -5.25px;
+		right: -2.9px;
+		width: 16px;
+		height: 16px;
+	}
+	background: #e9b520;
 }
-.colored-word-yellow{
-  color: $main;
+.colored-word-yellow {
+	color: $main;
 }
-.colored-word-red{
-  color:$contact;
+.colored-word-red {
+	color: $contact;
 }
 .container {
-  padding: 0 240px;
+	padding: 0 240px;
 
-  @include xl {
-    padding: 0 180px;
-  }
-  @include rwd(1440){
-    padding:0 130px;
-  }
-  @include lg {
-    padding: 0 60px;
-  }
-  @include tab {
-    padding: 0 35px;
-  }
-  @include sm{
-    padding: 0 15px;
-  }
+	@include xl {
+		padding: 0 180px;
+	}
+	@include rwd(1440) {
+		padding: 0 130px;
+	}
+	@include lg {
+		padding: 0 60px;
+	}
+	@include tab {
+		padding: 0 35px;
+	}
+	@include sm {
+		padding: 0 15px;
+	}
 }
 .text-container {
-  padding: 0 485px;
+	padding: 0 485px;
 
-  @include xl {
-    padding: 0 380px;
-  }
-  @include rwd(1440){
-    padding:0 330px;
-  }
-  @include lg {
-    padding: 0 150px;
-  }
-  @include tab {
-    padding: 0 80px;
-  }
-  @include sm{
-    padding: 0 15px;
-  }
+	@include xl {
+		padding: 0 380px;
+	}
+	@include rwd(1440) {
+		padding: 0 330px;
+	}
+	@include lg {
+		padding: 0 150px;
+	}
+	@include tab {
+		padding: 0 80px;
+	}
+	@include sm {
+		padding: 0 15px;
+	}
 }
-.text-container-head{
-  padding-left: 362px;
-  @include xl{
-    padding-left: 280px;
-  }
-  @include rwd(1440){
-    padding-left: 230px;
-  }
-  @include lg {
-    padding-left: 80px;
-  }
-  @include tab {
-    padding: 0 80px;
-  }
-  @include sm{
-    padding: 0 15px;
-  }
+.text-container-head {
+	padding-left: 362px;
+	@include xl {
+		padding-left: 280px;
+	}
+	@include rwd(1440) {
+		padding-left: 230px;
+	}
+	@include lg {
+		padding-left: 80px;
+	}
+	@include tab {
+		padding: 0 80px;
+	}
+	@include sm {
+		padding: 0 15px;
+	}
 }

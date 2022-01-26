@@ -23,12 +23,17 @@
 html {
 	scroll-behavior: smooth;
 }
+body.mob-menu {
+	overflow-x: hidden;
+}
 
 @import "header";
+@import "aside";
 @import "main-slider";
 @import "main-services";
 @import "main-countries";
 @import "tours";
 @import "about-us";
 @import "concept";
+@import "contact";
 @import "footer";

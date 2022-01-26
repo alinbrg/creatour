@@ -1,0 +1,683 @@
+.main-contact {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	@include before-line-top-left(50vh, 0, 9vw, $main);
+	@include after-line-top-right(240px, 0, 7vw, $main);
+	@include sm {
+		height: fit-content;
+	}
+	@include lg {
+		&::before {
+			display: initial;
+			top: 194px;
+			width: 105px;
+			z-index: 1;
+			position: absolute;
+		}
+	}
+	&__bg {
+		z-index: -1;
+		position: relative;
+		background-image: url(../img/contact-bg.jpg),
+			url(../img/contact-overlay.png);
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-blend-mode: multiply;
+		@include sm {
+			height: 300px;
+		}
+	}
+	&__contact-info {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 75%;
+		@include rwd(1440) {
+			top: 53%;
+		}
+		@include sm {
+			position: static;
+			width: calc(100% - 30px);
+			margin: 0 auto;
+			transform: none;
+		}
+		.contact-info-head {
+			margin-bottom: 48px;
+			display: flex;
+			justify-content: flex-start;
+			@include rwd(1440) {
+				margin-bottom: 20px;
+			}
+			@include sm {
+				position: absolute;
+				top: 160px;
+				display: block;
+				margin: 0;
+			}
+			span {
+				color: $main;
+				font-size: clamp(24px, 1.6vw, 32px);
+				font-family: "caslon-semi-bold";
+				line-height: 1.2;
+				&.divider {
+					color: $white;
+					font-size: unset;
+					font-family: unset;
+					margin: 0 22px;
+					@include sm {
+						display: none;
+					}
+				}
+			}
+			div {
+				p {
+					color: $white;
+					font-family: "caslon-reg";
+					font-size: clamp(13px, 1.6vw, 16px);
+
+					line-height: 1.2;
+					@include lg {
+						width: unset;
+					}
+					@include sm {
+						font-family: "montserrat-medium";
+						margin-top: 16px;
+					}
+				}
+			}
+		}
+		.main-office {
+			padding-top: 37px;
+			padding-bottom: 50px;
+
+			background-color: rgba(118, 26, 20, 0.95);
+			justify-content: space-around;
+			@include rwd(1440) {
+				padding-top: 15px;
+				padding-bottom: 20px;
+			}
+			@include sm {
+				flex-direction: column;
+				margin-top: 31px;
+				margin-bottom: 25px;
+				background-color: rgba(118, 26, 20, 0.75);
+			}
+			// gap: 11%;
+			&__info {
+				width: 35%;
+				@include sm {
+					width: 90%;
+				}
+				h5 {
+					color: $white;
+					font-family: "caslon-semi-bold";
+					font-size: 24px;
+					@include sm {
+						margin-bottom: 24px;
+					}
+				}
+				.location-img-icon {
+					width: 42px;
+					height: 42px;
+					@include centering;
+					background-color: rgba(255, 255, 255, 0.1);
+					border-radius: 50%;
+					flex-shrink: 0;
+					margin-right: 15px;
+					img {
+						width: 20px;
+					}
+				}
+				.location {
+					span {
+						color: rgba(255, 255, 255, 0.3);
+						font-size: 12px;
+						font-family: "montserrat";
+						text-transform: uppercase;
+					}
+					p {
+						font-size: clamp(14px, 1.2vw, 18px);
+						margin-top: 9px;
+						color: $white;
+						font-family: "caslon-semi-bold";
+						line-height: 1;
+					}
+				}
+			}
+			&__img {
+				width: 41%;
+				@include sm {
+					margin-top: 125px;
+					width: 95%;
+				}
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&__scroll-down {
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		@include centering;
+		flex-direction: column;
+		transform: translateX(-50%);
+		span {
+			color: $white;
+			font-size: clamp(14px, 1.2vw, 18px);
+			text-transform: uppercase;
+			font-family: "caslon-semi-bold";
+		}
+		svg {
+			transform: rotate(100grad);
+			margin-top: 10px;
+		}
+		@include xl {
+			bottom: 10px;
+		}
+		@include sm {
+			display: none;
+		}
+	}
+	&__icons {
+		position: absolute;
+		right: 131px;
+		bottom: 21px;
+		@include rwd(1440) {
+			right: 90px;
+		}
+		@include sm {
+			display: none;
+		}
+		.mobile,
+		.messenger {
+			justify-content: center;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			img {
+				width: 24px;
+			}
+		}
+		.mobile {
+			background-color: $grey;
+			margin-bottom: 20px;
+			img {
+				width: 20px;
+			}
+		}
+		.messenger {
+			background-color: $contact;
+		}
+	}
+}
+
+.customer-care {
+	padding-top: 196px;
+	text-align: center;
+	@include rwd(1440) {
+		padding-top: 150px;
+	}
+	@include sm {
+		padding-top: 0;
+	}
+	.left,
+	.right {
+		max-width: 340px;
+		flex-shrink: 0;
+		img {
+			width: 100%;
+		}
+		@include rwd(1440) {
+			max-width: 250px;
+		}
+		@include lg {
+			max-width: 200px;
+		}
+		@include sm {
+			max-width: 90px;
+		}
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+
+	.upper-block {
+		margin-bottom: 110px;
+		margin-top: 30px;
+		@include sm {
+			margin-bottom: 60px;
+		}
+		h5 {
+			color: $contact;
+			font-family: "caslon-semi-bold";
+			font-size: clamp(20px, 1.6vw, 32px);
+			margin-bottom: 16px;
+			@include sm {
+				margin-bottom: 19px;
+			}
+		}
+		.divider {
+			color: $contact;
+		}
+		.phone,
+		.mail {
+			span {
+				display: block;
+				margin-bottom: 16px;
+				text-transform: uppercase;
+				color: rgba(118, 26, 20, 0.3);
+				font-size: 12px;
+				font-family: "montserrat-bold";
+				@include sm {
+					margin-bottom: 8px;
+				}
+			}
+			&__icon {
+				border-radius: 50%;
+				@include centering;
+				background-color: rgba(118, 26, 20, 0.1);
+				width: 42px;
+				height: 42px;
+				margin: 0 auto;
+				flex-shrink: 0;
+				margin-bottom: 16px;
+				img {
+					max-width: 20px;
+				}
+			}
+			a {
+				color: $contact;
+				font-size: clamp(14px, 1.6vw, 18px);
+				font-family: "caslon-semi-bold";
+			}
+		}
+		.phone {
+			margin-top: 38px;
+			@include sm {
+				margin-top: 16px;
+			}
+		}
+		.mail {
+			margin-top: 32px;
+			@include sm {
+				margin-top: 24px;
+			}
+		}
+	}
+	.contact-options {
+		p {
+			font-size: clamp(14px, 1.6vw, 24px);
+			font-family: "caslon-bold";
+			@include sm {
+				line-height: 1.2;
+			}
+		}
+		&__icons {
+			display: flex;
+			justify-content: center;
+			gap: 8px;
+			margin-top: 64px;
+			flex-shrink: 0;
+			@include rwd(1440) {
+			}
+			@include sm {
+				margin-top: 28px;
+			}
+			@include sm {
+				gap: 4px;
+			}
+			div {
+				@include centering;
+				width: 72px;
+				height: 72px;
+				border-radius: 50%;
+				background-color: rgba(118, 26, 20, 0.1);
+				@include sm {
+					width: 36px;
+					height: 36px;
+				}
+				a {
+					@include centering;
+					img {
+						max-width: 25px;
+						@include sm {
+							max-width: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.tour-countries {
+	margin-top: 154px;
+	position: relative;
+	&::before {
+		content: "";
+		width: 24%;
+		height: 70%;
+		background: url(../img/map.png);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		top: 60%;
+		transform: translateY(-50%);
+		position: absolute;
+		left: 240px;
+		// border: 1px solid $main;
+		// border-radius: 50%;
+		@include xl {
+			left: 180px;
+		}
+		@include rwd(1440) {
+			left: 130px;
+		}
+		@include lg {
+			left: 60px;
+		}
+		@include tab {
+			left: 35px;
+		}
+		@include sm {
+			left: 15px;
+			width: 50%;
+			top: 170px;
+			z-index: 10;
+		}
+	}
+	@include sm {
+		margin-top: 86px;
+	}
+	.scroll-to-bottom {
+		display: none;
+		@include sm {
+			display: block;
+			position: absolute;
+			z-index: 20;
+			bottom: 30px;
+			left: 46px;
+			width: 12px;
+			cursor: pointer;
+		}
+	}
+	h3 {
+		text-align: center;
+		font-size: clamp(24px, 1.6vw, 32px);
+		font-family: "caslon-semi-bold";
+		&::after {
+			content: "";
+			width: 32px;
+			height: 1px;
+			display: block;
+			background-color: $contact;
+			margin: 16px auto;
+		}
+	}
+	.swiper {
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-wrapper {
+		width: 227px;
+		float: right;
+		max-height: 500px;
+		margin-right: 100px;
+		@include rwd(1440) {
+			margin-right: 50px;
+		}
+		@include sm {
+			width: 100%;
+			float: none;
+			margin-top: -50px;
+			max-height: 250px;
+			z-index: -2;
+			margin-right: 0;
+		}
+	}
+	.tour-countries__pgn {
+		right: initial;
+		left: 150px !important;
+		width: 50% !important;
+		@include rwd(1440) {
+			left: 100px !important;
+		}
+		@include sm {
+			left: 0px !important;
+			margin-top: 100px;
+			position: static;
+			width: 100% !important;
+			background-color: $white;
+		}
+		span {
+			display: block !important;
+			text-transform: capitalize;
+			text-align: right;
+		}
+	}
+	.swiper-pagination-bullet {
+		border-radius: 0;
+		width: auto;
+		font-family: "caslon-bold";
+		font-weight: 700;
+		height: fit-content;
+		font-size: 64px;
+		font-size: clamp(35px, 1.2vw, 64px);
+		color: rgba(0, 0, 0, 0.2);
+		opacity: 1;
+		padding: 0;
+		background: transparent;
+		left: -20% !important;
+		@include sm {
+			font-size: 14px;
+			margin: 5px !important;
+			left: -20% !important;
+		}
+	}
+	.swiper-pagination-bullet-active {
+		position: relative;
+		&:before {
+			display: none;
+		}
+		left: 0 !important;
+		color: $secondary;
+		font-size: clamp(75px, 1.2vw, 144px);
+		@include lg {
+			font-size: 32px;
+			left: -10% !important;
+		}
+		@include sm {
+			left: 0% !important;
+		}
+	}
+	.swiper-pagination-bullet-active-main,
+	.swiper-pagination-bullet-active-next {
+		color: rgba(0, 0, 0, 0.5);
+		@include lg {
+			// font-size: clamp(35px, 1.2vw, 64px);
+			color: rgba(0, 0, 0, 0.2);
+		}
+	}
+	[aria-current="true"] {
+		color: $secondary;
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include sm {
+			justify-content: start;
+		}
+		h5 {
+			font-size: clamp(24px, 1.6vw, 32px);
+			font-family: "caslon-semi-bold";
+			margin-bottom: 10px;
+			text-transform: capitalize;
+			@include sm {
+				margin-bottom: 0;
+			}
+		}
+		.flex {
+			justify-content: initial;
+			margin-top: 30px;
+			@include sm {
+				margin-top: 20px;
+				margin-left: 90px;
+			}
+			.img-icon {
+				width: 42px;
+				height: 42px;
+				border-radius: 50%;
+				@include centering;
+				background-color: rgba(118, 26, 20, 0.1);
+				margin-right: 15px;
+				img {
+					max-width: 25px;
+				}
+			}
+			.info {
+				span,
+				a {
+					display: block;
+					line-height: 1.2;
+				}
+				span {
+					margin-bottom: 9px;
+					color: #cbcbcb;
+					font-size: 12px;
+					text-transform: uppercase;
+					font-family: "montserrat-bold";
+				}
+				a {
+					font-size: 18px;
+					font-family: "caslon-semi-bold";
+				}
+			}
+		}
+	}
+}
+
+.contact-form {
+	padding-top: 223px;
+	padding-bottom: 103px;
+	align-items: flex-start;
+	gap: 2%;
+	@include lg {
+		padding-top: 120px;
+	}
+	@include sm {
+		flex-direction: column;
+		padding-bottom: 45px;
+		padding-top: 86px;
+	}
+	&__form-block {
+		max-width: 585px;
+		h3 {
+			font-size: clamp(24px, 1.6vw, 32px);
+			font-family: "caslon-semi-bold";
+			position: relative;
+			padding-bottom: 16px;
+			@include before-line-bottom-left(0, 0, 158px, $contact);
+			@include lg {
+				&::before {
+					display: initial;
+				}
+			}
+		}
+		form {
+			margin-top: 32px;
+			@include sm {
+				margin-top: 58px;
+			}
+			.form-row {
+				margin-bottom: 30px;
+				// display: flex;
+				// align-items: flex-end;
+				&:last-of-type {
+					display: block;
+				}
+				@include sm {
+					margin-bottom: 16px;
+				}
+				input {
+					border: none;
+					background: transparent;
+					outline: none;
+					border-bottom: 1px solid $contact-form;
+					margin-left: 10px;
+					font-family: "caslon-bold";
+					font-size: clamp(13px, 1.6vw, 18px);
+					color: $contact;
+					width: 50%;
+					&#user-feedback {
+						width: 100%;
+						display: block;
+						margin-left: 0;
+						margin-top: 35px;
+						@include sm {
+							margin-top: 20px;
+						}
+					}
+				}
+				label,
+				span {
+					color: $secondary;
+					font-size: clamp(16px, 1.6vw, 24px);
+					font-family: "caslon-semi-bold";
+				}
+				label {
+					@include sm {
+						&[for="user-tel"] {
+							width: 40%;
+							display: inline-block;
+						}
+					}
+				}
+			}
+			button {
+				background-color: transparent;
+				border: 1px solid $contact;
+				color: $contact;
+				padding: 16px 32px;
+				margin-top: 30px;
+				font-size: 14px;
+				text-transform: uppercase;
+				font-family: "montserrat-semibold";
+				@include sm {
+					margin: 0 auto;
+					margin-top: 40px;
+					display: block;
+				}
+			}
+		}
+	}
+	&__img {
+		@include centering;
+		background-color: $milkWhite;
+		flex-shrink: 0;
+		// padding: 147px 181px;
+		width: 50%;
+		img {
+			width: 50%;
+			margin: 147px 0;
+			@include sm {
+				margin: 71px 0;
+			}
+		}
+		@include sm {
+			max-width: 100%;
+			width: 100%;
+			margin-top: 45px;
+		}
+	}
+}

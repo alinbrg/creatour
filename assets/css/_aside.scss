@@ -1,0 +1,29 @@
+aside {
+	left: 0;
+	top: 0;
+	padding-top: 185px;
+	width: 180px;
+	display: none;
+	position: absolute;
+	z-index: 2;
+	transform: translateX(-100%);
+	ul {
+		padding-left: 15px;
+		li {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+		a {
+			font-size: 18px;
+			font-family: "caslon-reg";
+			color: $tours-black;
+		}
+	}
+	&.shown {
+		display: block;
+		transform: translateX(0);
+	}
+}
+.mob-menu-shown {
+	transform: translateX(195px);
+}
