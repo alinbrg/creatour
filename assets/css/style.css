@@ -2472,11 +2472,6 @@ aside.shown {
   transform: rotate(100grad);
   margin-top: 10px;
 }
-@media screen and (max-width: 1600px) {
-  .main-contact__scroll-down {
-    bottom: 10px;
-  }
-}
 @media screen and (max-width: 700px) {
   .main-contact__scroll-down {
     display: none;
@@ -2675,6 +2670,7 @@ aside.shown {
   align-items: center;
   width: 72px;
   height: 72px;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: rgba(118, 26, 20, 0.1);
 }
@@ -2711,12 +2707,13 @@ aside.shown {
   background-position: center;
   background-repeat: no-repeat;
   top: 60%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1.5);
   position: absolute;
-  left: 240px;
+  left: 265px;
 }
 @media screen and (max-width: 1600px) {
   .tour-countries::before {
+    transform: translateY(-50%) scale(1.4);
     left: 180px;
   }
 }
@@ -2737,6 +2734,7 @@ aside.shown {
 }
 @media screen and (max-width: 700px) {
   .tour-countries::before {
+    transform: translateY(-50%) scale(1.1);
     left: 15px;
     width: 50%;
     top: 170px;
@@ -2746,6 +2744,7 @@ aside.shown {
 @media screen and (max-width: 700px) {
   .tour-countries {
     margin-top: 86px;
+    padding-bottom: 20px;
   }
 }
 .tour-countries .scroll-to-bottom {
@@ -2756,7 +2755,7 @@ aside.shown {
     display: block;
     position: absolute;
     z-index: 20;
-    bottom: 30px;
+    bottom: 0px;
     left: 46px;
     width: 12px;
     cursor: pointer;
@@ -2840,7 +2839,7 @@ aside.shown {
 }
 @media screen and (max-width: 700px) {
   .tour-countries .swiper-pagination-bullet {
-    font-size: 14px;
+    font-size: clamp(14px, 1.2vw, 46px);
     margin: 5px !important;
     left: -20% !important;
   }
@@ -3026,11 +3025,23 @@ aside.shown {
     margin-top: 20px;
   }
 }
+.contact-form__form-block form .form-row input#user-tel {
+  width: unset;
+}
+@media screen and (max-width: 700px) {
+  .contact-form__form-block form .form-row input#user-tel {
+    width: 50%;
+  }
+}
 .contact-form__form-block form .form-row label,
 .contact-form__form-block form .form-row span {
   color: #111111;
   font-size: clamp(16px, 1.6vw, 24px);
   font-family: "caslon-semi-bold";
+}
+.contact-form__form-block form .form-row label[for=user-tel] {
+  width: 50%;
+  display: inline-block;
 }
 @media screen and (max-width: 700px) {
   .contact-form__form-block form .form-row label[for=user-tel] {
@@ -3078,6 +3089,887 @@ aside.shown {
     width: 100%;
     margin-top: 45px;
   }
+}
+
+.tours-inside-main {
+  width: 100%;
+  height: 640px;
+  text-align: center;
+  position: relative;
+}
+.tours-inside-main__bg {
+  background-image: url(../img/tour-inside-bg.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.tours-inside-main__content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tours-inside-main__content h1 {
+  color: #ffffff;
+  font-size: clamp(60px, 1.6vw, 80px);
+  font-family: "caslon-reg";
+}
+.tours-inside-main__content h5 {
+  color: #e9b520;
+  font-family: "caslon-semi-bold";
+  font-size: 20px;
+}
+.tours-inside-main__options {
+  position: absolute;
+  bottom: 0;
+  height: 85px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .tours-inside-main__options {
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+  }
+}
+.tours-inside-main__options .left-block ul {
+  gap: 44px;
+}
+.tours-inside-main__options .left-block ul li {
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .tours-inside-main__options .left-block ul {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tours-inside-main__options .left-block ul {
+    gap: 15px;
+  }
+}
+.tours-inside-main__options .right-block ul {
+  gap: 21px;
+}
+@media screen and (max-width: 1024px) {
+  .tours-inside-main__options .right-block ul {
+    gap: 15px;
+  }
+}
+.tours-inside-main__options ul {
+  display: flex;
+}
+.tours-inside-main__options ul li a {
+  color: #ffffff;
+  font-family: "caslon-bold";
+  font-size: clamp(14px, 1.6vw, 16px);
+}
+.tours-inside-main__options ul li.active a {
+  color: #e9b520;
+  border-bottom: 1px solid #e9b520;
+}
+
+.tour-information {
+  padding-top: 60px;
+  position: relative;
+  display: flex;
+}
+.tour-information::before {
+  content: "";
+  background: url(../img/g12.png);
+  width: 100%;
+  height: 300px;
+  background-size: auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.15;
+}
+@media screen and (max-width: 1024px) {
+  .tour-information {
+    flex-direction: column;
+  }
+}
+.tour-information__plan {
+  max-width: 951px;
+  width: calc(74% - 25px);
+  margin-right: 25px;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan {
+    width: 100%;
+  }
+}
+.tour-information__plan .day-schedule {
+  background-color: #ffffff;
+  border: 1px solid #761a14;
+}
+.tour-information__plan .day-schedule__head {
+  height: 94px;
+  display: flex;
+  align-items: center;
+}
+.tour-information__plan .day-schedule__head .day-number {
+  background-color: #e9b520;
+  width: 65px;
+  height: 42px;
+  margin-left: 25px;
+  margin-right: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tour-information__plan .day-schedule__head .day-number span {
+  font-size: 14px;
+  font-family: "montserrat-bold";
+}
+.tour-information__plan .day-schedule__head .day-destination p {
+  font-size: 14px;
+  font-family: "montserrat-bold";
+  line-height: 1;
+}
+.tour-information__plan .day-schedule__head .day-destination h5 {
+  color: #761a14;
+  font-size: 18px;
+  font-family: "caslon-semi-bold";
+  line-height: 1;
+  margin-top: 8px;
+}
+.tour-information__plan .day-schedule__head .show-more-btn {
+  height: 100%;
+  width: 97px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #761a14;
+}
+.tour-information__plan .day-schedule__head .show-more-btn div {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+.tour-information__plan .day-schedule__head .show-more-btn div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #761a14;
+}
+.tour-information__plan .day-schedule__head .show-more-btn div span:first-child {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.tour-information__plan .day-schedule__head .show-more-btn div.active {
+  background-color: #ffffff;
+}
+.tour-information__plan .day-schedule__head .show-more-btn div.active span:first-child {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.tour-information__plan .day-schedule__head .show-more-btn div.active span:last-child {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.tour-information__plan .day-schedule__details {
+  padding: 25px;
+}
+.tour-information__plan .day-schedule__details.active {
+  display: block;
+}
+.tour-information__plan .day-schedule__details .details-tabs ul {
+  display: flex;
+  gap: 25px;
+}
+@media screen and (max-width: 1280px) {
+  .tour-information__plan .day-schedule__details .details-tabs ul {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tour-information__plan .day-schedule__details .details-tabs ul {
+    gap: 10px;
+  }
+}
+.tour-information__plan .day-schedule__details .details-tabs ul li {
+  font-size: 16px;
+  font-family: "montserrat-regular";
+}
+.tour-information__plan .day-schedule__details .details-tabs ul li.active {
+  font-family: "montserrat-bold";
+  position: relative;
+}
+.tour-information__plan .day-schedule__details .details-tabs ul li.active::after {
+  content: "";
+  position: absolute;
+  width: 138px;
+  height: 1px;
+  background-color: #e9b520;
+  bottom: -8px;
+  left: 0;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan {
+  margin-top: 25px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule {
+  padding: 23px 25px;
+  border: 1px solid #e9b520;
+  margin-bottom: 15px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head {
+  display: flex;
+  align-items: center;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head img {
+  margin-right: 10px;
+  width: 16px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head h3 {
+  color: #e9b520;
+  font-size: 18px;
+  font-family: "caslon-bold";
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head div {
+  width: 16px;
+  height: 16px;
+  background-color: #f7ecce;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head div.active img {
+  transform: rotate(180deg);
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head div img {
+  margin: 0;
+  width: 9px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list {
+  margin-top: 20px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop {
+  border: 1px solid #761a14;
+  padding: 16px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head {
+  display: flex;
+  align-items: center;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head img {
+  margin-right: 10px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head h4 {
+  color: #761a14;
+  font-size: 16px;
+  font-family: "montserrat-bold";
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #761a14;
+  flex-shrink: 0;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  border-radius: 4px;
+  height: 2px;
+  background-color: #761a14;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div span:first-child {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div.active span:first-child {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div.active span:last-child {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details {
+  font-family: "montserrat-medium";
+  margin-top: 20px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details .title {
+  font-size: 18px;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li {
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-family: inherit;
+  position: relative;
+  padding: 0 20px 0 15px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li::before {
+  content: "";
+  position: absolute;
+  color: #e9b520;
+  width: 6px;
+  height: 6px;
+  background-color: #e9b520;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #761a14;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li.active::after {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background-color: #761a14;
+  border-radius: 4px;
+}
+.tour-information__visuals {
+  max-width: 463px;
+  width: 26%;
+  height: 587px;
+  margin-top: 120px;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__visuals {
+    width: 100%;
+  }
+}
+.tour-information__visuals .swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tour-information__visuals .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.tour-information__visuals .mySwiper2 {
+  width: 100%;
+}
+.tour-information__visuals .mySwiper2 .swiper-slide {
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.tour-information__visuals .mySwiper2 .swiper-slide img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.tour-information__visuals .mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  overflow: initial;
+}
+.tour-information__visuals .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0 !important;
+  margin-right: 0 !important;
+  position: absolute;
+  bottom: 0;
+}
+.tour-information__visuals .mySwiper .swiper-slide:not(.swiper-slide-thumb-active) .img {
+  border: 0.5px solid #e9b520;
+}
+.tour-information__visuals .mySwiper .swiper-slide .img {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.tour-information__visuals .mySwiper .swiper-slide .img img {
+  width: 100%;
+}
+.tour-information__visuals .mySwiper .swiper-slide .img svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+}
+.tour-information__visuals .mySwiper .swiper-slide .text {
+  text-align: center;
+  margin-top: 13px;
+}
+.tour-information__visuals .mySwiper .swiper-slide .text span {
+  font-size: 14px;
+  color: #111111;
+  font-family: "caslon-semi-bold";
+}
+.tour-information__visuals .mySwiper .swiper-slide:first-child {
+  position: absolute;
+  bottom: 40px;
+  left: -10px;
+}
+.tour-information__visuals .mySwiper .swiper-slide:nth-child(2) {
+  left: 25%;
+}
+.tour-information__visuals .mySwiper .swiper-slide:nth-child(3) {
+  right: 25%;
+}
+.tour-information__visuals .mySwiper .swiper-slide:last-child {
+  position: absolute;
+  bottom: 40px;
+  right: -10px;
+}
+.tour-information__visuals .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.tour-information__visuals .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.calendar-section {
+  position: relative;
+}
+.calendar-section__bg {
+  background: url(../img/amphitheatre\ top.jpg);
+  width: 100%;
+  max-height: 823px;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 700px) {
+  .calendar-section {
+    padding: 0;
+  }
+}
+.calendar-section .calendar {
+  height: max-content;
+  width: max-content;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.calendar-section .calendar .calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.calendar-section .calendar .calendar-header span {
+  color: white;
+  font-size: clamp(24px, 1.6vw, 40px);
+  font-family: "montserrat-extra";
+}
+.calendar-section .calendar .calendar-body .calendar-week-day {
+  max-height: 90px;
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calendar-section .calendar .calendar-body .calendar-week-day div {
+  display: grid;
+  place-items: center;
+  color: var(--bg-second);
+  color: #ffffff;
+  font-family: "montserrat-extra";
+  font-size: clamp(24px, 1.6vw, 40px);
+}
+.calendar-section .calendar .calendar-body .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.calendar-section .calendar .calendar-body .calendar-days div {
+  max-width: 90px;
+  max-height: 90px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  position: relative;
+  color: #ffffff;
+  font-size: clamp(24px, 1.6vw, 40px);
+  font-family: "montserrat-extra";
+}
+.calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n), .calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n+1) {
+  color: #a69d74;
+}
+.calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n) span, .calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n+1) span {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .calendar-section .calendar .calendar-body .calendar-days div {
+    width: 40px;
+    height: 40px;
+  }
+}
+.calendar-section .calendar .calendar-body .calendar-days div.filled {
+  color: #ffb9a6;
+}
+.calendar-section .calendar .calendar-body .calendar-days div.weekend {
+  color: #a69d74;
+}
+.calendar-section .calendar .calendar-body .calendar-days div span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: inherit;
+  font-family: "montserrat-bold";
+  font-size: clamp(8px, 1.6vw, 10px);
+  text-transform: uppercase;
+}
+
+.reg-auth-section {
+  height: unset;
+}
+.reg-auth-section .form-block {
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 200;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(0);
+  width: 707px;
+  padding: 70px 0;
+}
+.reg-auth-section .form-block.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+@media (max-width: 1440px) {
+  .reg-auth-section .form-block.registration.active {
+    position: absolute;
+    top: 80px;
+    transform: translateX(-50%) scale(1);
+  }
+}
+@media screen and (max-width: 1600px) {
+  .reg-auth-section .form-block {
+    padding: 50px 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block {
+    padding: 40px 0;
+    width: 345px;
+  }
+}
+.reg-auth-section .form-block form,
+.reg-auth-section .form-block .title,
+.reg-auth-section .form-block .have-account {
+  width: 463px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block form,
+.reg-auth-section .form-block .title,
+.reg-auth-section .form-block .have-account {
+    width: 265px;
+  }
+}
+.reg-auth-section .form-block .reg-close {
+  position: absolute;
+  right: 65px;
+  top: 65px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1600px) {
+  .reg-auth-section .form-block .reg-close {
+    right: 45px;
+    top: 45px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block .reg-close {
+    right: 34px;
+    top: 34px;
+  }
+}
+.reg-auth-section .form-block .title h3 {
+  font-size: clamp(24px, 1.2vw, 32px);
+  color: #111111;
+  font-family: "caslon-semi-bold";
+}
+.reg-auth-section .form-block .have-account {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .reg-auth-section .form-block .have-account {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+}
+.reg-auth-section .form-block .have-account p {
+  font-family: "montserrat-medium";
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+.reg-auth-section .form-block .have-account p a {
+  color: #761a14;
+  font-size: inherit;
+}
+.reg-auth-section .form-block form .form-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 25px;
+  height: 56px;
+}
+@media screen and (max-width: 1600px) {
+  .reg-auth-section .form-block form .form-row {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block form .form-row {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    height: unset;
+  }
+}
+.reg-auth-section .form-block form .form-row div {
+  width: 219px;
+  display: flex;
+  border: 1px solid #cbcbcb;
+  height: 100%;
+  padding: 0 20px;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block form .form-row div {
+    width: 100%;
+    height: 56px;
+  }
+}
+.reg-auth-section .form-block form .form-row div img {
+  width: 24px;
+  margin-right: 20px;
+}
+.reg-auth-section .form-block form .form-row div img.error-icon {
+  position: absolute;
+  cursor: pointer;
+  right: 44px;
+  margin: 0;
+  top: 16px;
+}
+.reg-auth-section .form-block form .form-row div .error-icon-block {
+  width: auto;
+}
+.reg-auth-section .form-block form .form-row div .error-icon-block span {
+  display: none;
+  position: absolute;
+  background-color: #3f3f3f;
+  padding: 8px;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: "montserrat-medium";
+  max-width: 336px;
+  width: 265px;
+}
+.reg-auth-section .form-block form .form-row div .error-icon-block span.activeError {
+  display: block;
+  top: -80px;
+  right: 0;
+}
+.reg-auth-section .form-block form .form-row div .error-icon-block span.activeError::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #3f3f3f;
+  transform: rotate(45deg);
+  position: inherit;
+  bottom: -7px;
+  right: 50px;
+}
+.reg-auth-section .form-block form .form-row div input {
+  overflow: hidden;
+}
+.reg-auth-section .form-block form .form-row div input::placeholder {
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
+}
+.reg-auth-section .form-block form .form-row div input#personal-ID::-webkit-inner-spin-button, .reg-auth-section .form-block form .form-row div input#personal-ID::-webkit-outer-spin-button, .reg-auth-section .form-block form .form-row div input#user-age::-webkit-inner-spin-button, .reg-auth-section .form-block form .form-row div input#user-age::-webkit-outer-spin-button {
+  opacity: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+.reg-auth-section .form-block form .form-row div .arrow-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 10px;
+  padding: 0;
+  top: 16px;
+  border: none;
+  gap: 5px;
+}
+.reg-auth-section .form-block form .form-row div .arrow-icons img {
+  margin: 0;
+  width: 8.5px;
+}
+.reg-auth-section .form-block form .form-row div select {
+  width: 100%;
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  background: transparent;
+  background-image: url("../img/icons/arr-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+.reg-auth-section .form-block form .form-row.error-message-block {
+  height: 25px;
+  margin: 16px 0 40px;
+}
+.reg-auth-section .form-block form .form-row.error-message-block .error-message {
+  font-family: "caslon-semi-bold";
+  color: #761a14;
+  font-size: 12px;
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block form .form-row.error-message-block {
+    margin: 10px 0 30px;
+  }
+}
+.reg-auth-section .form-block form .form-row.captcha-block {
+  height: 80px;
+  margin-bottom: 0;
+}
+.reg-auth-section .form-block form .form-row.captcha-block .captcha {
+  background-color: #e2e2e2;
+  width: 219px;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  color: #6e6e6e;
+  font-family: "montserrat-medium";
+  height: 100%;
+}
+.reg-auth-section .form-block form button {
+  width: 100%;
+  background-color: #761a14;
+  height: 56px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 40px;
+  font-size: 14px;
+  font-family: "montserrat-semibold";
+  cursor: pointer;
+}
+.reg-auth-section .form-block.authorization form .form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #cbcbcb;
+  height: 100%;
+  padding: 0 20px;
+  height: 56px;
+  position: relative;
+}
+.reg-auth-section .form-block.authorization form .form-row label[for=auth-email] {
+  position: absolute;
+  top: 4px;
+  left: 70px;
+  color: #6e6e6e;
+  font-family: "montserrat-medium";
+  font-size: 12px;
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block.authorization form .form-row label[for=auth-email] {
+    left: 55px;
+  }
+}
+.reg-auth-section .form-block.authorization form .form-row input::placeholder {
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
+}
+.reg-auth-section .form-block.authorization form .form-row .forgot-pass {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #6e6e6e;
+  font-family: "montserrat-medium";
+}
+.reg-auth-section .form-block.authorization form .form-row .forgot-pass span {
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+@media screen and (max-width: 700px) {
+  .reg-auth-section .form-block.authorization form .form-row .forgot-pass span {
+    display: none;
+  }
+}
+.reg-auth-section .form-block.authorization form .form-row img {
+  width: 24px;
+}
+.reg-auth-section .form-block.authorization form button {
+  margin-top: 10px;
+}
+.reg-auth-section #overlay {
+  background-color: rgba(17, 17, 17, 0.7);
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+.reg-auth-section #overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 125;
 }
 
 footer .footer-div {

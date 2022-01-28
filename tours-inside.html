@@ -4,10 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="assets/css/nice-select.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
-
-		<title>Tours</title>
+		<!-- <link rel="stylesheet" href="assets/css/app.css" /> -->
+		<title>tour-inside</title>
 	</head>
 	<body>
 		<header class="container flex tours-header">
@@ -75,6 +78,7 @@
 				<span>Login</span>
 			</div>
 		</header>
+
 		<aside class="mob-menu">
 			<ul class="nav-list">
 				<li class="nav-li-item">
@@ -97,443 +101,341 @@
 				</li>
 			</ul>
 		</aside>
-		<section class="tours tours__main">
-			<img
-				class="tours__main__bg__web"
-				src="assets/img/tours-main.jpg"
-				alt="creatour"
-			/>
-			<img class="tours__main__bg__mob" src="assets/img/tours-mob.jpg" alt="" />
-			<div class="tours__main__content__web">
-				<p>
-					Each country has it's unique place in the world every cselectture has
-					it's unique story to tell and inspires desire to know it.
-				</p>
-				<p>
-					Our hope is that this tour becomes increasingly inclusive of countries
-					from all over the world as we go forward.
-				</p>
+
+		<section class="tours-inside-main">
+			<div class="tours-inside-main__bg"></div>
+			<div class="tours-inside-main__content">
+				<h1>GEORGIA</h1>
+				<h5>
+					At The Far edge of Europe and Crosspoint of The East and The West
+				</h5>
 			</div>
-			<div class="tours__main__content__mob">
-				<p class="journey-of-europe__slogan container">
-					Each journey has to start somewhere. Creatour's path to the
-					exploration to he world starts with the project of
-					<span class="colored-word-yellow"> Journey of Europe</span>
-				</p>
-				<div class="journey-of-europe__bg">
-					<img src="assets/img/tours-bg.jpg" alt="" />
-					<h2 class="journey-of-europe__title">Journey of Europe</h2>
+			<div class="tours-inside-main__options flex container">
+				<div class="left-block">
+					<ul>
+						<li class="active"><a href="#">Itinerary</a></li>
+						<li><a href="#">Tour Profile</a></li>
+						<li><a href="#">Tour Objectives</a></li>
+					</ul>
 				</div>
-			</div>
-			<div class="tours__filter container">
-				<div class="tours__status filter">
-					<select id="status" class="small open">
-						<option value="0" selected>All tours</option>
-						<option value="1">Active tours</option>
-						<option value="2">Planned tours</option>
-					</select>
-				</div>
-				<div class="tours__countries filter">
-					<select id="destination" class="small open">
-						<option value="0" selected>All Countries</option>
-						<option value="1">England</option>
-						<option value="2">France</option>
-						<option value="3">Georgia</option>
-						<option value="4">Germany</option>
-						<option value="5">Greece</option>
-						<option value="6">Israel</option>
-						<option value="7">Italy</option>
-						<option value="8">Russia</option>
-						<option value="9">Spain</option>
-						<option value="10">Turkey</option>
-					</select>
+				<div class="right-block">
+					<ul>
+						<li class="active"><a href="#">Map</a></li>
+						<li><a href="#">Video Tour</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Tour Guides</a></li>
+					</ul>
 				</div>
 			</div>
 		</section>
 
-		<section class="journey-of-europe container">
-			<p class="journey-of-europe__slogan">
-				Each journey has to start somewhere. Creatour's path to the exploration
-				to he world starts with the project of
-				<span class="colored-word-yellow"> Journey of Europe</span>
-			</p>
-			<div class="journey-of-europe__bg">
-				<img src="assets/img/tours-bg.jpg" alt="" />
-				<h2 class="journey-of-europe__title">Journey of Europe</h2>
-				<div class="journey-of-europe__text flex">
-					<p>
-						Term Europe is indeed symbolic and objective is to go well into and
-						beyond the "dubious concept of Western Civilization" and ambiguous
-						question of where really Europe starts and ends.
-					</p>
-					<p>
-						Currently planned tours are only a part of the vast concept of
-						Europe, which is an extensive world with it's complexities and
-						diversities.
-					</p>
+		<section class="tour-information container">
+			<div class="tour-information__plan">
+				<div class="day-schedule">
+					<div class="day-schedule__head">
+						<div class="day-number">
+							<span>Day 1</span>
+						</div>
+						<div class="day-destination">
+							<p>
+								Tskaltubo - Gathering and Welcome Day at the Legends SPA Resort
+							</p>
+							<h5>
+								Grand Sanatorium of Soviet Era Elites with “Waters of
+								Immortality”
+							</h5>
+						</div>
+						<div class="show-more-btn">
+							<div>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div class="day-schedule__details">
+						<div class="details-tabs">
+							<ul>
+								<li class="active">Detailed Program Outline</li>
+								<li>Main Themes of Exploration</li>
+								<li>Tour leader - Background and Introduction</li>
+							</ul>
+						</div>
+						<div class="whole-day-plan">
+							<div class="daily-schedule">
+								<div class="daily-schedule__head">
+									<img src="assets/img/icons/close-btn.svg" alt="" />
+									<h3>Journey From Tskaltubo Hotel to Salkhino</h3>
+									<div class="">
+										<img src="assets/img/icons/arr-yellow.svg" alt="" />
+									</div>
+								</div>
+								<div class="stop-list">
+									<div class="stop">
+										<div class="stop__head">
+											<img src="assets/img/icons/close-btn.svg" alt="" />
+											<h4>First Stop - Salkhino Palace</h4>
+											<div class="">
+												<span></span>
+												<span></span>
+											</div>
+										</div>
+										<div class="stop__details">
+											<h3 class="title">
+												Very special place for presenting treasures of
+												Samegrelo, treasure itself - Salkhino complex
+											</h3>
+											<ul>
+												<li>
+													Amazing insight Story of Georgian Cuisine Presented in
+													the Main Hall of the Kvevri Palace
+												</li>
+												<li>
+													Passionate Master-Class of Prominent Georgian Dishes
+													done by two beloved local celebrities
+												</li>
+												<li>Memorable Lunch at the Empire-Styled Restaurant</li>
+												<li>
+													Salkhino Wine Cellar - tasting Ojaleshi from a
+													centuries-old pitcher.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tour-information__visuals">
+				<div
+					style="
+						--swiper-navigation-color: #fff;
+						--swiper-pagination-color: #fff;
+					"
+					class="swiper mySwiper2"
+				>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="assets/img/tour-map.png" />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/Group 242.jpg" />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/Group 242.jpg" />
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/tour-map.png" />
+						</div>
+					</div>
+				</div>
+
+				<div thumbsSlider="" class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" id="swiper-map">
+							<div class="img">
+								<img src="assets/img/tour-map-sm.png" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="23.266"
+									height="21.333"
+									viewBox="0 0 23.266 21.333"
+								>
+									<g id="map" transform="translate(1 1)">
+										<path
+											id="Path_4094"
+											data-name="Path 4094"
+											d="M1,5.867V21.333l6.767-3.867L15.5,21.333l6.767-3.867V2L15.5,5.867,7.767,2Z"
+											transform="translate(-1 -2)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+										<path
+											id="Path_4095"
+											data-name="Path 4095"
+											d="M8,2V17.466"
+											transform="translate(-1.233 -2)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+										<path
+											id="Path_4096"
+											data-name="Path 4096"
+											d="M16,6V21.466"
+											transform="translate(-1.5 -2.133)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+									</g>
+								</svg>
+							</div>
+							<div class="text">
+								<span>Map</span>
+							</div>
+						</div>
+						<div class="swiper-slide" id="swiper-video">
+							<div class="img">
+								<img src="assets/img/video.png" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="22.244"
+									height="15"
+									viewBox="0 0 22.244 15"
+								>
+									<g id="video" transform="translate(0.801 0.68)">
+										<path
+											id="Path_4100"
+											data-name="Path 4100"
+											d="M22.242,7,16,11.459l6.242,4.459Z"
+											transform="translate(-1.799 -4.703)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+										<rect
+											id="Rectangle_422"
+											data-name="Rectangle 422"
+											width="14"
+											height="13"
+											rx="2"
+											transform="translate(0.199 0.32)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+									</g>
+								</svg>
+							</div>
+							<div class="text">
+								<span>Video Tour</span>
+							</div>
+						</div>
+						<div class="swiper-slide" id="swiper-gallery">
+							<div class="img">
+								<img src="assets/img/gallery.png" />
+								<svg
+									id="photo_camera-24px"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+								>
+									<path
+										id="Path_4098"
+										data-name="Path 4098"
+										d="M0,0H24V24H0Z"
+										fill="none"
+									/>
+									<circle
+										id="Ellipse_51"
+										data-name="Ellipse 51"
+										cx="3.2"
+										cy="3.2"
+										r="3.2"
+										transform="translate(8.8 8.8)"
+										fill="#fff"
+									/>
+									<path
+										id="Path_4099"
+										data-name="Path 4099"
+										d="M9,2,7.17,4H4A2.006,2.006,0,0,0,2,6V18a2.006,2.006,0,0,0,2,2H20a2.006,2.006,0,0,0,2-2V6a2.006,2.006,0,0,0-2-2H16.83L15,2Zm3,15a5,5,0,1,1,5-5A5,5,0,0,1,12,17Z"
+										fill="#fff"
+									/>
+								</svg>
+							</div>
+							<div class="text">
+								<span>Gallery</span>
+							</div>
+						</div>
+						<div class="swiper-slide" id="swiper-guide">
+							<div class="img">
+								<img src="assets/img/guide.png" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="23.266"
+									height="21.333"
+									viewBox="0 0 23.266 21.333"
+								>
+									<g id="map" transform="translate(1 1)">
+										<path
+											id="Path_4094"
+											data-name="Path 4094"
+											d="M1,5.867V21.333l6.767-3.867L15.5,21.333l6.767-3.867V2L15.5,5.867,7.767,2Z"
+											transform="translate(-1 -2)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+										<path
+											id="Path_4095"
+											data-name="Path 4095"
+											d="M8,2V17.466"
+											transform="translate(-1.233 -2)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+										<path
+											id="Path_4096"
+											data-name="Path 4096"
+											d="M16,6V21.466"
+											transform="translate(-1.5 -2.133)"
+											fill="none"
+											stroke="#fff"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+										/>
+									</g>
+								</svg>
+							</div>
+							<div class="text">
+								<span>Tour Guide</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="tours-results">
-			<div class="active-tours container">
-				<span class="colored-word-yellow">Journey of Europe</span>
-				<h5>Active Tours</h5>
-				<div class="tours-results__list">
-					<div class="tours-results__item item">
-						<img src="assets/img/Group 242.jpg" alt="" />
-						<div class="item__top flex">
-							<div class="item__title">
-								<h5 class="item__name">France Revolution Tour</h5>
-								<div>
-									<span clacc="item__price">699 .00$</span>
-									<span class="dot">·</span>
-									<span class="item__country">France</span>
-								</div>
-							</div>
-							<div class="item__status btn">Active Tour</div>
-						</div>
-						<div class="item__description">
-							<h6>DESCRIPTION</h6>
-							<p>
-								The French Revolution was a period of social and political
-								upheaval in France and its colonies beginning in 1789 and ending
-								in 1799. The Revolution overthrew the monarchy; established a
-								republic; catalyzed violent periods of political turmoil; and
-								finally culminated in a …
-							</p>
-							<a class="book-now" href="#">
-								Book Now
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="19.162"
-									height="13.256"
-									viewBox="0 0 19.162 13.256"
-								>
-									<g
-										id="Group_97"
-										data-name="Group 97"
-										transform="translate(0.5 0.628)"
-									>
-										<path
-											id="Path_2"
-											data-name="Path 2"
-											d="M400,528h18"
-											transform="translate(-400 -522)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_3"
-											data-name="Path 3"
-											d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618"
-											transform="translate(-404.064 -528)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_4"
-											data-name="Path 4"
-											d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528"
-											transform="translate(-404.064 -522.064)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-									</g>
-								</svg>
-							</a>
-						</div>
-					</div>
-					<div class="tours-results__item item">
-						<img src="assets/img/Group 242.jpg" alt="" />
-						<div class="item__top flex">
-							<div class="item__title">
-								<h5 class="item__name">France Revolution Tour</h5>
-								<div>
-									<span clacc="item__price">699 .00$</span>
-									<span class="dot">·</span>
-									<span class="item__country">France</span>
-								</div>
-							</div>
-							<div class="item__status btn">Active Tour</div>
-						</div>
-						<div class="item__description">
-							<h6>DESCRIPTION</h6>
-							<p>
-								The French Revolution was a period of social and political
-								upheaval in France and its colonies beginning in 1789 and ending
-								in 1799. The Revolution overthrew the monarchy; established a
-								republic; catalyzed violent periods of political turmoil; and
-								finally culminated in a …
-							</p>
-							<a class="book-now" href="#">
-								Book Now
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="19.162"
-									height="13.256"
-									viewBox="0 0 19.162 13.256"
-								>
-									<g
-										id="Group_97"
-										data-name="Group 97"
-										transform="translate(0.5 0.628)"
-									>
-										<path
-											id="Path_2"
-											data-name="Path 2"
-											d="M400,528h18"
-											transform="translate(-400 -522)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_3"
-											data-name="Path 3"
-											d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618"
-											transform="translate(-404.064 -528)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_4"
-											data-name="Path 4"
-											d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528"
-											transform="translate(-404.064 -522.064)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-									</g>
-								</svg>
-							</a>
-						</div>
-					</div>
-					<div class="tours-results__item item">
-						<img src="assets/img/Group 242.jpg" alt="" />
-						<div class="item__top flex">
-							<div class="item__title">
-								<h5 class="item__name">France Revolution Tour</h5>
-								<div>
-									<span clacc="item__price">699 .00$</span>
-									<span class="dot">·</span>
-									<span class="item__country">France</span>
-								</div>
-							</div>
-							<div class="item__status btn">Active Tour</div>
-						</div>
-						<div class="item__description">
-							<h6>DESCRIPTION</h6>
-							<p>
-								The French Revolution was a period of social and political
-								upheaval in France and its colonies beginning in 1789 and ending
-								in 1799. The Revolution overthrew the monarchy; established a
-								republic; catalyzed violent periods of political turmoil; and
-								finally culminated in a …
-							</p>
-							<a class="book-now" href="#">
-								Book Now
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="19.162"
-									height="13.256"
-									viewBox="0 0 19.162 13.256"
-								>
-									<g
-										id="Group_97"
-										data-name="Group 97"
-										transform="translate(0.5 0.628)"
-									>
-										<path
-											id="Path_2"
-											data-name="Path 2"
-											d="M400,528h18"
-											transform="translate(-400 -522)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_3"
-											data-name="Path 3"
-											d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618"
-											transform="translate(-404.064 -528)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_4"
-											data-name="Path 4"
-											d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528"
-											transform="translate(-404.064 -522.064)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-									</g>
-								</svg>
-							</a>
-						</div>
-					</div>
+		<section class="calendar-section container">
+			<div class="calendar-section__bg"></div>
+			<div class="calendar">
+				<div class="calendar-header">
+					<span class="month-picker" id="month-picker">February</span>
 				</div>
-			</div>
-			<div class="planned-tours container">
-				<h5>Planned Tours</h5>
-				<div class="tours-results__list">
-					<div class="tours-results__item item">
-						<img src="assets/img/Group 242.jpg" alt="" />
-						<div class="item__top flex">
-							<div class="item__title">
-								<h5 class="item__name">France Revolution Tour</h5>
-								<div>
-									<span clacc="item__price">699 .00$</span>
-									<span class="dot">·</span>
-									<span class="item__country">France</span>
-								</div>
-							</div>
-						</div>
-						<div class="item__description">
-							<h6>DESCRIPTION</h6>
-							<p>
-								The French Revolution was a period of social and political
-								upheaval in France and its colonies beginning in 1789 and ending
-								in 1799. The Revolution overthrew the monarchy; established a
-								republic; catalyzed violent periods of political turmoil; and
-								finally culminated in a …
-							</p>
-							<a class="book-now" href="#">
-								Book Now
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="19.162"
-									height="13.256"
-									viewBox="0 0 19.162 13.256"
-								>
-									<g
-										id="Group_97"
-										data-name="Group 97"
-										transform="translate(0.5 0.628)"
-									>
-										<path
-											id="Path_2"
-											data-name="Path 2"
-											d="M400,528h18"
-											transform="translate(-400 -522)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_3"
-											data-name="Path 3"
-											d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618"
-											transform="translate(-404.064 -528)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_4"
-											data-name="Path 4"
-											d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528"
-											transform="translate(-404.064 -522.064)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-									</g>
-								</svg>
-							</a>
-						</div>
+				<div class="calendar-body">
+					<div class="calendar-week-day">
+						<div>S</div>
+						<div>M</div>
+						<div>T</div>
+						<div>W</div>
+						<div>T</div>
+						<div>F</div>
+						<div>S</div>
 					</div>
-					<div class="tours-results__item item">
-						<img src="assets/img/Group 242.jpg" alt="" />
-						<div class="item__top flex">
-							<div class="item__title">
-								<h5 class="item__name">France Revolution Tour</h5>
-								<div>
-									<span clacc="item__price">699 .00$</span>
-									<span class="dot">·</span>
-									<span class="item__country">France</span>
-								</div>
-							</div>
-						</div>
-						<div class="item__description">
-							<h6>DESCRIPTION</h6>
-							<p>
-								The French Revolution was a period of social and political
-								upheaval in France and its colonies beginning in 1789 and ending
-								in 1799. The Revolution overthrew the monarchy; established a
-								republic; catalyzed violent periods of political turmoil; and
-								finally culminated in a …
-							</p>
-							<a class="book-now" href="#">
-								Book Now
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="19.162"
-									height="13.256"
-									viewBox="0 0 19.162 13.256"
-								>
-									<g
-										id="Group_97"
-										data-name="Group 97"
-										transform="translate(0.5 0.628)"
-									>
-										<path
-											id="Path_2"
-											data-name="Path 2"
-											d="M400,528h18"
-											transform="translate(-400 -522)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_3"
-											data-name="Path 3"
-											d="M416,528a9.587,9.587,0,0,0,2.131,3.445,15.776,15.776,0,0,0,3.933,2.618"
-											transform="translate(-404.064 -528)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-										<path
-											id="Path_4"
-											data-name="Path 4"
-											d="M416,534.064a9.587,9.587,0,0,1,2.131-3.445A15.778,15.778,0,0,1,422.064,528"
-											transform="translate(-404.064 -522.064)"
-											fill="none"
-											stroke="#fff"
-											stroke-linecap="round"
-											stroke-width="1"
-										/>
-									</g>
-								</svg>
-							</a>
-						</div>
-					</div>
+					<div class="calendar-days"></div>
 				</div>
+				<div class="month-list"></div>
 			</div>
 		</section>
 
@@ -814,21 +716,26 @@
 				</div>
 			</div>
 		</footer>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-		<script src="assets/js/niceSelect.js"></script>
-
+		<!-- Initialize Swiper -->
 		<script>
-			$(document).ready(function () {
-				$("select").niceSelect();
+			var swiper = new Swiper(".mySwiper", {
+				spaceBetween: 10,
+				slidesPerView: 4,
+				freeMode: true,
+				watchSlidesProgress: true,
+			});
+			var swiper2 = new Swiper(".mySwiper2", {
+				spaceBetween: 10,
+				thumbs: {
+					swiper: swiper,
+				},
 			});
 		</script>
 		<script src="assets/js/script.js"></script>
 		<script src="assets/js/reg-auth.js"></script>
+		<script src="assets/js/tours-inside.js"></script>
+		<script src="assets/js/calendar.js"></script>
 	</body>
 </html>

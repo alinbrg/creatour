@@ -182,7 +182,201 @@
 				</p>
 			</div>
 		</section>
+		<section class="reg-auth-section">
+			<div class="registration form-block">
+				<div class="reg-close">
+					<img src="assets/img/icons/close-btn.svg" alt="" />
+				</div>
+				<div class="title">
+					<h3>Register</h3>
+				</div>
+				<div class="have-account">
+					<p>Already have account?</p>
+					<p>Please <a href="">Login</a> now</p>
+				</div>
+				<form action="#">
+					<div class="form-row">
+						<div>
+							<img src="assets/img/icons/user-3-line.svg" alt="" />
+							<input
+								type="text"
+								placeholder="Name"
+								name="user-name"
+								id="user-name"
+								required
+							/>
+						</div>
+						<div>
+							<img src="assets/img/icons/user-3-line.svg" alt="" />
+							<input
+								type="text"
+								placeholder="Surname"
+								name="user-surname"
+								id="user-surname"
+								required
+							/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div>
+							<img src="assets/img/icons/genderless-line.svg" alt="" />
+							<select name="gender" id="user-gender">
+								<option>Gender</option>
+								<option value="1">Female</option>
+								<option value="2">Male</option>
+								<option value="3">Other</option>
+							</select>
+						</div>
+						<div>
+							<img src="assets/img/icons/user-heart-line.svg" alt="" />
+							<input
+								type="number"
+								name="user-age"
+								id="user-age"
+								placeholder="Age"
+								min="17"
+								max="100"
+								step="1"
+								required
+							/>
+							<span class="error-icon-block">
+								<img
+									src="assets/img/icons/information-fill.svg"
+									class="error-icon"
+									alt=""
+								/>
+								<span class="error-icon-message"
+									>Due to the complex nature of the tour’s content and
+									activities it is understood that appeal is to individuals of
+									mature age</span
+								>
+							</span>
+							<div class="arrow-icons">
+								<img
+									src="assets/img/icons/arr-up.svg"
+									alt=""
+									class="arrow-up"
+								/>
+								<img
+									src="assets/img/icons/arr-down.svg"
+									alt=""
+									class="arrow-down"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div>
+							<img src="assets/img/icons/smartphone-line-white.svg" alt="" />
+							<input type="tel" name="phone" id="phone" placeholder="Phone" />
+						</div>
+						<div>
+							<img src="assets/img/icons/account-box-line.svg" alt="" />
+							<input
+								type="number"
+								name="personal-ID"
+								id="personal-ID"
+								placeholder="Personal ID"
+								required
+							/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div>
+							<img src="assets/img/icons/global-line.svg" alt="" />
+							<select name="Country" id="user-Country">
+								<option>Country</option>
+								<option value="1">Georgia</option>
+								<option value="2">England</option>
+								<option value="3">France</option>
+								<option value="4">Germany</option>
+							</select>
+						</div>
+						<div>
+							<img src="assets/img/icons/mail-line-white.svg" alt="" />
+							<input
+								type="email"
+								name="reg-email"
+								id="reg-email"
+								placeholder="E-Mail"
+								required
+							/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div>
+							<img src="assets/img/icons/lock-line.svg" alt="" />
+							<input
+								type="password"
+								name="reg-password"
+								id="reg-password"
+								placeholder="Password"
+								required
+							/>
+						</div>
+						<div>
+							<img src="assets/img/icons/lock-line.svg" alt="" />
+							<input
+								type="password"
+								name="confirn-password"
+								id="confirn-password"
+								placeholder="Confirn Password"
+								required
+							/>
+						</div>
+					</div>
+					<div class="form-row error-message-block">
+						<span class="error-message"
+							>* Under 17 years persons can’t register in tour.</span
+						>
+					</div>
+					<div class="form-row captcha-block">
+						<div class="captcha">I’m not bot</div>
+					</div>
+					<button type="submit">REGISTER</button>
+				</form>
+			</div>
 
+			<div class="authorization form-block">
+				<div class="reg-close">
+					<img src="assets/img/icons/close-btn.svg" alt="" />
+				</div>
+				<div class="title">
+					<h3>Login</h3>
+				</div>
+				<div class="have-account">
+					<p>You don’t have account?</p>
+					<p>Please <a href="#">Register</a> now</p>
+				</div>
+				<form action="#">
+					<div class="form-row">
+						<img src="assets/img/icons/mail-line-white.svg" alt="" />
+						<label for="auth-email">E-Mail</label>
+						<input
+							type="email"
+							name="auth-email"
+							id="auth-email"
+							placeholder="example@gmail.com"
+							required
+						/>
+					</div>
+					<div class="form-row">
+						<img src="assets/img/icons/lock-line.svg" alt="" />
+						<input
+							type="password"
+							name="auth-password"
+							id="auth-password"
+							placeholder="Password"
+							required
+						/>
+						<a href="#" class="forgot-pass">Forgot <span>password</span>?</a>
+					</div>
+					<button type="submit">Login</button>
+				</form>
+			</div>
+
+			<div id="overlay"></div>
+		</section>
 		<footer class="container">
 			<div class="flex footer-div">
 				<div class="nav">
@@ -265,5 +459,6 @@
 			</div>
 		</footer>
 		<script src="assets/js/script.js"></script>
+		<script src="assets/js/reg-auth.js"></script>
 	</body>
 </html>

@@ -1,0 +1,311 @@
+.reg-auth-section {
+	height: unset;
+	.form-block {
+		position: fixed;
+		background-color: #ffffff;
+		z-index: 200;
+		top: 50vh;
+		left: 50vw;
+		transform: translate(-50%, -50%) scale(0);
+		&.active {
+			transform: translate(-50%, -50%) scale(1);
+		}
+		@include rwd(1440) {
+			&.registration {
+				&.active {
+					position: absolute;
+					top: 80px;
+					transform: translateX(-50%) scale(1);
+				}
+			}
+		}
+		width: 707px;
+		padding: 70px 0;
+		@include xl {
+			padding: 50px 0;
+		}
+		@include sm {
+			padding: 40px 0;
+			width: 345px;
+		}
+		form,
+		.title,
+		.have-account {
+			width: 463px;
+			margin: 0 auto;
+			@include sm {
+				width: 265px;
+			}
+		}
+		.reg-close {
+			position: absolute;
+			right: 65px;
+			top: 65px;
+			cursor: pointer;
+			@include xl {
+				right: 45px;
+				top: 45px;
+			}
+			@include sm {
+				right: 34px;
+				top: 34px;
+			}
+		}
+		.title {
+			h3 {
+				font-size: clamp(24px, 1.2vw, 32px);
+				color: $secondary;
+				font-family: "caslon-semi-bold";
+			}
+		}
+		.have-account {
+			margin-top: 20px;
+			margin-bottom: 40px;
+			@include xl {
+				margin-top: 15px;
+				margin-bottom: 25px;
+			}
+			p {
+				font-family: "montserrat-medium";
+				font-size: clamp(14px, 1.2vw, 18px);
+				a {
+					color: $contact;
+					font-size: inherit;
+				}
+			}
+		}
+		form {
+			.form-row {
+				display: flex;
+				width: 100%;
+				margin-bottom: 20px;
+				gap: 25px;
+
+				height: 56px;
+				@include xl {
+					margin-bottom: 15px;
+				}
+				@include sm {
+					flex-direction: column;
+					gap: 10px;
+					margin-bottom: 10px;
+					height: unset;
+				}
+				div {
+					width: 219px;
+					display: flex;
+					border: 1px solid $form-grey;
+					height: 100%;
+					padding: 0 20px;
+					align-items: center;
+					position: relative;
+					@include sm {
+						width: 100%;
+						height: 56px;
+					}
+					img {
+						width: 24px;
+						margin-right: 20px;
+						&.error-icon {
+							position: absolute;
+							cursor: pointer;
+							right: 44px;
+							margin: 0;
+							top: 16px;
+						}
+					}
+					.error-icon-block {
+						width: auto;
+						span {
+							display: none;
+							position: absolute;
+							background-color: #3f3f3f;
+							padding: 8px;
+							font-size: 12px;
+							color: $white;
+							font-family: "montserrat-medium";
+							max-width: 336px;
+							width: 265px;
+							&.activeError {
+								display: block;
+								top: -80px;
+								right: 0;
+								&::after {
+									content: "";
+									width: 15px;
+									height: 15px;
+									background-color: #3f3f3f;
+									transform: rotate(45deg);
+									position: inherit;
+									bottom: -7px;
+									right: 50px;
+								}
+							}
+						}
+					}
+					input {
+						overflow: hidden;
+						&::placeholder {
+							color: $tours-black;
+							font-family: "montserrat-medium";
+							font-size: 14px;
+						}
+						&#personal-ID,
+						&#user-age {
+							&::-webkit-inner-spin-button,
+							&::-webkit-outer-spin-button {
+								opacity: 0;
+								-webkit-appearance: none;
+								margin: 0;
+								-moz-appearance: textfield;
+							}
+						}
+					}
+					.arrow-icons {
+						@include centering;
+						flex-direction: column;
+						position: absolute;
+						width: 24px;
+						height: 24px;
+						right: 10px;
+						padding: 0;
+						top: 16px;
+						border: none;
+						gap: 5px;
+						img {
+							margin: 0;
+							width: 8.5px;
+						}
+					}
+					select {
+						width: 100%;
+						color: $tours-black;
+						font-family: "montserrat-medium";
+						font-size: 14px;
+						background: transparent;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						margin: 0;
+						// -moz-appearance: textfield;
+						background: transparent;
+						background-image: url("../img/icons/arr-down.svg");
+						background-repeat: no-repeat;
+						background-position-x: 100%;
+						background-position-y: 5px;
+					}
+				}
+				&.error-message-block {
+					height: 25px;
+					margin: 16px 0 40px;
+					.error-message {
+						font-family: "caslon-semi-bold";
+						color: $contact;
+						font-size: 12px;
+					}
+					@include sm {
+						margin: 10px 0 30px;
+					}
+				}
+				&.captcha-block {
+					height: 80px;
+					margin-bottom: 0;
+					.captcha {
+						background-color: #e2e2e2;
+						width: 219px;
+						margin: 0 auto;
+						padding: 0;
+						justify-content: center;
+						font-size: 12px;
+						cursor: pointer;
+						color: #6e6e6e;
+						font-family: "montserrat-medium";
+						height: 100%;
+					}
+				}
+			}
+			button {
+				width: 100%;
+				background-color: $contact;
+				height: 56px;
+				color: $white;
+				text-transform: uppercase;
+				margin-top: 40px;
+				font-size: 14px;
+				font-family: "montserrat-semibold";
+				cursor: pointer;
+			}
+		}
+		&.authorization {
+			form {
+				.form-row {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					border: 1px solid $form-grey;
+					height: 100%;
+					padding: 0 20px;
+					height: 56px;
+					position: relative;
+					label[for="auth-email"] {
+						position: absolute;
+						top: 4px;
+						left: 70px;
+						color: #6e6e6e;
+						font-family: "montserrat-medium";
+						font-size: 12px;
+						@include sm {
+							left: 55px;
+						}
+					}
+					input {
+						&::placeholder {
+							color: $tours-black;
+							font-family: "montserrat-medium";
+							font-size: 14px;
+						}
+					}
+					.forgot-pass {
+						position: absolute;
+						right: 20px;
+						cursor: pointer;
+						font-size: 12px;
+						color: #6e6e6e;
+						font-family: "montserrat-medium";
+						span {
+							font-size: inherit;
+							color: inherit;
+							font-family: inherit;
+						}
+						@include sm {
+							span {
+								display: none;
+							}
+						}
+					}
+					img {
+						width: 24px;
+					}
+				}
+				button {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	#overlay {
+		background-color: rgba(17, 17, 17, 0.7);
+		position: fixed;
+		opacity: 0;
+		transition: 200ms ease-in-out;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		&.active {
+			opacity: 1;
+			pointer-events: all;
+			z-index: 125;
+		}
+	}
+}
