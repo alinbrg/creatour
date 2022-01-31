@@ -3,6 +3,7 @@
 	height: 640px;
 	text-align: center;
 	position: relative;
+	@include before-line-top-left(50%, 0, 7vw, $main);
 	&__bg {
 		background-image: url(../img/tour-inside-bg.jpg);
 		width: 100%;
@@ -35,12 +36,15 @@
 		height: 85px;
 		background-color: rgba(0, 0, 0, 0.7);
 		width: 100%;
+		@include after-line-top-right(50%, 0, 7vw, $main);
 		@include sm {
 			flex-direction: column;
 			height: 100px;
-			justify-content: center;
 		}
 		.left-block {
+			@include sm {
+				margin-top: 10px;
+			}
 			ul {
 				gap: 44px;
 				li {
@@ -55,6 +59,7 @@
 			}
 		}
 		.right-block {
+			display: none;
 			ul {
 				gap: 21px;
 				@include tab {
@@ -98,19 +103,33 @@
 		opacity: 0.15;
 	}
 	display: flex;
+	justify-content: space-between;
 	@include tab {
 		flex-direction: column;
+		margin-bottom: 50px;
+		justify-content: center;
 	}
-	&__plan {
+	&__details {
 		max-width: 951px;
 		width: calc(74% - 25px);
-		margin-right: 25px;
-		@include sm {
+		@include tab {
 			width: 100%;
+		}
+	}
+	&__plan {
+		display: none;
+		&.active {
+			display: block;
 		}
 		.day-schedule {
 			background-color: $white;
 			border: 1px solid $contact;
+			height: 94px;
+			overflow: hidden;
+			margin-bottom: 25px;
+			&.active {
+				height: auto;
+			}
 			&__head {
 				height: 94px;
 				display: flex;
@@ -122,20 +141,24 @@
 					margin-left: 25px;
 					margin-right: 31px;
 					@include centering;
+					@include sm {
+						margin-left: 5px;
+						margin-right: 12px;
+					}
 					span {
-						font-size: 14px;
+						font-size: clamp(12px, 0.9vw, 14px);
 						font-family: "montserrat-bold";
 					}
 				}
 				.day-destination {
 					p {
-						font-size: 14px;
+						font-size: clamp(12px, 0.9vw, 14px);
 						font-family: "montserrat-bold";
 						line-height: 1;
 					}
 					h5 {
 						color: $contact;
-						font-size: 18px;
+						font-size: clamp(14px, 0.9vw, 18px);
 						font-family: "caslon-semi-bold";
 						line-height: 1;
 						margin-top: 8px;
@@ -161,7 +184,7 @@
 							transform: translate(-50%, -50%);
 							width: 10px;
 							height: 2px;
-							border-radius: 4px;
+							// border-radius: 4px;
 							background-color: $contact;
 							&:first-child {
 								transform: translate(-50%, -50%) rotate(90deg);
@@ -198,7 +221,7 @@
 							gap: 10px;
 						}
 						li {
-							font-size: 16px;
+							font-size: clamp(12px, 0.9vw, 16px);
 							font-family: "montserrat-regular";
 							&.active {
 								font-family: "montserrat-bold";
@@ -223,6 +246,8 @@
 						padding: 23px 25px;
 						border: 1px solid $main;
 						margin-bottom: 15px;
+						overflow: hidden;
+
 						&__head {
 							display: flex;
 							align-items: center;
@@ -233,7 +258,7 @@
 							}
 							h3 {
 								color: $main;
-								font-size: 18px;
+								font-size: clamp(14px, 0.9vw, 18px);
 								font-family: "caslon-bold";
 							}
 							div {
@@ -254,21 +279,27 @@
 								}
 							}
 						}
+
 						.stop-list {
-							margin-top: 20px;
+							height: 0;
+							overflow: hidden;
 							.stop {
 								border: 1px solid $contact;
 								padding: 16px;
+								overflow: hidden;
+								margin-bottom: 15px;
+
 								&__head {
 									display: flex;
 									align-items: center;
 
 									img {
 										margin-right: 10px;
+										width: 18px;
 									}
 									h4 {
 										color: $contact;
-										font-size: 16px;
+										font-size: clamp(12px, 0.9vw, 16px);
 										font-family: "montserrat-bold";
 									}
 									div {
@@ -285,7 +316,7 @@
 											left: 50%;
 											transform: translate(-50%, -50%);
 											width: 10px;
-											border-radius: 4px;
+											// border-radius: 4px;
 											height: 2px;
 											background-color: $contact;
 											&:first-child {
@@ -306,16 +337,18 @@
 								}
 								&__details {
 									font-family: "montserrat-medium";
-									margin-top: 20px;
+									height: 0;
+									overflow: hidden;
+
 									.title {
-										font-size: 18px;
+										font-size: clamp(14px, 0.9vw, 18px);
 										font-family: inherit;
 										margin-bottom: 20px;
 									}
 									ul {
 										li {
 											margin-bottom: 14px;
-											font-size: 14px;
+											font-size: clamp(12px, 0.9vw, 14px);
 											font-family: inherit;
 											position: relative;
 											padding: 0 20px 0 15px;
@@ -327,17 +360,19 @@
 												height: 6px;
 												background-color: $main;
 												left: 0;
-												top: 50%;
+												top: 10px;
 												transform: translateY(-50%);
 											}
 											&::after {
-												content: "\002B";
+												content: "\1429";
 												position: absolute;
 												right: 0;
-												// width: 8px;
-												top: 50%;
+												top: 10px;
 												transform: translateY(-50%);
 												color: $contact;
+											}
+											.more-info {
+												display: none;
 											}
 											&.active {
 												&::after {
@@ -345,12 +380,36 @@
 													width: 8px;
 													height: 1px;
 													background-color: $contact;
-													border-radius: 4px;
+													// border-radius: 4px;
+												}
+												.more-info {
+													display: block;
+													margin-top: 10px;
+													font-size: 13px;
 												}
 											}
 										}
 									}
 								}
+								&.active {
+									.stop__details {
+										height: auto;
+										overflow: auto;
+										margin-top: 20px;
+									}
+								}
+							}
+						}
+						&.active {
+							height: auto;
+							padding: 23px 25px;
+							overflow: auto;
+							.stop-list {
+								height: auto;
+								margin-top: 20px;
+								overflow: auto;
+							}
+							@include sm {
 							}
 						}
 					}
@@ -361,10 +420,74 @@
 	&__visuals {
 		max-width: 463px;
 		width: 26%;
-		height: 587px;
+		max-height: 587px;
+		height: 500px;
 		margin-top: 120px;
-		@include sm {
+		@include tab {
+			margin: 100px auto 0;
 			width: 100%;
+		}
+		.visuals-bg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 26%;
+			height: 160px;
+			@include tab {
+				display: none;
+			}
+			span {
+				display: block;
+				position: absolute;
+			}
+			.circle {
+				bottom: 0;
+				left: 0;
+				width: 93px;
+				height: 93px;
+				border-radius: 50%;
+				border: 1px solid $main;
+				.center-dot,
+				.bottom-dot {
+					width: 14px;
+					height: 14px;
+					border-radius: 50%;
+					background-color: $contact;
+				}
+				.center-dot {
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				.bottom-dot {
+					bottom: -7px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.line {
+					height: 41px;
+					width: 1px;
+					background-color: $contact;
+					top: 50%;
+					left: 45px;
+				}
+			}
+			.right-line {
+				width: calc(100% - 93px / 2);
+				height: 1px;
+				right: 0;
+				top: calc(50% + 34.5px);
+				background-color: $contact;
+				transform: translateY(-50%);
+			}
+			.top-line {
+				width: 1px;
+				height: calc(100% - 30px);
+				background-color: $contact;
+				top: -10px;
+				left: 14px;
+				transform: rotate(-33grad);
+			}
 		}
 		.swiper {
 			width: 100%;
@@ -376,7 +499,63 @@
 			background-size: cover;
 			background-position: center;
 		}
+		.mySwiper-pgn {
+			right: 240px;
 
+			@include xl {
+				right: 180px;
+			}
+			@include rwd(1440) {
+				right: 130px;
+			}
+			@include lg {
+				right: 60px;
+			}
+			@include tab {
+				right: 35px;
+			}
+			@include sm {
+				top: -50px;
+				right: unset;
+				height: 50px;
+				width: calc(100% - 30px);
+				justify-content: start;
+				left: 15px;
+			}
+			top: -85px;
+			width: 50%;
+			height: 85px;
+			left: unset;
+			display: flex;
+			gap: 21px;
+			align-items: center;
+			justify-content: flex-end;
+			@include tab {
+				gap: 15px;
+			}
+			span {
+				text-transform: capitalize;
+				width: fit-content;
+				height: max-content;
+				border-radius: 0;
+				font-size: 18px;
+				opacity: 1;
+				margin: 0 !important;
+				background: transparent;
+				--swiper-theme-color: unset;
+				&.swiper-pagination-bullet-active {
+					border-bottom: 1px solid $main;
+					color: $main;
+				}
+				&::before {
+					display: none;
+				}
+				color: #ffffff;
+				font-family: "caslon-bold";
+				font-size: clamp(14px, 1.6vw, 16px);
+				// margin: ;
+			}
+		}
 		.mySwiper2 {
 			width: 100%;
 			.swiper-slide {
@@ -476,11 +655,14 @@
 
 .calendar-section {
 	position: relative;
+	padding-top: 115px;
+	padding-bottom: 75px;
+	margin-bottom: 160px;
 	&__bg {
 		background: url(../img/amphitheatre\ top.jpg);
 		width: 100%;
 		max-height: 823px;
-		height: 600px;
+		height: 700px;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -489,7 +671,8 @@
 		padding: 0;
 	}
 	.calendar {
-		$calendar-font-size: clamp(24px, 1.6vw, 40px);
+		margin-top: 25px;
+		$calendar-font-size: clamp(32px, 1.6vw, 40px);
 		$calendar-font-family: "montserrat-extra";
 
 		height: max-content;
@@ -501,6 +684,9 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 
+		@include sm {
+			margin-top: 15px;
+		}
 		.calendar-header {
 			@include centering;
 			margin-bottom: 10px;
@@ -532,8 +718,10 @@
 				div {
 					max-width: 90px;
 					max-height: 90px;
-					width: 70px;
-					height: 70px;
+					// width: 70px;
+					// height: 70px;
+					width: 67px;
+					height: 67px;
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -549,15 +737,12 @@
 							display: none;
 						}
 					}
-					@include tab {
+					@include sm {
 						width: 40px;
 						height: 40px;
 					}
 					&.filled {
 						color: #ffb9a6;
-					}
-					&.weekend {
-						color: #a69d74;
 					}
 					span {
 						position: absolute;
@@ -566,8 +751,11 @@
 						transform: translateX(-50%);
 						color: inherit;
 						font-family: "montserrat-bold";
-						font-size: clamp(8px, 1.6vw, 10px);
+						font-size: clamp(8px, 0.9vw, 10px);
 						text-transform: uppercase;
+						@include sm {
+							bottom: -5px;
+						}
 					}
 				}
 			}

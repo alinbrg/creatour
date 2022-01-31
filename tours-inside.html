@@ -9,7 +9,6 @@
 			href="https://unpkg.com/swiper/swiper-bundle.min.css"
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
-		<!-- <link rel="stylesheet" href="assets/css/app.css" /> -->
 		<title>tour-inside</title>
 	</head>
 	<body>
@@ -113,92 +112,488 @@
 			<div class="tours-inside-main__options flex container">
 				<div class="left-block">
 					<ul>
-						<li class="active"><a href="#">Itinerary</a></li>
-						<li><a href="#">Tour Profile</a></li>
-						<li><a href="#">Tour Objectives</a></li>
+						<li class="active itinerary-selector"><a href="#">Itinerary</a></li>
+						<li><a class="tour-profile-selector" href="#">Tour Profile</a></li>
+						<li>
+							<a class="tour-objectives-selector" href="#">Tour Objectives</a>
+						</li>
 					</ul>
 				</div>
 				<div class="right-block">
 					<ul>
-						<li class="active"><a href="#">Map</a></li>
-						<li><a href="#">Video Tour</a></li>
-						<li><a href="#">Gallery</a></li>
-						<li><a href="#">Tour Guides</a></li>
+						<li class="active map-selector"><a href="#">Map</a></li>
+						<li><a class="video-selector" href="#">Video Tour</a></li>
+						<li><a class="gallery-selector" href="#">Gallery</a></li>
+						<li><a class="guide-selector" href="#">Tour Guides</a></li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
 		<section class="tour-information container">
-			<div class="tour-information__plan">
-				<div class="day-schedule">
-					<div class="day-schedule__head">
-						<div class="day-number">
-							<span>Day 1</span>
+			<div class="tour-information__details">
+				<div class="tour-information__plan itinerary active">
+					<div class="day-schedule">
+						<div class="day-schedule__head">
+							<div class="day-number">
+								<span>Day 1</span>
+							</div>
+							<div class="day-destination">
+								<p>
+									Tskaltubo - Gathering and Welcome Day at the Legends SPA
+									Resort
+								</p>
+								<h5>
+									Grand Sanatorium of Soviet Era Elites with “Waters of
+									Immortality”
+								</h5>
+							</div>
+							<div class="show-more-btn">
+								<div>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
 						</div>
-						<div class="day-destination">
-							<p>
-								Tskaltubo - Gathering and Welcome Day at the Legends SPA Resort
-							</p>
-							<h5>
-								Grand Sanatorium of Soviet Era Elites with “Waters of
-								Immortality”
-							</h5>
-						</div>
-						<div class="show-more-btn">
-							<div>
-								<span></span>
-								<span></span>
+						<div class="day-schedule__details">
+							<div class="details-tabs">
+								<ul>
+									<li class="active">Detailed Program Outline</li>
+									<li>Main Themes of Exploration</li>
+									<li>Tour leader - Background and Introduction</li>
+								</ul>
+							</div>
+							<div class="whole-day-plan">
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>Journey From Tskaltubo Hotel to Salkhino</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
+										</div>
+									</div>
+									<div class="stop-list">
+										<div class="stop">
+											<div class="stop__head">
+												<img src="assets/img/icons/Group 456.svg" alt="" />
+												<h4>First Stop - Salkhino Palace</h4>
+												<div>
+													<span></span>
+													<span></span>
+												</div>
+											</div>
+											<div class="stop__details">
+												<h3 class="title">
+													Very special place for presenting treasures of
+													Samegrelo, treasure itself - Salkhino complex
+												</h3>
+												<ul>
+													<li>
+														Amazing insight Story of Georgian Cuisine Presented
+														in the Main Hall of the Kvevri Palace
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Passionate Master-Class of Prominent Georgian Dishes
+														done by two beloved local celebrities
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Memorable Lunch at the Empire-Styled Restaurant
+													</li>
+													<li>
+														Salkhino Wine Cellar - tasting Ojaleshi from a
+														centuries-old pitcher.
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="stop">
+											<div class="stop__head">
+												<img src="assets/img/icons/Group 456.svg" alt="" />
+												<h4>Second Stop - Salkhino Palace</h4>
+												<div>
+													<span></span>
+													<span></span>
+												</div>
+											</div>
+											<div class="stop__details">
+												<h3 class="title">
+													Very special place for presenting treasures of
+													Samegrelo, treasure itself - Salkhino complex
+												</h3>
+												<ul>
+													<li>
+														Amazing insight Story of Georgian Cuisine Presented
+														in the Main Hall of the Kvevri Palace
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Passionate Master-Class of Prominent Georgian Dishes
+														done by two beloved local celebrities
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Memorable Lunch at the Empire-Styled Restaurant
+													</li>
+													<li>
+														Salkhino Wine Cellar - tasting Ojaleshi from a
+														centuries-old pitcher.
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="day-schedule__details">
-						<div class="details-tabs">
-							<ul>
-								<li class="active">Detailed Program Outline</li>
-								<li>Main Themes of Exploration</li>
-								<li>Tour leader - Background and Introduction</li>
-							</ul>
-						</div>
-						<div class="whole-day-plan">
-							<div class="daily-schedule">
-								<div class="daily-schedule__head">
-									<img src="assets/img/icons/close-btn.svg" alt="" />
-									<h3>Journey From Tskaltubo Hotel to Salkhino</h3>
-									<div class="">
-										<img src="assets/img/icons/arr-yellow.svg" alt="" />
-									</div>
+					<div class="day-schedule">
+						<div class="day-schedule__head">
+							<div class="day-number">
+								<span>Day 2</span>
+							</div>
+							<div class="day-destination">
+								<p>
+									Samegrelo - The Centre of the “Fabulous Kingdom of the Sun”
+								</p>
+								<h5>
+									Cross Point of Ancient World Cultures and Mother Load of
+									Georgian Cuisine
+								</h5>
+							</div>
+							<div class="show-more-btn">
+								<div>
+									<span></span>
+									<span></span>
 								</div>
-								<div class="stop-list">
-									<div class="stop">
-										<div class="stop__head">
-											<img src="assets/img/icons/close-btn.svg" alt="" />
-											<h4>First Stop - Salkhino Palace</h4>
-											<div class="">
-												<span></span>
-												<span></span>
+							</div>
+						</div>
+						<div class="day-schedule__details">
+							<div class="details-tabs">
+								<ul>
+									<li class="active">Detailed Program Outline</li>
+									<li>Main Themes of Exploration</li>
+									<li>Tour leader - Background and Introduction</li>
+								</ul>
+							</div>
+							<div class="whole-day-plan">
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>Journey From Tskaltubo Hotel to Salkhino</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
+										</div>
+									</div>
+									<div class="stop-list">
+										<div class="stop">
+											<div class="stop__head">
+												<img src="assets/img/icons/Group 456.svg" alt="" />
+												<h4>First Stop - Salkhino Palace</h4>
+												<div>
+													<span></span>
+													<span></span>
+												</div>
+											</div>
+											<div class="stop__details">
+												<h3 class="title">
+													Very special place for presenting treasures of
+													Samegrelo, treasure itself - Salkhino complex
+												</h3>
+												<ul>
+													<li>
+														Amazing insight Story of Georgian Cuisine Presented
+														in the Main Hall of the Kvevri Palace
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Passionate Master-Class of Prominent Georgian Dishes
+														done by two beloved local celebrities
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Memorable Lunch at the Empire-Styled Restaurant
+													</li>
+													<li>
+														Salkhino Wine Cellar - tasting Ojaleshi from a
+														centuries-old pitcher.
+													</li>
+												</ul>
 											</div>
 										</div>
-										<div class="stop__details">
-											<h3 class="title">
-												Very special place for presenting treasures of
-												Samegrelo, treasure itself - Salkhino complex
-											</h3>
-											<ul>
-												<li>
-													Amazing insight Story of Georgian Cuisine Presented in
-													the Main Hall of the Kvevri Palace
-												</li>
-												<li>
-													Passionate Master-Class of Prominent Georgian Dishes
-													done by two beloved local celebrities
-												</li>
-												<li>Memorable Lunch at the Empire-Styled Restaurant</li>
-												<li>
-													Salkhino Wine Cellar - tasting Ojaleshi from a
-													centuries-old pitcher.
-												</li>
-											</ul>
+										<div class="stop">
+											<div class="stop__head">
+												<img src="assets/img/icons/Group 456.svg" alt="" />
+												<h4>
+													Second Stop - The Ancient Capital of Legendary Colchis
+													- Tsikhe Goji
+												</h4>
+												<div>
+													<span></span>
+													<span></span>
+												</div>
+											</div>
+											<div class="stop__details">
+												<h3 class="title">
+													Very special place for presenting treasures of
+													Samegrelo, treasure itself - Salkhino complex
+												</h3>
+												<ul>
+													<li>
+														Amazing insight Story of Georgian Cuisine Presented
+														in the Main Hall of the Kvevri Palace
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Passionate Master-Class of Prominent Georgian Dishes
+														done by two beloved local celebrities
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Memorable Lunch at the Empire-Styled Restaurant
+													</li>
+													<li>
+														Salkhino Wine Cellar - tasting Ojaleshi from a
+														centuries-old pitcher.
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>
+											An Ancient Capital of Legendary Colchis - Tsikhe Goji
+										</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>Journey from Tsikhe - Goji to Leto Hotel Zugdidi</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>Evening Supta at “The Kingdom of Colchis”</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>Back to the Hotel</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="day-schedule">
+						<div class="day-schedule__head">
+							<div class="day-number">
+								<span>Day 3</span>
+							</div>
+							<div class="day-destination">
+								<p>
+									Tskaltubo - Gathering and Welcome Day at the Legends SPA
+									Resort
+								</p>
+								<h5>
+									Grand Sanatorium of Soviet Era Elites with “Waters of
+									Immortality”
+								</h5>
+							</div>
+							<div class="show-more-btn">
+								<div>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<div class="day-schedule__details">
+							<div class="details-tabs">
+								<ul>
+									<li class="active">Detailed Program Outline</li>
+									<li>Main Themes of Exploration</li>
+									<li>Tour leader - Background and Introduction</li>
+								</ul>
+							</div>
+							<div class="whole-day-plan">
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>Journey From Tskaltubo Hotel to Salkhino</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
+										</div>
+									</div>
+									<div class="stop-list">
+										<div class="stop">
+											<div class="stop__head">
+												<img src="assets/img/icons/Group 456.svg" alt="" />
+												<h4>First Stop - Salkhino Palace</h4>
+												<div>
+													<span></span>
+													<span></span>
+												</div>
+											</div>
+											<div class="stop__details">
+												<h3 class="title">
+													Very special place for presenting treasures of
+													Samegrelo, treasure itself - Salkhino complex
+												</h3>
+												<ul>
+													<li>
+														Amazing insight Story of Georgian Cuisine Presented
+														in the Main Hall of the Kvevri Palace
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Passionate Master-Class of Prominent Georgian Dishes
+														done by two beloved local celebrities
+														<div class="more-info">
+															Lorem, ipsum dolor sit amet consectetur
+															adipisicing elit. Quae numquam saepe voluptates
+															voluptas officiis dolor, aperiam eaque facilis
+															enim voluptatibus adipisci rem quas odit laborum.
+														</div>
+													</li>
+													<li>
+														Memorable Lunch at the Empire-Styled Restaurant
+													</li>
+													<li>
+														Salkhino Wine Cellar - tasting Ojaleshi from a
+														centuries-old pitcher.
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="day-schedule">
+						<div class="day-schedule__head">
+							<div class="day-number">
+								<span>Day 4</span>
+							</div>
+							<div class="day-destination">
+								<p>
+									Tskaltubo - Gathering and Welcome Day at the Legends SPA
+									Resort
+								</p>
+								<h5>
+									Grand Sanatorium of Soviet Era Elites with “Waters of
+									Immortality”
+								</h5>
+							</div>
+							<div class="show-more-btn">
+								<div>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<div class="day-schedule__details">
+							<div class="details-tabs">
+								<ul>
+									<li class="active">Detailed Program Outline</li>
+									<li>Main Themes of Exploration</li>
+									<li>Tour leader - Background and Introduction</li>
+								</ul>
+							</div>
+							<div class="whole-day-plan">
+								<div class="daily-schedule">
+									<div class="daily-schedule__head">
+										<img
+											src="assets/img/icons/directions_bus-24px.svg"
+											alt=""
+										/>
+										<h3>Journey From Tskaltubo Hotel to Salkhino</h3>
+										<div>
+											<img src="assets/img/icons/arr-yellow.svg" alt="" />
 										</div>
 									</div>
 								</div>
@@ -206,9 +601,20 @@
 						</div>
 					</div>
 				</div>
+				<div class="tour-information__plan tour-profile">second block</div>
+				<div class="tour-information__plan tour-objectives">third block</div>
 			</div>
-
 			<div class="tour-information__visuals">
+				<div class="visuals-bg">
+					<span class="circle">
+						<span class="center-dot"></span>
+						<span class="bottom-dot"></span>
+						<span class="line"></span>
+					</span>
+					<span class="top-line"></span>
+					<span class="right-line"></span>
+				</div>
+				<div class="swiper-pagination mySwiper-pgn"></div>
 				<div
 					style="
 						--swiper-navigation-color: #fff;
@@ -716,10 +1122,12 @@
 				</div>
 			</div>
 		</footer>
+
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 		<!-- Initialize Swiper -->
 		<script>
+			let swiperBtns = ["map", "video tour", "gallery", "tour guides"];
 			var swiper = new Swiper(".mySwiper", {
 				spaceBetween: 10,
 				slidesPerView: 4,
@@ -730,6 +1138,16 @@
 				spaceBetween: 10,
 				thumbs: {
 					swiper: swiper,
+				},
+				pagination: {
+					el: ".mySwiper-pgn",
+					clickable: true,
+					dynamicBullets: false,
+					renderBullet: function (index, className) {
+						return (
+							'<span class="' + className + '">' + swiperBtns[index] + "</span>"
+						);
+					},
 				},
 			});
 		</script>

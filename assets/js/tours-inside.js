@@ -1,41 +1,63 @@
-const toursMainBtns = document.querySelectorAll(
-	".tours-inside-main__options .right-block li, .tours-inside-main__options .left-block li"
-);
-
-// const tourLeftBtns = document.querySelectorAll(
-// 	".tours-inside-main__options .left-block li"
-// );
-
-const tabcontentsContainer = document.querySelector(".profilepage__contents");
-const tabSwitcher = (el) => {
-	[...document.querySelectorAll(".profilepage__tabs__item")].forEach((tab) => {
-		tab.classList.remove("active");
+const toggleActiveClasses = function (btn, className) {
+	btn.addEventListener("click", () => {
+		btn.classList.toggle("active");
+		btn.closest(className).classList.toggle("active");
 	});
-	el.classList.add("active");
-
-	if (el.id === "tab_orderhistory") {
-		tabcontentsContainer.classList.add("orders");
-	} else {
-		tabcontentsContainer.classList.remove("orders");
-	}
 };
 
-[...document.querySelectorAll(".profilepage__tabs__item")].forEach((tab) => {
-	tab.addEventListener("click", () => {
-		tabSwitcher(tab);
+const toursInfoBtns = document.querySelectorAll(".details-tabs li");
+
+const dayScheduleBtn = document.querySelectorAll(
+	".day-schedule .day-schedule__head .show-more-btn div"
+);
+
+const dailyScheduleBtn = document.querySelectorAll(
+	".daily-schedule .daily-schedule__head div"
+);
+
+const tourInformationBlocks = [
+	...document.querySelectorAll(".tour-information__plan"),
+];
+
+const tourInformationSelectors = document.querySelectorAll(".left-block ul li");
+
+const stopsBtns = document.querySelectorAll(".stop-list .stop .stop__head div");
+
+const stopsDetailsBtns = document.querySelectorAll(".stop__details ul li");
+
+tourInformationSelectors.forEach((btn, i) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		if (btn.parentElement.querySelector(".active")) {
+			btn.parentElement.querySelector(".active").classList.remove("active");
+			btn.classList.add("active");
+		}
+		document
+			.querySelector(".tour-information__details")
+			.querySelector(".tour-information__plan.active")
+			.classList.remove("active");
+
+		tourInformationBlocks[i].classList.add("active");
 	});
 });
 
-const tourVisualsThumbs = [
-	...document.querySelectorAll(".mySwiper .swiper-slide"),
-];
+stopsDetailsBtns.forEach((btn) => {
+	btn.addEventListener("click", () => {
+		btn.classList.toggle("active");
+	});
+});
 
-const showMoreBtns = document.querySelectorAll(
-	".show-more-btn div, .daily-schedule__head div, .stop__head div, .stop__details li"
-);
-const hiddenContent = document.querySelectorAll(".day-schedule__details");
+stopsBtns.forEach((btn) => {
+	toggleActiveClasses(btn, ".stop");
+});
 
-const toursInfoBtns = document.querySelectorAll(".details-tabs li");
+dayScheduleBtn.forEach((btn) => {
+	toggleActiveClasses(btn, ".day-schedule");
+});
+
+dailyScheduleBtn.forEach((btn) => {
+	toggleActiveClasses(btn, ".daily-schedule");
+});
 
 toursInfoBtns.forEach((btn) => {
 	btn.addEventListener("click", () => {
@@ -43,22 +65,3 @@ toursInfoBtns.forEach((btn) => {
 		btn.classList.add("active");
 	});
 });
-
-showMoreBtns.forEach((btn) => {
-	btn.addEventListener("click", () => {
-		btn.classList.toggle("active");
-	});
-});
-
-toursMainBtns.forEach((btn, i) => {
-	btn.addEventListener("click", (e) => {
-		e.preventDefault();
-		if (btn.parentElement.querySelector(".active")) {
-			btn.parentElement.querySelector(".active").classList.remove("active");
-			btn.classList.add("active");
-			// console.log(tourVisualsThumbs[i].id);
-		}
-	});
-});
-
-// calendar

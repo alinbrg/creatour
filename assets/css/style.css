@@ -3097,6 +3097,20 @@ aside.shown {
   text-align: center;
   position: relative;
 }
+.tours-inside-main:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 7vw;
+  height: 1px;
+  background-color: #e9b520;
+}
+@media screen and (max-width: 1280px) {
+  .tours-inside-main:before {
+    display: none;
+  }
+}
 .tours-inside-main__bg {
   background-image: url(../img/tour-inside-bg.jpg);
   width: 100%;
@@ -3130,11 +3144,29 @@ aside.shown {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
 }
+.tours-inside-main__options:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 7vw;
+  height: 1px;
+  background-color: #e9b520;
+}
+@media screen and (max-width: 1280px) {
+  .tours-inside-main__options:after {
+    display: none;
+  }
+}
 @media screen and (max-width: 700px) {
   .tours-inside-main__options {
     flex-direction: column;
     height: 100px;
-    justify-content: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tours-inside-main__options .left-block {
+    margin-top: 10px;
   }
 }
 .tours-inside-main__options .left-block ul {
@@ -3152,6 +3184,9 @@ aside.shown {
   .tours-inside-main__options .left-block ul {
     gap: 15px;
   }
+}
+.tours-inside-main__options .right-block {
+  display: none;
 }
 .tours-inside-main__options .right-block ul {
   gap: 21px;
@@ -3178,6 +3213,7 @@ aside.shown {
   padding-top: 60px;
   position: relative;
   display: flex;
+  justify-content: space-between;
 }
 .tour-information::before {
   content: "";
@@ -3196,21 +3232,34 @@ aside.shown {
 @media screen and (max-width: 1024px) {
   .tour-information {
     flex-direction: column;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+}
+.tour-information__details {
+  max-width: 951px;
+  width: calc(74% - 25px);
+}
+@media screen and (max-width: 1024px) {
+  .tour-information__details {
+    width: 100%;
   }
 }
 .tour-information__plan {
-  max-width: 951px;
-  width: calc(74% - 25px);
-  margin-right: 25px;
+  display: none;
 }
-@media screen and (max-width: 700px) {
-  .tour-information__plan {
-    width: 100%;
-  }
+.tour-information__plan.active {
+  display: block;
 }
 .tour-information__plan .day-schedule {
   background-color: #ffffff;
   border: 1px solid #761a14;
+  height: 94px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.tour-information__plan .day-schedule.active {
+  height: auto;
 }
 .tour-information__plan .day-schedule__head {
   height: 94px;
@@ -3227,18 +3276,24 @@ aside.shown {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__head .day-number {
+    margin-left: 5px;
+    margin-right: 12px;
+  }
+}
 .tour-information__plan .day-schedule__head .day-number span {
-  font-size: 14px;
+  font-size: clamp(12px, 0.9vw, 14px);
   font-family: "montserrat-bold";
 }
 .tour-information__plan .day-schedule__head .day-destination p {
-  font-size: 14px;
+  font-size: clamp(12px, 0.9vw, 14px);
   font-family: "montserrat-bold";
   line-height: 1;
 }
 .tour-information__plan .day-schedule__head .day-destination h5 {
   color: #761a14;
-  font-size: 18px;
+  font-size: clamp(14px, 0.9vw, 18px);
   font-family: "caslon-semi-bold";
   line-height: 1;
   margin-top: 8px;
@@ -3267,7 +3322,6 @@ aside.shown {
   transform: translate(-50%, -50%);
   width: 10px;
   height: 2px;
-  border-radius: 4px;
   background-color: #761a14;
 }
 .tour-information__plan .day-schedule__head .show-more-btn div span:first-child {
@@ -3303,7 +3357,7 @@ aside.shown {
   }
 }
 .tour-information__plan .day-schedule__details .details-tabs ul li {
-  font-size: 16px;
+  font-size: clamp(12px, 0.9vw, 16px);
   font-family: "montserrat-regular";
 }
 .tour-information__plan .day-schedule__details .details-tabs ul li.active {
@@ -3326,6 +3380,7 @@ aside.shown {
   padding: 23px 25px;
   border: 1px solid #e9b520;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head {
   display: flex;
@@ -3337,7 +3392,7 @@ aside.shown {
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head h3 {
   color: #e9b520;
-  font-size: 18px;
+  font-size: clamp(14px, 0.9vw, 18px);
   font-family: "caslon-bold";
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head div {
@@ -3358,11 +3413,14 @@ aside.shown {
   width: 9px;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list {
-  margin-top: 20px;
+  height: 0;
+  overflow: hidden;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop {
   border: 1px solid #761a14;
   padding: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head {
   display: flex;
@@ -3370,10 +3428,11 @@ aside.shown {
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head img {
   margin-right: 10px;
+  width: 18px;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head h4 {
   color: #761a14;
-  font-size: 16px;
+  font-size: clamp(12px, 0.9vw, 16px);
   font-family: "montserrat-bold";
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div {
@@ -3391,7 +3450,6 @@ aside.shown {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 10px;
-  border-radius: 4px;
   height: 2px;
   background-color: #761a14;
 }
@@ -3406,16 +3464,17 @@ aside.shown {
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details {
   font-family: "montserrat-medium";
-  margin-top: 20px;
+  height: 0;
+  overflow: hidden;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details .title {
-  font-size: 18px;
+  font-size: clamp(14px, 0.9vw, 18px);
   font-family: inherit;
   margin-bottom: 20px;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li {
   margin-bottom: 14px;
-  font-size: 14px;
+  font-size: clamp(12px, 0.9vw, 14px);
   font-family: inherit;
   position: relative;
   padding: 0 20px 0 15px;
@@ -3428,34 +3487,122 @@ aside.shown {
   height: 6px;
   background-color: #e9b520;
   left: 0;
-  top: 50%;
+  top: 10px;
   transform: translateY(-50%);
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li::after {
-  content: "+";
+  content: "ᐩ";
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 10px;
   transform: translateY(-50%);
   color: #761a14;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li .more-info {
+  display: none;
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li.active::after {
   content: "";
   width: 8px;
   height: 1px;
   background-color: #761a14;
-  border-radius: 4px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li.active .more-info {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop.active .stop__details {
+  height: auto;
+  overflow: auto;
+  margin-top: 20px;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule.active {
+  height: auto;
+  padding: 23px 25px;
+  overflow: auto;
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule.active .stop-list {
+  height: auto;
+  margin-top: 20px;
+  overflow: auto;
 }
 .tour-information__visuals {
   max-width: 463px;
   width: 26%;
-  height: 587px;
+  max-height: 587px;
+  height: 500px;
   margin-top: 120px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tour-information__visuals {
+    margin: 100px auto 0;
     width: 100%;
   }
+}
+.tour-information__visuals .visuals-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 26%;
+  height: 160px;
+}
+@media screen and (max-width: 1024px) {
+  .tour-information__visuals .visuals-bg {
+    display: none;
+  }
+}
+.tour-information__visuals .visuals-bg span {
+  display: block;
+  position: absolute;
+}
+.tour-information__visuals .visuals-bg .circle {
+  bottom: 0;
+  left: 0;
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+  border: 1px solid #e9b520;
+}
+.tour-information__visuals .visuals-bg .circle .center-dot,
+.tour-information__visuals .visuals-bg .circle .bottom-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #761a14;
+}
+.tour-information__visuals .visuals-bg .circle .center-dot {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tour-information__visuals .visuals-bg .circle .bottom-dot {
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tour-information__visuals .visuals-bg .circle .line {
+  height: 41px;
+  width: 1px;
+  background-color: #761a14;
+  top: 50%;
+  left: 45px;
+}
+.tour-information__visuals .visuals-bg .right-line {
+  width: calc(100% - 46.5px);
+  height: 1px;
+  right: 0;
+  top: calc(50% + 34.5px);
+  background-color: #761a14;
+  transform: translateY(-50%);
+}
+.tour-information__visuals .visuals-bg .top-line {
+  width: 1px;
+  height: calc(100% - 30px);
+  background-color: #761a14;
+  top: -10px;
+  left: 14px;
+  transform: rotate(-33grad);
 }
 .tour-information__visuals .swiper {
   width: 100%;
@@ -3465,6 +3612,73 @@ aside.shown {
 .tour-information__visuals .swiper-slide {
   background-size: cover;
   background-position: center;
+}
+.tour-information__visuals .mySwiper-pgn {
+  right: 240px;
+  top: -85px;
+  width: 50%;
+  height: 85px;
+  left: unset;
+  display: flex;
+  gap: 21px;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 1600px) {
+  .tour-information__visuals .mySwiper-pgn {
+    right: 180px;
+  }
+}
+@media (max-width: 1440px) {
+  .tour-information__visuals .mySwiper-pgn {
+    right: 130px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .tour-information__visuals .mySwiper-pgn {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tour-information__visuals .mySwiper-pgn {
+    right: 35px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tour-information__visuals .mySwiper-pgn {
+    top: -50px;
+    right: unset;
+    height: 50px;
+    width: calc(100% - 30px);
+    justify-content: start;
+    left: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tour-information__visuals .mySwiper-pgn {
+    gap: 15px;
+  }
+}
+.tour-information__visuals .mySwiper-pgn span {
+  text-transform: capitalize;
+  width: fit-content;
+  height: max-content;
+  border-radius: 0;
+  font-size: 18px;
+  opacity: 1;
+  margin: 0 !important;
+  background: transparent;
+  --swiper-theme-color: unset;
+  color: #ffffff;
+  font-family: "caslon-bold";
+  font-size: clamp(14px, 1.6vw, 16px);
+}
+.tour-information__visuals .mySwiper-pgn span.swiper-pagination-bullet-active {
+  border-bottom: 1px solid #e9b520;
+  color: #e9b520;
+}
+.tour-information__visuals .mySwiper-pgn span::before {
+  display: none;
 }
 .tour-information__visuals .mySwiper2 {
   width: 100%;
@@ -3555,12 +3769,15 @@ aside.shown {
 
 .calendar-section {
   position: relative;
+  padding-top: 115px;
+  padding-bottom: 75px;
+  margin-bottom: 160px;
 }
 .calendar-section__bg {
   background: url(../img/amphitheatre\ top.jpg);
   width: 100%;
   max-height: 823px;
-  height: 600px;
+  height: 700px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3571,6 +3788,7 @@ aside.shown {
   }
 }
 .calendar-section .calendar {
+  margin-top: 25px;
   height: max-content;
   width: max-content;
   overflow: hidden;
@@ -3578,6 +3796,11 @@ aside.shown {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 700px) {
+  .calendar-section .calendar {
+    margin-top: 15px;
+  }
 }
 .calendar-section .calendar .calendar-header {
   display: flex;
@@ -3587,7 +3810,7 @@ aside.shown {
 }
 .calendar-section .calendar .calendar-header span {
   color: white;
-  font-size: clamp(24px, 1.6vw, 40px);
+  font-size: clamp(32px, 1.6vw, 40px);
   font-family: "montserrat-extra";
 }
 .calendar-section .calendar .calendar-body .calendar-week-day {
@@ -3602,7 +3825,7 @@ aside.shown {
   color: var(--bg-second);
   color: #ffffff;
   font-family: "montserrat-extra";
-  font-size: clamp(24px, 1.6vw, 40px);
+  font-size: clamp(32px, 1.6vw, 40px);
 }
 .calendar-section .calendar .calendar-body .calendar-days {
   display: grid;
@@ -3612,15 +3835,15 @@ aside.shown {
 .calendar-section .calendar .calendar-body .calendar-days div {
   max-width: 90px;
   max-height: 90px;
-  width: 70px;
-  height: 70px;
+  width: 67px;
+  height: 67px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 5px;
   position: relative;
   color: #ffffff;
-  font-size: clamp(24px, 1.6vw, 40px);
+  font-size: clamp(32px, 1.6vw, 40px);
   font-family: "montserrat-extra";
 }
 .calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n), .calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n+1) {
@@ -3629,7 +3852,7 @@ aside.shown {
 .calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n) span, .calendar-section .calendar .calendar-body .calendar-days div:nth-child(7n+1) span {
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 700px) {
   .calendar-section .calendar .calendar-body .calendar-days div {
     width: 40px;
     height: 40px;
@@ -3638,9 +3861,6 @@ aside.shown {
 .calendar-section .calendar .calendar-body .calendar-days div.filled {
   color: #ffb9a6;
 }
-.calendar-section .calendar .calendar-body .calendar-days div.weekend {
-  color: #a69d74;
-}
 .calendar-section .calendar .calendar-body .calendar-days div span {
   position: absolute;
   bottom: 0;
@@ -3648,8 +3868,13 @@ aside.shown {
   transform: translateX(-50%);
   color: inherit;
   font-family: "montserrat-bold";
-  font-size: clamp(8px, 1.6vw, 10px);
+  font-size: clamp(8px, 0.9vw, 10px);
   text-transform: uppercase;
+}
+@media screen and (max-width: 700px) {
+  .calendar-section .calendar .calendar-body .calendar-days div span {
+    bottom: -5px;
+  }
 }
 
 .reg-auth-section {
@@ -3972,6 +4197,255 @@ aside.shown {
   z-index: 125;
 }
 
+.profile {
+  margin-top: 241px;
+  margin-bottom: 40vh;
+  display: flex;
+  justify-content: space-between;
+}
+.profile:before {
+  content: "";
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  width: 9vw;
+  height: 1px;
+  background-color: #e9b520;
+}
+@media screen and (max-width: 1280px) {
+  .profile:before {
+    display: none;
+  }
+}
+.profile:after {
+  content: "";
+  position: absolute;
+  top: 240px;
+  right: 0;
+  width: 7vw;
+  height: 1px;
+  background-color: #e9b520;
+}
+@media screen and (max-width: 1280px) {
+  .profile:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .profile::before {
+    display: initial;
+    top: 194px;
+    width: 105px;
+  }
+}
+.profile__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/g12.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.1;
+}
+@media screen and (max-width: 1024px) {
+  .profile {
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 145px;
+    margin-bottom: 30px;
+    gap: 25px;
+  }
+}
+.profile__selectors ul li {
+  font-size: clamp(14px, 0.9vw, 24px);
+  font-family: "caslon-semi-bold";
+  margin-bottom: 20px;
+}
+.profile__selectors ul li.active {
+  font-size: clamp(24px, 0.9vw, 32px);
+  position: relative;
+}
+.profile__selectors ul li.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 50%;
+  left: 0;
+  background-color: #761a14;
+}
+@media screen and (max-width: 1024px) {
+  .profile__selectors ul li.active::after {
+    display: none;
+  }
+}
+.profile__selectors .log-out {
+  color: #761a14;
+  font-size: clamp(14px, 0.9vw, 24px);
+  font-family: "caslon-semi-bold";
+}
+.profile__information {
+  width: 60%;
+}
+@media screen and (max-width: 1024px) {
+  .profile__information {
+    width: 100%;
+  }
+}
+.profile__information .personal-information form .form-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 25px;
+  height: 56px;
+}
+@media screen and (max-width: 700px) {
+  .profile__information .personal-information form .form-row {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    height: unset;
+  }
+}
+.profile__information .personal-information form .form-row div {
+  max-width: 341px;
+  width: calc(50% - 25px);
+  display: flex;
+  border: 1px solid #cbcbcb;
+  height: 100%;
+  padding: 0 20px;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  .profile__information .personal-information form .form-row div {
+    width: 100%;
+    height: 56px;
+  }
+}
+.profile__information .personal-information form .form-row div.email {
+  background-color: rgba(226, 226, 226, 0.2);
+  border: none;
+}
+.profile__information .personal-information form .form-row div img {
+  width: 24px;
+  margin-right: 20px;
+}
+.profile__information .personal-information form .form-row div input {
+  overflow: hidden;
+}
+.profile__information .personal-information form .form-row div input::placeholder {
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
+}
+.profile__information .personal-information form .form-row div input#ID::-webkit-inner-spin-button, .profile__information .personal-information form .form-row div input#ID::-webkit-outer-spin-button, .profile__information .personal-information form .form-row div input#age::-webkit-inner-spin-button, .profile__information .personal-information form .form-row div input#age::-webkit-outer-spin-button {
+  opacity: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+.profile__information .personal-information form .form-row div input#email {
+  background-color: transparent;
+}
+.profile__information .personal-information form .form-row div .arrow-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 10px;
+  padding: 0;
+  top: 16px;
+  border: none;
+  gap: 5px;
+}
+.profile__information .personal-information form .form-row div .arrow-icons img {
+  margin: 0;
+  width: 8.5px;
+}
+.profile__information .personal-information form .form-row div select {
+  width: 100%;
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  background: transparent;
+  background-image: url("../img/icons/arr-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+.profile__information .info-block {
+  display: none;
+}
+.profile__information .info-block.active {
+  display: block;
+}
+.profile__information .change-pass {
+  margin-bottom: 100px;
+}
+.profile__information .change-pass div {
+  max-width: 341px;
+  width: calc(50% - 25px);
+  display: flex;
+  border: 1px solid #cbcbcb;
+  height: 56px;
+  padding: 0 20px;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+.profile__information .change-pass div:last-child {
+  margin-bottom: 0;
+}
+.profile__information .change-pass div img {
+  width: 24px;
+  margin-right: 20px;
+}
+.profile__information .change-pass div input {
+  overflow: hidden;
+}
+.profile__information .change-pass div input::placeholder {
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
+}
+@media screen and (max-width: 700px) {
+  .profile__information .change-pass div {
+    width: 100%;
+  }
+}
+.profile__information .personal-information button,
+.profile__information .change-pass button {
+  max-width: 341px;
+  width: calc(50% - 25px);
+  background-color: #761a14;
+  height: 56px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: "montserrat-semibold";
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .profile__information .personal-information button,
+.profile__information .change-pass button {
+    width: 100%;
+  }
+}
 footer .footer-div {
   border-top: 2px solid #e2e2e2;
   padding: 40px 0 30px;
