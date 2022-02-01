@@ -3111,6 +3111,11 @@ aside.shown {
     display: none;
   }
 }
+@media screen and (max-width: 700px) {
+  .tours-inside-main {
+    height: unset;
+  }
+}
 .tours-inside-main__bg {
   background-image: url(../img/tour-inside-bg.jpg);
   width: 100%;
@@ -3120,6 +3125,11 @@ aside.shown {
   background-repeat: no-repeat;
   z-index: -1;
 }
+@media screen and (max-width: 700px) {
+  .tours-inside-main__bg {
+    height: 300px;
+  }
+}
 .tours-inside-main__content {
   text-align: center;
   position: absolute;
@@ -3127,15 +3137,34 @@ aside.shown {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 700px) {
+  .tours-inside-main__content {
+    top: 160px;
+    width: calc(100% - 30px);
+    transform: translateX(-50%);
+  }
+}
 .tours-inside-main__content h1 {
   color: #ffffff;
   font-size: clamp(60px, 1.6vw, 80px);
   font-family: "caslon-reg";
 }
+@media screen and (max-width: 700px) {
+  .tours-inside-main__content h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
 .tours-inside-main__content h5 {
   color: #e9b520;
   font-family: "caslon-semi-bold";
   font-size: 20px;
+}
+@media screen and (max-width: 700px) {
+  .tours-inside-main__content h5 {
+    font-size: 13px;
+    font-family: "montserrat-medium";
+  }
 }
 .tours-inside-main__options {
   position: absolute;
@@ -3160,13 +3189,17 @@ aside.shown {
 }
 @media screen and (max-width: 700px) {
   .tours-inside-main__options {
-    flex-direction: column;
-    height: 100px;
+    display: block;
+    position: static;
+    background-color: transparent;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 700px) {
   .tours-inside-main__options .left-block {
     margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 .tours-inside-main__options .left-block ul {
@@ -3183,6 +3216,15 @@ aside.shown {
 @media screen and (max-width: 700px) {
   .tours-inside-main__options .left-block ul {
     gap: 15px;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  .tours-inside-main__options .left-block ul::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .tours-inside-main__options .left-block ul li {
+    height: 30px;
   }
 }
 .tours-inside-main__options .right-block {
@@ -3202,11 +3244,36 @@ aside.shown {
 .tours-inside-main__options ul li a {
   color: #ffffff;
   font-family: "caslon-bold";
-  font-size: clamp(14px, 1.6vw, 16px);
+  font-size: clamp(16px, 1.6vw, 16px);
+}
+@media screen and (max-width: 700px) {
+  .tours-inside-main__options ul li a {
+    color: #000000;
+    white-space: nowrap;
+  }
 }
 .tours-inside-main__options ul li.active a {
   color: #e9b520;
   border-bottom: 1px solid #e9b520;
+}
+@media screen and (max-width: 700px) {
+  .tours-inside-main__options ul li.active a {
+    border: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tours-inside-main__options ul li.active {
+    position: relative;
+  }
+  .tours-inside-main__options ul li.active::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    bottom: 5px;
+    left: 0;
+    position: absolute;
+    background-color: #e9b520;
+  }
 }
 
 .tour-information {
@@ -3258,6 +3325,11 @@ aside.shown {
   overflow: hidden;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule {
+    height: 140px;
+  }
+}
 .tour-information__plan .day-schedule.active {
   height: auto;
 }
@@ -3265,6 +3337,16 @@ aside.shown {
   height: 94px;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__head {
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 10px;
+    padding-bottom: 15px;
+    gap: 12px;
+    align-items: flex-start;
+  }
 }
 .tour-information__plan .day-schedule__head .day-number {
   background-color: #e9b520;
@@ -3278,25 +3360,37 @@ aside.shown {
 }
 @media screen and (max-width: 700px) {
   .tour-information__plan .day-schedule__head .day-number {
-    margin-left: 5px;
-    margin-right: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 24px;
   }
 }
 .tour-information__plan .day-schedule__head .day-number span {
+  text-transform: uppercase;
   font-size: clamp(12px, 0.9vw, 14px);
   font-family: "montserrat-bold";
 }
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__head .day-destination {
+    order: 3;
+  }
+}
 .tour-information__plan .day-schedule__head .day-destination p {
-  font-size: clamp(12px, 0.9vw, 14px);
+  font-size: clamp(12px, 1.2vw, 14px);
   font-family: "montserrat-bold";
   line-height: 1;
 }
 .tour-information__plan .day-schedule__head .day-destination h5 {
   color: #761a14;
-  font-size: clamp(14px, 0.9vw, 18px);
+  font-size: clamp(16px, 1.2vw, 18px);
   font-family: "caslon-semi-bold";
   line-height: 1;
   margin-top: 8px;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__head .day-destination h5 {
+    margin-top: 12px;
+  }
 }
 .tour-information__plan .day-schedule__head .show-more-btn {
   height: 100%;
@@ -3306,6 +3400,12 @@ aside.shown {
   justify-content: center;
   align-items: center;
   background-color: #761a14;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__head .show-more-btn {
+    background-color: transparent;
+    justify-content: end;
+  }
 }
 .tour-information__plan .day-schedule__head .show-more-btn div {
   background-color: rgba(255, 255, 255, 0.5);
@@ -3342,23 +3442,34 @@ aside.shown {
 .tour-information__plan .day-schedule__details.active {
   display: block;
 }
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details {
+    padding: 10px;
+  }
+}
+.tour-information__plan .day-schedule__details .details-tabs {
+  white-space: nowrap;
+  overflow: hidden;
+}
 .tour-information__plan .day-schedule__details .details-tabs ul {
   display: flex;
   gap: 25px;
+  flex-shrink: 0;
+  overflow-x: auto;
+  white-space: nowrap;
 }
-@media screen and (max-width: 1280px) {
-  .tour-information__plan .day-schedule__details .details-tabs ul {
-    gap: 15px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .tour-information__plan .day-schedule__details .details-tabs ul {
-    gap: 10px;
-  }
+.tour-information__plan .day-schedule__details .details-tabs ul::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .tour-information__plan .day-schedule__details .details-tabs ul li {
-  font-size: clamp(12px, 0.9vw, 16px);
+  font-size: 16px;
   font-family: "montserrat-regular";
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .details-tabs ul li {
+    height: 30px;
+  }
 }
 .tour-information__plan .day-schedule__details .details-tabs ul li.active {
   font-family: "montserrat-bold";
@@ -3373,6 +3484,11 @@ aside.shown {
   bottom: -8px;
   left: 0;
 }
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .details-tabs ul li.active::after {
+    bottom: 5px;
+  }
+}
 .tour-information__plan .day-schedule__details .whole-day-plan {
   margin-top: 25px;
 }
@@ -3385,6 +3501,11 @@ aside.shown {
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head {
+    align-items: flex-start;
+  }
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule__head img {
   margin-right: 10px;
@@ -3462,6 +3583,11 @@ aside.shown {
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div.active span:last-child {
   transform: translate(-50%, -50%) rotate(180deg);
 }
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__head div {
+    display: none;
+  }
+}
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details {
   font-family: "montserrat-medium";
   height: 0;
@@ -3472,14 +3598,14 @@ aside.shown {
   font-family: inherit;
   margin-bottom: 20px;
 }
-.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li {
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details > ul > li {
   margin-bottom: 14px;
   font-size: clamp(12px, 0.9vw, 14px);
   font-family: inherit;
   position: relative;
   padding: 0 20px 0 15px;
 }
-.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li::before {
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details > ul > li::before {
   content: "";
   position: absolute;
   color: #e9b520;
@@ -3490,32 +3616,45 @@ aside.shown {
   top: 10px;
   transform: translateY(-50%);
 }
-.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li::after {
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details > ul > li::after {
   content: "ᐩ";
   position: absolute;
   right: 0;
   top: 10px;
   transform: translateY(-50%);
   color: #761a14;
+  font-size: 24px;
 }
-.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li .more-info {
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details > ul > li::after {
+    top: 15px;
+  }
+}
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details > ul > li .more-info {
   display: none;
 }
-.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li.active::after {
-  content: "";
-  width: 8px;
-  height: 1px;
-  background-color: #761a14;
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details > ul > li.active::after {
+  content: "−";
 }
-.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details ul li.active .more-info {
+.tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop__details > ul > li.active .more-info {
   display: block;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: clamp(11px, 1.2vw, 13px);
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop.active .stop__details {
   height: auto;
   overflow: auto;
   margin-top: 20px;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop {
+    padding: 10px;
+  }
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule .stop-list .stop .stop__details {
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
+  }
 }
 .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule.active {
   height: auto;
@@ -3526,6 +3665,22 @@ aside.shown {
   height: auto;
   margin-top: 20px;
   overflow: auto;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule.active {
+    padding: 0;
+  }
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule.active .stop-list {
+    height: auto;
+    margin-top: 20px;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tour-information__plan .day-schedule__details .whole-day-plan .daily-schedule {
+    padding: 0;
+    border: none;
+  }
 }
 .tour-information__visuals {
   max-width: 463px;
@@ -3543,7 +3698,8 @@ aside.shown {
 }
 @media screen and (max-width: 700px) {
   .tour-information__visuals {
-    margin: 0 auto 50px;
+    margin: 0 auto;
+    height: 400px;
   }
 }
 .tour-information__visuals .visuals-bg {
@@ -3629,6 +3785,8 @@ aside.shown {
   gap: 21px;
   align-items: center;
   justify-content: flex-end;
+  color: #ffffff;
+  font-family: "caslon-bold";
 }
 @media screen and (max-width: 1600px) {
   .tour-information__visuals .mySwiper-pgn {
@@ -3648,21 +3806,19 @@ aside.shown {
 @media screen and (max-width: 1024px) {
   .tour-information__visuals .mySwiper-pgn {
     right: 35px;
+    gap: 15px;
   }
 }
 @media screen and (max-width: 700px) {
   .tour-information__visuals .mySwiper-pgn {
-    top: -50px;
+    top: -30px;
     right: unset;
     height: 50px;
     width: calc(100% - 30px);
     justify-content: start;
     left: 15px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .tour-information__visuals .mySwiper-pgn {
-    gap: 15px;
+    color: #000000;
+    font-size: clamp(16px, 1.6vw, 16px);
   }
 }
 .tour-information__visuals .mySwiper-pgn span {
@@ -3675,9 +3831,6 @@ aside.shown {
   margin: 0 !important;
   background: transparent;
   --swiper-theme-color: unset;
-  color: #ffffff;
-  font-family: "caslon-bold";
-  font-size: clamp(14px, 1.6vw, 16px);
 }
 .tour-information__visuals .mySwiper-pgn span.swiper-pagination-bullet-active {
   color: #e9b520;
@@ -3719,6 +3872,11 @@ aside.shown {
   box-sizing: border-box;
   padding: 10px 0;
   overflow: initial;
+}
+@media screen and (max-width: 700px) {
+  .tour-information__visuals .mySwiper {
+    display: none;
+  }
 }
 .tour-information__visuals .mySwiper .swiper-slide {
   width: 25%;
@@ -3791,6 +3949,11 @@ aside.shown {
 @media screen and (max-width: 1024px) {
   .calendar-section {
     margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .calendar-section {
+    display: none;
   }
 }
 .calendar-section__bg {
@@ -4291,12 +4454,12 @@ aside.shown {
   }
 }
 .profile__selectors ul li {
-  font-size: clamp(14px, 1.6vw, 24px);
+  font-size: clamp(14px, 1.2vw, 24px);
   font-family: "caslon-semi-bold";
   margin-bottom: 20px;
 }
 .profile__selectors ul li.active {
-  font-size: clamp(24px, 1.6vw, 32px);
+  font-size: clamp(24px, 1.2vw, 32px);
   position: relative;
 }
 .profile__selectors ul li.active::after {
@@ -4315,7 +4478,7 @@ aside.shown {
 }
 .profile__selectors .log-out {
   color: #761a14;
-  font-size: clamp(14px, 1.6vw, 24px);
+  font-size: clamp(14px, 1.2vw, 24px);
   font-family: "caslon-semi-bold";
 }
 .profile__information {
