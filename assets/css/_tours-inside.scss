@@ -424,8 +424,12 @@
 		height: 500px;
 		margin-top: 120px;
 		@include tab {
-			margin: 100px auto 0;
+			margin: 0 auto 200px;
 			width: 100%;
+			order: -1;
+		}
+		@include sm {
+			margin: 0 auto 50px;
 		}
 		.visuals-bg {
 			position: absolute;
@@ -544,8 +548,18 @@
 				background: transparent;
 				--swiper-theme-color: unset;
 				&.swiper-pagination-bullet-active {
-					border-bottom: 1px solid $main;
+					// border-bottom: 1px solid $main;
 					color: $main;
+					position: relative;
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						background-color: $main;
+						height: 1px;
+						width: 100%;
+					}
 				}
 				&::before {
 					display: none;
@@ -658,6 +672,9 @@
 	padding-top: 115px;
 	padding-bottom: 75px;
 	margin-bottom: 160px;
+	@include tab {
+		margin-bottom: 50px;
+	}
 	&__bg {
 		background: url(../img/amphitheatre\ top.jpg);
 		width: 100%;
@@ -671,7 +688,7 @@
 		padding: 0;
 	}
 	.calendar {
-		margin-top: 25px;
+		margin-top: -15px;
 		$calendar-font-size: clamp(32px, 1.6vw, 40px);
 		$calendar-font-family: "montserrat-extra";
 

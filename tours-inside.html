@@ -121,10 +121,10 @@
 				</div>
 				<div class="right-block">
 					<ul>
-						<li class="active map-selector"><a href="#">Map</a></li>
-						<li><a class="video-selector" href="#">Video Tour</a></li>
-						<li><a class="gallery-selector" href="#">Gallery</a></li>
-						<li><a class="guide-selector" href="#">Tour Guides</a></li>
+						<li>Map</li>
+						<li>Video Tour</li>
+						<li>Gallery</li>
+						<li>Tour Guides</li>
 					</ul>
 				</div>
 			</div>
@@ -1128,13 +1128,14 @@
 		<!-- Initialize Swiper -->
 		<script>
 			let swiperBtns = ["map", "video tour", "gallery", "tour guides"];
-			var swiper = new Swiper(".mySwiper", {
+			const btns = [...document.querySelectorAll(".right-block li")];
+			const swiper = new Swiper(".mySwiper", {
 				spaceBetween: 10,
 				slidesPerView: 4,
 				freeMode: true,
 				watchSlidesProgress: true,
 			});
-			var swiper2 = new Swiper(".mySwiper2", {
+			const swiper2 = new Swiper(".mySwiper2", {
 				spaceBetween: 10,
 				thumbs: {
 					swiper: swiper,
@@ -1145,7 +1146,11 @@
 					dynamicBullets: false,
 					renderBullet: function (index, className) {
 						return (
-							'<span class="' + className + '">' + swiperBtns[index] + "</span>"
+							'<span class="' +
+							className +
+							'">' +
+							btns[index].innerText +
+							"</span>"
 						);
 					},
 				},

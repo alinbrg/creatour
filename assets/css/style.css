@@ -3536,8 +3536,14 @@ aside.shown {
 }
 @media screen and (max-width: 1024px) {
   .tour-information__visuals {
-    margin: 100px auto 0;
+    margin: 0 auto 200px;
     width: 100%;
+    order: -1;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tour-information__visuals {
+    margin: 0 auto 50px;
   }
 }
 .tour-information__visuals .visuals-bg {
@@ -3674,8 +3680,17 @@ aside.shown {
   font-size: clamp(14px, 1.6vw, 16px);
 }
 .tour-information__visuals .mySwiper-pgn span.swiper-pagination-bullet-active {
-  border-bottom: 1px solid #e9b520;
   color: #e9b520;
+  position: relative;
+}
+.tour-information__visuals .mySwiper-pgn span.swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #e9b520;
+  height: 1px;
+  width: 100%;
 }
 .tour-information__visuals .mySwiper-pgn span::before {
   display: none;
@@ -3773,6 +3788,11 @@ aside.shown {
   padding-bottom: 75px;
   margin-bottom: 160px;
 }
+@media screen and (max-width: 1024px) {
+  .calendar-section {
+    margin-bottom: 50px;
+  }
+}
 .calendar-section__bg {
   background: url(../img/amphitheatre\ top.jpg);
   width: 100%;
@@ -3788,7 +3808,7 @@ aside.shown {
   }
 }
 .calendar-section .calendar {
-  margin-top: 25px;
+  margin-top: -15px;
   height: max-content;
   width: max-content;
   overflow: hidden;
@@ -4042,6 +4062,9 @@ aside.shown {
 }
 .reg-auth-section .form-block form .form-row div input {
   overflow: hidden;
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
 }
 .reg-auth-section .form-block form .form-row div input::placeholder {
   color: #171717;
@@ -4151,6 +4174,11 @@ aside.shown {
     left: 55px;
   }
 }
+.reg-auth-section .form-block.authorization form .form-row input {
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
+}
 .reg-auth-section .form-block.authorization form .form-row input::placeholder {
   color: #171717;
   font-family: "montserrat-medium";
@@ -4206,7 +4234,7 @@ aside.shown {
 .profile:before {
   content: "";
   position: absolute;
-  top: 50vh;
+  top: 582px;
   left: 0;
   width: 9vw;
   height: 1px;
@@ -4263,12 +4291,12 @@ aside.shown {
   }
 }
 .profile__selectors ul li {
-  font-size: clamp(14px, 0.9vw, 24px);
+  font-size: clamp(14px, 1.6vw, 24px);
   font-family: "caslon-semi-bold";
   margin-bottom: 20px;
 }
 .profile__selectors ul li.active {
-  font-size: clamp(24px, 0.9vw, 32px);
+  font-size: clamp(24px, 1.6vw, 32px);
   position: relative;
 }
 .profile__selectors ul li.active::after {
@@ -4287,7 +4315,7 @@ aside.shown {
 }
 .profile__selectors .log-out {
   color: #761a14;
-  font-size: clamp(14px, 0.9vw, 24px);
+  font-size: clamp(14px, 1.6vw, 24px);
   font-family: "caslon-semi-bold";
 }
 .profile__information {
@@ -4339,6 +4367,9 @@ aside.shown {
 }
 .profile__information .personal-information form .form-row div input {
   overflow: hidden;
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
 }
 .profile__information .personal-information form .form-row div input::placeholder {
   color: #171717;
@@ -4416,6 +4447,9 @@ aside.shown {
 }
 .profile__information .change-pass div input {
   overflow: hidden;
+  color: #171717;
+  font-family: "montserrat-medium";
+  font-size: 14px;
 }
 .profile__information .change-pass div input::placeholder {
   color: #171717;
@@ -4447,12 +4481,18 @@ aside.shown {
   }
 }
 .profile__information .tour-history .history-block {
+  width: 90%;
   display: flex;
   gap: 30px;
   padding: 20px;
   position: relative;
   border: 1px solid #cbcbcb;
   margin-bottom: 20px;
+}
+@media (max-width: 1440px) {
+  .profile__information .tour-history .history-block {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 700px) {
   .profile__information .tour-history .history-block {
@@ -4469,6 +4509,7 @@ aside.shown {
 }
 .profile__information .tour-history .history-block .img img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .profile__information .tour-history .history-block .img div {
@@ -4479,7 +4520,7 @@ aside.shown {
   height: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 8px;
   background-color: #e9b520;
   font-size: clamp(18px, 0.9vw, 24px);
   font-family: "caslon-semi-bold";
@@ -4497,6 +4538,7 @@ aside.shown {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 700px) {
   .profile__information .tour-history .history-block .info__header {
@@ -4514,10 +4556,11 @@ aside.shown {
   font-family: "caslon-bold";
 }
 .profile__information .tour-history .history-block .info__more {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto;
   row-gap: 9px;
   column-gap: 30px;
+  width: fit-content;
 }
 @media screen and (max-width: 700px) {
   .profile__information .tour-history .history-block .info__more {

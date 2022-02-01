@@ -145,6 +145,9 @@
 					}
 					input {
 						overflow: hidden;
+						color: $tours-black;
+						font-family: "montserrat-medium";
+						font-size: 14px;
 						&::placeholder {
 							color: $tours-black;
 							font-family: "montserrat-medium";
@@ -258,6 +261,9 @@
 						}
 					}
 					input {
+						color: $tours-black;
+						font-family: "montserrat-medium";
+						font-size: 14px;
 						&::placeholder {
 							color: $tours-black;
 							font-family: "montserrat-medium";
