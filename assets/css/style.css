@@ -3187,7 +3187,7 @@ aside.shown {
     display: none;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tours-inside-main__options {
     display: block;
     position: static;
@@ -3195,7 +3195,7 @@ aside.shown {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tours-inside-main__options .left-block {
     margin-top: 10px;
     white-space: nowrap;
@@ -3213,7 +3213,7 @@ aside.shown {
     gap: 20px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tours-inside-main__options .left-block ul {
     gap: 15px;
     white-space: nowrap;
@@ -3246,7 +3246,7 @@ aside.shown {
   font-family: "caslon-bold";
   font-size: clamp(16px, 1.6vw, 16px);
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tours-inside-main__options ul li a {
     color: #000000;
     white-space: nowrap;
@@ -3256,12 +3256,12 @@ aside.shown {
   color: #e9b520;
   border-bottom: 1px solid #e9b520;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tours-inside-main__options ul li.active a {
     border: none;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tours-inside-main__options ul li.active {
     position: relative;
   }
@@ -3696,9 +3696,17 @@ aside.shown {
     order: -1;
   }
 }
+@media screen and (max-width: 1024px) {
+  .tour-information__visuals {
+    margin: 0 auto;
+    height: 580px;
+    padding-top: 60px;
+  }
+}
 @media screen and (max-width: 700px) {
   .tour-information__visuals {
     margin: 0 auto;
+    padding-top: 0;
     height: 400px;
   }
 }
@@ -3785,8 +3793,6 @@ aside.shown {
   gap: 21px;
   align-items: center;
   justify-content: flex-end;
-  color: #ffffff;
-  font-family: "caslon-bold";
 }
 @media screen and (max-width: 1600px) {
   .tour-information__visuals .mySwiper-pgn {
@@ -3805,20 +3811,20 @@ aside.shown {
 }
 @media screen and (max-width: 1024px) {
   .tour-information__visuals .mySwiper-pgn {
-    right: 35px;
     gap: 15px;
+    right: unset;
+    left: 35px;
+    top: 50px;
+    height: 50px;
+    width: calc(100% - 70px);
+    justify-content: start;
   }
 }
 @media screen and (max-width: 700px) {
   .tour-information__visuals .mySwiper-pgn {
     top: -30px;
-    right: unset;
-    height: 50px;
-    width: calc(100% - 30px);
-    justify-content: start;
     left: 15px;
-    color: #000000;
-    font-size: clamp(16px, 1.6vw, 16px);
+    width: calc(100% - 30px);
   }
 }
 .tour-information__visuals .mySwiper-pgn span {
@@ -3826,11 +3832,19 @@ aside.shown {
   width: fit-content;
   height: max-content;
   border-radius: 0;
+  color: #ffffff;
+  font-family: "caslon-bold";
   font-size: 18px;
   opacity: 1;
   margin: 0 !important;
   background: transparent;
   --swiper-theme-color: unset;
+}
+@media screen and (max-width: 1024px) {
+  .tour-information__visuals .mySwiper-pgn span {
+    color: #000000;
+    font-size: clamp(16px, 1.6vw, 16px);
+  }
 }
 .tour-information__visuals .mySwiper-pgn span.swiper-pagination-bullet-active {
   color: #e9b520;
@@ -3873,7 +3887,7 @@ aside.shown {
   padding: 10px 0;
   overflow: initial;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
   .tour-information__visuals .mySwiper {
     display: none;
   }
@@ -3951,11 +3965,6 @@ aside.shown {
     margin-bottom: 50px;
   }
 }
-@media screen and (max-width: 700px) {
-  .calendar-section {
-    display: none;
-  }
-}
 .calendar-section__bg {
   background: url(../img/amphitheatre\ top.jpg);
   width: 100%;
@@ -3989,7 +3998,6 @@ aside.shown {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
 }
 .calendar-section .calendar .calendar-header span {
   color: white;
