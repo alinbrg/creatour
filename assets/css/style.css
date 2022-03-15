@@ -382,6 +382,24 @@ header nav li {
 header nav li:first-child {
   margin-left: 0;
 }
+header nav li.country-list-web div {
+  display: none;
+}
+header nav li.country-list-web.active {
+  position: relative;
+}
+header nav li.country-list-web.active div {
+  display: block;
+  position: absolute;
+  left: -50%;
+}
+header nav li.country-list-web.active div ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+header nav li.country-list-web.active div ul li {
+  margin: 0;
+}
 header nav li .nav-site-logo {
   width: 80px;
   margin: 0 40px;
@@ -472,6 +490,15 @@ aside ul li {
   margin: 0;
   margin-bottom: 20px;
 }
+aside ul li.country__list div {
+  display: none;
+}
+aside ul li.country__list div li {
+  margin-bottom: 0;
+}
+aside ul li.country__list.active div {
+  display: block;
+}
 aside ul a {
   font-size: 18px;
   font-family: "caslon-reg";
@@ -483,7 +510,7 @@ aside.shown {
 }
 
 .mob-menu-shown {
-  transform: translateX(195px);
+  transform: translateX(180px);
 }
 
 .main-slider {
@@ -1822,20 +1849,23 @@ aside.shown {
   font-family: "caslon-bold";
 }
 
-.about-us, .rules {
+.about-us,
+.rules {
   padding-top: 241px;
   padding-bottom: 125px;
   position: relative;
 }
-.about-us__bg, .rules__bg {
+.about-us__bg,
+.rules__bg {
   display: none;
 }
 @media screen and (max-width: 1024px) {
-  .about-us__bg, .rules__bg {
+  .about-us__bg,
+.rules__bg {
     display: block;
     background-image: url(../img/g12.png);
     width: 100%;
-    height: 60%;
+    height: 100%;
     background-size: auto;
     background-position: top;
     background-repeat: no-repeat;
@@ -1844,15 +1874,18 @@ aside.shown {
     left: 0;
     z-index: -1;
     opacity: 0.25;
+    background-attachment: fixed;
   }
 }
 @media screen and (max-width: 700px) {
-  .about-us, .rules {
+  .about-us,
+.rules {
     padding-top: 145px;
     padding-bottom: 30px;
   }
 }
-.about-us:before, .rules:before {
+.about-us:before,
+.rules:before {
   content: "";
   position: absolute;
   top: max(50vh, 550px);
@@ -1862,11 +1895,13 @@ aside.shown {
   background-color: #e9b520;
 }
 @media screen and (max-width: 1280px) {
-  .about-us:before, .rules:before {
+  .about-us:before,
+.rules:before {
     display: none;
   }
 }
-.about-us:after, .rules:after {
+.about-us:after,
+.rules:after {
   content: "";
   position: absolute;
   top: 240px;
@@ -1876,51 +1911,62 @@ aside.shown {
   background-color: #e9b520;
 }
 @media screen and (max-width: 1280px) {
-  .about-us:after, .rules:after {
+  .about-us:after,
+.rules:after {
     display: none;
   }
 }
 @media screen and (max-width: 1280px) {
-  .about-us::before, .about-us:after, .rules::before, .rules:after {
+  .about-us::before, .about-us:after,
+.rules::before,
+.rules:after {
     display: initial;
   }
 }
 @media screen and (max-width: 1024px) {
-  .about-us::before, .rules::before {
+  .about-us::before,
+.rules::before {
     width: 7vw;
   }
-  .about-us:after, .rules:after {
+  .about-us:after,
+.rules:after {
     display: none;
   }
 }
 @media screen and (max-width: 700px) {
-  .about-us:before, .rules:before {
+  .about-us:before,
+.rules:before {
     top: 194px;
     width: 105px;
     z-index: -1;
   }
 }
-.about-us__head, .rules__head {
+.about-us__head,
+.rules__head {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 60px;
 }
-.about-us__head h2, .rules__head h2 {
+.about-us__head h2,
+.rules__head h2 {
   font-size: clamp(24px, 2vw, 32px);
   color: #171717;
   font-family: "caslon-semi-bold";
 }
 @media screen and (max-width: 700px) {
-  .about-us__head, .rules__head {
+  .about-us__head,
+.rules__head {
     display: block;
     margin-bottom: 30px;
   }
 }
-.about-us__text, .rules__text {
+.about-us__text,
+.rules__text {
   position: relative;
 }
-.about-us__text:before, .rules__text:before {
+.about-us__text:before,
+.rules__text:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1930,14 +1976,17 @@ aside.shown {
   background-color: #761a14;
 }
 @media screen and (max-width: 1280px) {
-  .about-us__text:before, .rules__text:before {
+  .about-us__text:before,
+.rules__text:before {
     display: none;
   }
 }
-.about-us__text:before, .rules__text:before {
+.about-us__text:before,
+.rules__text:before {
   transform: translateY(-50%);
 }
-.about-us__text:after, .rules__text:after {
+.about-us__text:after,
+.rules__text:after {
   content: "";
   position: absolute;
   bottom: 175px;
@@ -1947,21 +1996,27 @@ aside.shown {
   background-color: #761a14;
 }
 @media screen and (max-width: 1280px) {
-  .about-us__text:after, .rules__text:after {
+  .about-us__text:after,
+.rules__text:after {
     display: none;
   }
 }
 @media screen and (max-width: 1280px) {
-  .about-us__text::before, .about-us__text:after, .rules__text::before, .rules__text:after {
+  .about-us__text::before, .about-us__text:after,
+.rules__text::before,
+.rules__text:after {
     display: initial;
   }
 }
 @media screen and (max-width: 1024px) {
-  .about-us__text:after, .about-us__text:before, .rules__text:after, .rules__text:before {
+  .about-us__text:after, .about-us__text:before,
+.rules__text:after,
+.rules__text:before {
     display: none;
   }
 }
-.about-us__text p, .rules__text p {
+.about-us__text p,
+.rules__text p {
   font-size: clamp(14px, 2vw, 18px);
   font-family: "montserrat-medium";
   color: #171717;
@@ -3965,6 +4020,11 @@ aside.shown {
     margin-bottom: 50px;
   }
 }
+@media screen and (max-width: 700px) {
+  .calendar-section {
+    display: none;
+  }
+}
 .calendar-section__bg {
   background: url(../img/amphitheatre\ top.jpg);
   width: 100%;
@@ -4065,6 +4125,261 @@ aside.shown {
 @media screen and (max-width: 700px) {
   .calendar-section .calendar .calendar-body .calendar-days div span {
     bottom: -5px;
+  }
+}
+
+.country-info {
+  padding-top: 241px;
+  padding-bottom: 125px;
+  position: relative;
+}
+.country-info:before {
+  content: "";
+  position: absolute;
+  top: max(50vh, 550px);
+  left: 0;
+  width: 9vw;
+  height: 1px;
+  background-color: #e9b520;
+}
+@media screen and (max-width: 1280px) {
+  .country-info:before {
+    display: none;
+  }
+}
+.country-info:after {
+  content: "";
+  position: absolute;
+  top: 240px;
+  right: 0;
+  width: 7vw;
+  height: 1px;
+  background-color: #e9b520;
+}
+@media screen and (max-width: 1280px) {
+  .country-info:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .country-info {
+    padding-bottom: 70px;
+  }
+  .country-info::before, .country-info:after {
+    display: initial;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .country-info::before {
+    width: 7vw;
+  }
+  .country-info:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .country-info:before {
+    top: 194px;
+    width: 105px;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 700px) {
+  .country-info {
+    padding-top: 145px;
+    padding-bottom: 30px;
+  }
+}
+.country-info__bg {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .country-info__bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/g12.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.1;
+    background-attachment: fixed;
+  }
+}
+.country-info p {
+  font-size: clamp(14px, 2vw, 18px);
+  font-family: "montserrat-medium";
+  color: #171717;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 700px) {
+  .country-info p {
+    margin-bottom: 20px;
+  }
+}
+.country-info__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  position: relative;
+}
+.country-info__head img {
+  width: 65%;
+}
+@media screen and (max-width: 700px) {
+  .country-info__head img {
+    display: flex;
+    margin-left: auto;
+    width: 75%;
+  }
+}
+.country-info__head h2 {
+  font-size: clamp(24px, 2vw, 32px);
+  color: #171717;
+  font-family: "caslon-semi-bold";
+}
+@media screen and (max-width: 700px) {
+  .country-info__head {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+.country-info__head:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 362px;
+  height: 100%;
+  width: 1px;
+  background-color: #761a14;
+}
+@media screen and (max-width: 1280px) {
+  .country-info__head:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .country-info__head:before {
+    left: 300px;
+  }
+}
+@media (max-width: 1440px) {
+  .country-info__head:before {
+    left: 250px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .country-info__head:before {
+    left: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .country-info__head:before {
+    display: none;
+  }
+}
+.country-info .text-container {
+  padding: 0 484px 0 362px;
+}
+@media screen and (max-width: 1600px) {
+  .country-info .text-container {
+    padding: 0 400px 0 300px;
+  }
+}
+@media (max-width: 1440px) {
+  .country-info .text-container {
+    padding: 0 330px 0 250px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .country-info .text-container {
+    padding: 0 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .country-info .text-container {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .country-info .text-container {
+    padding: 0 15px;
+  }
+}
+.country-info .text-container-head {
+  padding-right: 600px;
+}
+@media screen and (max-width: 1600px) {
+  .country-info .text-container-head {
+    padding-right: 450px;
+  }
+}
+@media (max-width: 1440px) {
+  .country-info .text-container-head {
+    padding-rigth: 280px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .country-info .text-container-head {
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .country-info .text-container-head {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .country-info .text-container-head {
+    padding: 0 15px;
+  }
+}
+
+.country__tours {
+  padding-bottom: 125px;
+}
+.country__tours--title {
+  margin-bottom: 70px;
+}
+.country__tours h2 {
+  font-size: clamp(24px, 2vw, 32px);
+  color: #171717;
+  font-family: "caslon-semi-bold";
+}
+.country__tours--list .tour__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.country__tours--list .tour__item__img {
+  width: 50%;
+}
+.country__tours--list .tour__item__img img {
+  width: 100%;
+}
+.country__tours--list .tour__item__info {
+  width: 50%;
+  padding: 30px 125px;
+}
+@media screen and (max-width: 700px) {
+  .country__tours--list .tour__item {
+    flex-wrap: wrap;
+  }
+  .country__tours--list .tour__item__img, .country__tours--list .tour__item__info {
+    width: 100%;
+  }
+  .country__tours--list .tour__item__info {
+    padding: 0;
   }
 }
 
@@ -4451,6 +4766,7 @@ aside.shown {
   background-repeat: no-repeat;
   z-index: -1;
   opacity: 0.1;
+  background-attachment: fixed;
 }
 @media screen and (max-width: 1024px) {
   .profile {

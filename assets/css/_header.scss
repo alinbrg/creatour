@@ -75,6 +75,26 @@ header {
 			&:first-child {
 				margin-left: 0;
 			}
+			&.country-list-web {
+				div {
+					display: none;
+				}
+				&.active {
+					position: relative;
+					div {
+						display: block;
+						position: absolute;
+						left: -50%;
+						ul {
+							display: flex;
+							flex-wrap: wrap;
+							li {
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
 			.nav-site-logo {
 				width: 80px;
 				margin: 0 40px;

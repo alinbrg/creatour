@@ -12,6 +12,19 @@ aside {
 		li {
 			margin: 0;
 			margin-bottom: 20px;
+			&.country__list {
+				div {
+					display: none;
+					li {
+						margin-bottom: 0;
+					}
+				}
+				&.active {
+					div {
+						display: block;
+					}
+				}
+			}
 		}
 		a {
 			font-size: 18px;
@@ -25,5 +38,5 @@ aside {
 	}
 }
 .mob-menu-shown {
-	transform: translateX(195px);
+	transform: translateX(180px);
 }
