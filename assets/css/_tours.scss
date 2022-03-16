@@ -1,550 +1,552 @@
-.tours-header{
-    &:before{
-        @include sm{
-            height: 70px;
-        }
-    }
+.tours-header {
+	&:before {
+		@include sm {
+			height: 70px;
+		}
+	}
 }
 
-.tours{
-    position: relative;
-    // max-height: 1250px;
-    height: 100vh;
-    @include tab{
-        height: unset;
-        margin-bottom: 38px;
-        &::before{
-            content: "";
-            position: absolute;
-            top:0;
-            left:0;
-            width: 100%;
-            height: 90px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),;
-        }
-    }
-    &__main{ 
-        &__bg__web{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            @include sm{
-                display: none;
-            }
-        }
-        &__bg__mob{
-            width: 100%;
-            
-            object-fit: cover;
-            display: none;            
-            @include sm{
-                display: block;
-                height: 376px;
-            }
-        }
-        
-        &__content__web{
-            position: absolute;
-            top:50%;
-            left:50%;
-            transform: translateX(-50%);
-            width: 50%;
-            text-align: center;
-            @include tab{
-                top:300px;
-            }
-            @include sm{
-                top: 180px;
-                width: 65%;
-            }
-            p{
-                color: $pgn;
-                font-size: clamp(14px, 1.6vw, 32px);
-                font-family: "caslon-reg";
-                
-                margin-top: 80px;
-                @include xl{
-                    margin-top: 50px;
-                }
-                @include tab{
-                    line-height: 1.2;
-                    margin-top: 40px;
-                }
-                @include sm{
-                    margin-top: 10px;
-                }
-                &:first-child{
-                    margin-top: 0;
-                }
-            }
-        }
-        &__content__mob{
-            display: none;
-            position: relative;
-            
-            width: 100%;
-            height: fit-content;
-            h1{
-                font-size: clamp(32px, 2vw, 80px);
-                font-family: "caslon-semi-bold";
-                text-align: center;
-                text-transform: uppercase;
-                color: $white;
-            }
-            @include tab{
-                display: block;
-            }
-        }
-    }
-    &__filter{
-        position: absolute;
-        bottom: 0;
-        left:0;
-        width: 100%;
-        height: 85px;
-        
-        background-color: rgba($color: #000000, $alpha: 0.7);
-        @include after-line-top-right(50%, 0, 7vw, $main);
-        @include xl{
-            &:after{
-                width:5vw;
-            }
-        }
-        display: flex;
-        align-items: center;
-        @include tab{
-            display: block;
-            margin-top: 30px;
-            position: relative;
-            background-color: transparent;
-            &:before{
-                content: "";
-                position: absolute;
-                top: 33px;
-                left: 0;
-                z-index:1;
-                height: 1px;
-                width: 105px;
-                background-color: $main;
-            }
-        }
-        @include sm{
-            padding: 0 15px 0 10px;
-        }
-        
-    }
+.tours {
+	position: relative;
+	// max-height: 1250px;
+	height: 100vh;
+	@include tab {
+		height: unset;
+		margin-bottom: 38px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 90px;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+		}
+	}
+	&__main {
+		&__bg__web {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@include sm {
+				display: none;
+			}
+		}
+		&__bg__mob {
+			width: 100%;
 
+			object-fit: cover;
+			display: none;
+			@include sm {
+				display: block;
+				height: 376px;
+			}
+		}
+
+		&__content__web {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50%;
+			text-align: center;
+			@include tab {
+				top: 300px;
+			}
+			@include sm {
+				top: 180px;
+				width: 65%;
+			}
+			p {
+				color: $pgn;
+				font-size: clamp(14px, 1.6vw, 32px);
+				font-family: "caslon-reg";
+
+				margin-top: 80px;
+				@include xl {
+					margin-top: 50px;
+				}
+				@include tab {
+					line-height: 1.2;
+					margin-top: 40px;
+				}
+				@include sm {
+					margin-top: 10px;
+				}
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+		&__content__mob {
+			display: none;
+			position: relative;
+
+			width: 100%;
+			height: fit-content;
+			h1 {
+				font-size: clamp(32px, 2vw, 80px);
+				font-family: "caslon-semi-bold";
+				text-align: center;
+				text-transform: uppercase;
+				color: $white;
+			}
+			@include tab {
+				display: block;
+			}
+		}
+	}
+	&__filter {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 85px;
+
+		background-color: rgba($color: #000000, $alpha: 0.7);
+		@include after-line-top-right(50%, 0, 7vw, $main);
+		@include xl {
+			&:after {
+				width: 5vw;
+			}
+		}
+		display: flex;
+		align-items: center;
+		@include tab {
+			display: block;
+			margin-top: 30px;
+			position: relative;
+			background-color: transparent;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 33px;
+				left: 0;
+				z-index: 1;
+				height: 1px;
+				width: 105px;
+				background-color: $main;
+			}
+		}
+		@include sm {
+			padding: 0 15px 0 10px;
+		}
+	}
 }
 .filter {
-    height: 55px;
-    width: auto;
-    display: inline-block;
-    @include tab{
-        height: 50%;
-        display: block;
-    }
-    &.tours__status{
-        width:35%;
-        .list{
-            margin-top: 10px;
-            @include centering;
-            justify-content: start;
-            @include tab{
-                margin-top: 0;
-                position: relative;
-                
-            }
-        }
-        @include tab{
-            width: 100%;
-        }
-    }
+	height: 55px;
+	width: auto;
+	display: inline-block;
+	@include tab {
+		height: 50%;
+		display: block;
+	}
+	&.tours__status {
+		width: 35%;
+		.list {
+			margin-top: 10px;
+			@include centering;
+			justify-content: start;
+			@include tab {
+				margin-top: 0;
+				position: relative;
+			}
+		}
+		@include tab {
+			width: 100%;
+		}
+	}
 
-    &.tours__countries{
-        width: 65%;
-        .list{
-            @include centering;
-            justify-content: end;
-            margin-top: 10px;   
-        }
-        @include tab{
-            width: 100%;
-            .list{
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                justify-content: start;
-                // margin-top: 0;
-                padding:0;
-                &::-webkit-scrollbar {
-                    width: 0px;
-                }
-            }
-        }
-    }
-    
-    .nice-select {
-        border-radius: 0;
-        border: none;
-        height: unset;
-        width: 100%;
-        padding: 0;
-        &.open:after, &.small:after{
-            display: none;
-        }
-        li {
-            color: $white;
-            padding:0;
-            position: relative;
-            margin-right: 20px;
-            font-family: "caslon-bold";
-            text-transform: capitalize;
-            @include xl{
-                margin-right: 15px;
-            }
-            @include tab{
-                color: $tours-black;
-                margin-right: 22px;
-            }
-            &:last-child{
-                margin-right: 0;
-            }
-            
-        }
-        span {
-            display: none;
-        }
-        li.selected {
-            color: $main;
-            position: relative;
-            &::after{
-                content: "";
-                height: 1px;
-                width:100%;
-                position: absolute;
-                bottom: 0;
-                left:0;
-                background-color: $main;
-                @include tab{
-                    background-color: $contact;
-                }
-            }
-            @include tab{
-                color: $contact;
+	&.tours__countries {
+		width: 65%;
+		.list {
+			@include centering;
+			justify-content: end;
+			margin-top: 10px;
+		}
+		@include tab {
+			width: 100%;
+			.list {
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				justify-content: start;
+				// margin-top: 0;
+				padding: 0;
+				&::-webkit-scrollbar {
+					width: 0px;
+				}
+			}
+		}
+	}
 
-            }
-        }
-        .list {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-            background-color: transparent;
-            border:none;
-            box-shadow: none;
-            width: 100%;
-            @include tab{
-                justify-content: start;
-            }
-            @include sm{
-                padding-left: 5px;
-            }
-        }
-        .option:hover, 
-        .option.focus, 
-        .option.selected.focus{
-            background: transparent;
-            font-weight: normal
-        }
-        &.small .option{
-            line-height: unset;
-            font-weight: unset;
-        }
-
-
-    }
+	.nice-select {
+		border-radius: 0;
+		border: none;
+		height: unset;
+		width: 100%;
+		padding: 0;
+		&.open:after,
+		&.small:after {
+			display: none;
+		}
+		li {
+			color: $white;
+			padding: 0;
+			position: relative;
+			margin-right: 20px;
+			font-family: "caslon-bold";
+			text-transform: capitalize;
+			@include xl {
+				margin-right: 15px;
+			}
+			@include tab {
+				color: $tours-black;
+				margin-right: 22px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		span {
+			display: none;
+		}
+		li.selected {
+			color: $main;
+			position: relative;
+			&::after {
+				content: "";
+				height: 1px;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: $main;
+				@include tab {
+					background-color: $contact;
+				}
+			}
+			@include tab {
+				color: $contact;
+			}
+		}
+		.list {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+			width: 100%;
+			@include tab {
+				justify-content: start;
+			}
+			@include sm {
+				padding-left: 5px;
+			}
+		}
+		.option:hover,
+		.option.focus,
+		.option.selected.focus {
+			background: transparent;
+			font-weight: normal;
+		}
+		&.small .option {
+			line-height: unset;
+			font-weight: unset;
+		}
+	}
 }
-.journey-of-europe{
-    position: relative;
-    @include before-line-bottom-left(85px, 0, 9vw, $main);
-    @include after-line-bottom-right(85px, 0, 9vw, $main);
-    @include xl{
-        &:before, &:after{
-            width:7vw;
-        }
-    }
-    @include tab{
-        padding-left:0;
-        padding-right: 0;
-    }
-    padding-top: 86px;
-    padding-bottom: 50px;
-    @include tab{
-        display: none;
-    }
-    &__slogan{
-        color: $tours;
-        margin-bottom: 65px;
-        @include before-line-top-left(105px, 0, 9vw, $tours);
-        @include after-line-top-right(182px, 0, 9vw, $main);
-        @include xl{
-            &:before, &:after{
-                width:7vw;
-            }
-        }
-        @include tab{
-            margin: 25px 0 32px;
-        }
-    }
-    &__slogan, &__slogan .colored-word-yellow{
-        font-size: 48px;
-        font-family: "caslon-reg";
-        font-weight: bold;
-        @include xl{
-            font-size: clamp(36px, 2vw, 48px);
-        }
-        @include tab{
-            font-size: 18px;
-        }
-    }
-    &__bg{
-        position: relative;
-        max-height: 809px;
-        &:before{
-            content: "";
-            width: 100%;
-            height: 60%;
-            position: absolute;
-            bottom: 0;
-            left:0;
-            background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-            @include tab{
-                height: 35%;
-                top:0;
-                background:linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+.journey-of-europe {
+	position: relative;
+	@include before-line-bottom-left(85px, 0, 9vw, $main);
+	@include after-line-bottom-right(85px, 0, 9vw, $main);
+	@include xl {
+		&:before,
+		&:after {
+			width: 7vw;
+		}
+	}
+	@include tab {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	padding-top: 86px;
+	padding-bottom: 50px;
+	@include tab {
+		display: none;
+	}
+	&__slogan {
+		color: $tours;
+		margin-bottom: 65px;
+		@include before-line-top-left(105px, 0, 9vw, $tours);
+		@include after-line-top-right(182px, 0, 9vw, $main);
+		@include xl {
+			&:before,
+			&:after {
+				width: 7vw;
+			}
+		}
+		@include tab {
+			margin: 25px 0 32px;
+		}
+	}
+	&__slogan,
+	&__slogan .colored-word-yellow {
+		font-size: 48px;
+		font-family: "caslon-reg";
+		font-weight: bold;
+		@include xl {
+			font-size: clamp(36px, 2vw, 48px);
+		}
+		@include tab {
+			font-size: 18px;
+		}
+	}
+	&__bg {
+		position: relative;
+		max-height: 809px;
+		&:before {
+			content: "";
+			width: 100%;
+			height: 60%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 0),
+				rgba(0, 0, 0, 1)
+			);
+			@include tab {
+				height: 35%;
+				top: 0;
+				background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+			}
+		}
 
-            }
-        }
-        
-        img{
-            width: 100%;
-            max-height: 809px;
-            height: 100%;
-            object-fit: cover;
-            @include sm{
-                max-height: 211px;
-            }
-        }
-        @include sm{
-            max-height: 211px;
-        }
-    }
-    &__title{
-        position: absolute;
-        top:9%;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: clamp(70px, 2vw, 80px);
-        font-family: "caslon-bold";
-        width: 100%;
-        color: $white;
-        @include tab{
-            font-size: clamp(32px, 2vw, 32px);
-            top:50%;
-            // transform: translateY(-50%);
-        }
-        
-    }
-    &__text{
-        position: absolute;
-        bottom: 0;
-        padding: 48px;
-        align-items: flex-start;
-        gap:70px;
-        @include xl{
-            gap:50px;
-        }
-        p{
-            color: $white;
-            width: 50%;
-            font-family: "montserrat-regular";
-            font-size: 18px;
-        }
-        @include tab{
-            display: none;
-        }
-    }
+		img {
+			width: 100%;
+			max-height: 809px;
+			height: 100%;
+			object-fit: cover;
+			@include sm {
+				max-height: 211px;
+			}
+		}
+		@include sm {
+			max-height: 211px;
+		}
+	}
+	&__title {
+		position: absolute;
+		top: 9%;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: clamp(70px, 2vw, 80px);
+		font-family: "caslon-bold";
+		width: 100%;
+		color: $white;
+		@include tab {
+			font-size: clamp(32px, 2vw, 32px);
+			top: 50%;
+			// transform: translateY(-50%);
+		}
+	}
+	&__text {
+		position: absolute;
+		bottom: 0;
+		padding: 48px;
+		align-items: flex-start;
+		gap: 70px;
+		@include xl {
+			gap: 50px;
+		}
+		p {
+			color: $white;
+			width: 50%;
+			font-family: "montserrat-regular";
+			font-size: 18px;
+		}
+		@include tab {
+			display: none;
+		}
+	}
 }
 
-.tours-results{
-    .active-tours, .planned-tours{
-        margin-bottom: 110px;
-        @include tab{
-            margin-bottom: 40px;
-        }
-        & > .colored-word-yellow{
-            font-size: 12px;
-            font-family: "montserrat-medium";
-            @include tab{
-                display: none;
-            }
-        }
-        & > h5{
-            margin-bottom: 60px;
-            margin-top: 8px;
-            color: $tours-black;
-            font-size: 32px;
-            font-family: "caslon-semi-bold";
-            @include tab{
-                margin-bottom: 16px;
-                font-size: 24px;
-            }
-        }
-    }
-    .planned-tours{
-        position: relative;
-        @include after-line-top-right(20px, 0, 12vw, $tours);
-        @include before-line-top-left-height(-160px, 4%, 317px,  $tours);
-        @include xl{
-            &:after{
-                width:10vw;
-            }
-        }
-    }
-    &__list{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap:25px;
-        grid-template-rows: auto;
-        @include tab{
-            grid-template-columns: 100%;
-            gap: 20px;
-        }
-    }
-    .item{
-        position: relative;
-        max-height: 550px;
-        @include tab{
-            position: static;
-            height: unset;
-        }
-        &::before{
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top:0;
-            left:0;
-            background-color: rgba($color: #111111, $alpha: 0.6);
-            @include tab{
-                display: none;
-            }
-        }
-        img{
-            width: 100%;
-            max-height: 550px;
-            height: 100%;
-            object-fit: cover;
-            @include tab{
-                height: 271px;
-                margin-bottom: 16px;
-            }
-            
-        }
-        h5, span, p, h6, a{
-            color: $white;
-            @include tab{
-                color: $secondary;
-            }
-        }
-        &__top{
-            padding:60px 50px 0;
-            position: absolute;
-            top:0;
-            left:0;
-            width: 100%;
-            align-items: flex-start;
-            @include xl{
-                padding:50px 40px 0;
-            }
-            @include tab{
-                position: static;
-                padding: 0;
-                margin-bottom: 15px;
-            }
-        }
-        &__title{
-            
-            h5{
-                margin-bottom: 16px;
-                font-size: clamp(24px, 1.2vw, 28px);
-                font-family: "caslon-semi-bold";
-                text-transform: capitalize;
-                @include tab{
-                    line-height: 1.2;
-                    margin-bottom: 8px;
-                }
-            }
-            span{
-                font-size: clamp(16px, 1.2vw, 24px);
-                font-family: "caslon-semi-bold";
-                
-                &.dot{
-                    margin: 0 20px;
-                    @include tab{
-                        margin: 0 10px;
-                    }
-                }
-            }
-        }
-        &__status{
-            font-family: "montserrat-medium";
-            @include tab{
-                display: none;
-            }
-        }
-        &__description{
-            position: absolute;
-            padding: 0 50px 60px;
-            bottom:0;
-            @include xl{
-                padding: 0 40px 50px;
-            }
-            @include tab{
-                position: static;
-                padding: 0;
-            }
-            h6{
-                margin-bottom: 30px;
-                text-transform: uppercase;
-                text-decoration: underline;
-                font-size: 12px;
-                @include tab{
-                    margin-bottom: 20px;
-                }
-            }
-            p{
-                font-family: "montserrat-medium";
-            }
-            .book-now{
-                display: flex;
-                margin-top: 30px;
-                line-height: 1.2;
-                @include tab{
-                    margin-top: 16px;
-                }
-                svg{
-                    width:18px;
-                    height: 12px;
-                    margin-left: 10px;
-                    @include tab{
-                        path{
-                            stroke: $secondary;
-                        }
-                    }
-                }
-            }
-            .book-now, h6{
-                font-family: "caslon-bold";
-            }
-        }
+.tours-results {
+	.active-tours,
+	.planned-tours {
+		margin-bottom: 110px;
+		@include tab {
+			margin-bottom: 40px;
+		}
+		& > .colored-word-yellow {
+			font-size: 12px;
+			font-family: "montserrat-medium";
+			@include tab {
+				display: none;
+			}
+		}
+		& > h5 {
+			margin-bottom: 60px;
+			margin-top: 8px;
+			color: $tours-black;
+			font-size: 32px;
+			font-family: "caslon-semi-bold";
+			@include tab {
+				margin-bottom: 16px;
+				font-size: 24px;
+			}
+		}
+	}
+	.planned-tours {
+		position: relative;
+		@include after-line-top-right(20px, 0, 12vw, $tours);
+		@include before-line-top-left-height(-160px, 4%, 317px, $tours);
+		@include xl {
+			&:after {
+				width: 10vw;
+			}
+		}
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 25px;
+		grid-template-rows: auto;
+		@include tab {
+			grid-template-columns: 100%;
+			gap: 20px;
+		}
+	}
+	.item {
+		position: relative;
+		max-height: 550px;
+		@include tab {
+			position: static;
+			height: unset;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba($color: $secondary, $alpha: 0.6);
+			@include tab {
+				display: none;
+			}
+		}
+		img {
+			width: 100%;
+			max-height: 550px;
+			height: 100%;
+			object-fit: cover;
+			@include tab {
+				height: 271px;
+				margin-bottom: 16px;
+			}
+		}
+		h5,
+		span,
+		p,
+		h6,
+		a {
+			color: $white;
+			@include tab {
+				color: $secondary;
+			}
+		}
+		&__top {
+			padding: 60px 50px 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			align-items: flex-start;
+			@include xl {
+				padding: 50px 40px 0;
+			}
+			@include tab {
+				position: static;
+				padding: 0;
+				margin-bottom: 15px;
+			}
+		}
+		&__title {
+			h5 {
+				margin-bottom: 16px;
+				font-size: clamp(24px, 1.2vw, 28px);
+				font-family: "caslon-semi-bold";
+				text-transform: capitalize;
+				@include tab {
+					line-height: 1.2;
+					margin-bottom: 8px;
+				}
+			}
+			span {
+				font-size: clamp(16px, 1.2vw, 24px);
+				font-family: "caslon-semi-bold";
 
-    }
+				&.dot {
+					margin: 0 20px;
+					@include tab {
+						margin: 0 10px;
+					}
+				}
+			}
+		}
+		&__status {
+			font-family: "montserrat-medium";
+			@include tab {
+				display: none;
+			}
+		}
+		&__description {
+			position: absolute;
+			padding: 0 50px 60px;
+			bottom: 0;
+			@include xl {
+				padding: 0 40px 50px;
+			}
+			@include tab {
+				position: static;
+				padding: 0;
+			}
+			h6 {
+				margin-bottom: 30px;
+				text-transform: uppercase;
+				text-decoration: underline;
+				font-size: 12px;
+				@include tab {
+					margin-bottom: 20px;
+				}
+			}
+			p {
+				font-family: "montserrat-medium";
+			}
+			.book-now {
+				display: flex;
+				margin-top: 30px;
+				line-height: 1.2;
+				@include tab {
+					margin-top: 16px;
+				}
+				svg {
+					width: 18px;
+					height: 12px;
+					margin-left: 10px;
+					@include tab {
+						path {
+							stroke: $secondary;
+						}
+					}
+				}
+			}
+			.book-now,
+			h6 {
+				font-family: "caslon-bold";
+			}
+		}
+	}
 }
