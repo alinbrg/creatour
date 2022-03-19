@@ -1,0 +1,262 @@
+.country-info {
+	padding-top: 241px;
+	padding-bottom: 125px;
+	position: relative;
+
+	@include before-line-top-left(max(50vh, 550px), 0, 9vw, $main);
+	@include after-line-top-right(240px, 0, 7vw, $main);
+	@include lg {
+		padding-bottom: 50px;
+		&::before,
+		&:after {
+			display: initial;
+		}
+	}
+	@include tab {
+		&::before {
+			width: 7vw;
+		}
+		&:after {
+			display: none;
+		}
+	}
+	@include sm {
+		&:before {
+			top: 194px;
+			width: 105px;
+			z-index: -1;
+		}
+	}
+	@include sm {
+		padding-top: 145px;
+		padding-bottom: 30px;
+	}
+	&__bg {
+		display: none;
+		@include tab {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(../img/g12.png);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			z-index: -1;
+			opacity: 0.1;
+			background-attachment: fixed;
+		}
+	}
+	p {
+		font-size: clamp(14px, 2vw, 18px);
+		font-family: "montserrat-medium";
+		color: $tours-black;
+		margin-bottom: 35px;
+		@include sm {
+			margin-bottom: 20px;
+		}
+	}
+	&__head {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 60px;
+
+		img {
+			width: 65%;
+			@include sm {
+				display: flex;
+				margin-left: auto;
+				width: 75%;
+			}
+		}
+		h2 {
+			font-size: clamp(24px, 2vw, 32px);
+			color: $tours-black;
+			font-family: "caslon-semi-bold";
+		}
+		@include sm {
+			display: block;
+			margin-bottom: 30px;
+		}
+		position: relative;
+		@include before-line-top-left-height(50px, 362px, 100%, $contact);
+		&:before {
+			@include xl {
+				left: 300px;
+			}
+			@include rwd(1440) {
+				left: 250px;
+			}
+			@include lg {
+				left: 150px;
+			}
+			@include tab {
+				display: none;
+			}
+		}
+	}
+	.text-container {
+		padding: 0 484px 0 362px;
+
+		@include xl {
+			padding: 0 400px 0 300px;
+		}
+		@include rwd(1440) {
+			padding: 0 330px 0 250px;
+		}
+		@include lg {
+			padding: 0 150px;
+		}
+		@include tab {
+			padding: 0 80px;
+		}
+		@include sm {
+			padding: 0 15px;
+		}
+	}
+	.text-container-head {
+		padding-right: 600px;
+		@include xl {
+			padding-right: 450px;
+		}
+		@include rwd(1440) {
+			padding-rigth: 280px;
+		}
+		@include lg {
+			padding-right: 100px;
+		}
+		@include tab {
+			padding: 0 80px;
+		}
+		@include sm {
+			padding: 0 15px;
+		}
+	}
+}
+.country__tours {
+	padding-bottom: 125px;
+	@include tab {
+		padding-bottom: 50px;
+	}
+	&--title {
+		margin-bottom: 70px;
+		@include tab {
+			margin-bottom: 40px;
+		}
+	}
+	h2 {
+		font-size: clamp(24px, 2vw, 32px);
+		color: $tours-black;
+		font-family: "caslon-semi-bold";
+	}
+	&--list {
+		.tour__item {
+			position: relative;
+			@include centering;
+			justify-content: space-between;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			margin-bottom: 30px;
+			&::after {
+				position: absolute;
+				content: "";
+				right: 0;
+				top: 0;
+				bottom: 0;
+				height: 100%;
+				width: 60%;
+				background-color: $milkWhite;
+				z-index: -1;
+			}
+			@include tab {
+				padding: 0 20px 30px;
+				&::after {
+					width: 100%;
+					height: 90%;
+					top: unset;
+				}
+			}
+			&__img {
+				width: 50%;
+				img {
+					width: 100%;
+				}
+			}
+			&__info {
+				width: 50%;
+			}
+			.item {
+				&__inside {
+					width: 70%;
+					margin: auto;
+					@include tab {
+						width: 100%;
+					}
+				}
+				&__name {
+					font-size: clamp(24px, 2vw, 28px);
+					color: $tours-black;
+					font-family: "caslon-semi-bold";
+					@include tab {
+						margin-top: 15px;
+						margin-bottom: 5px;
+					}
+				}
+				&__title {
+					margin-bottom: 50px;
+					@include sm {
+						margin-bottom: 20px;
+					}
+					div {
+						display: flex;
+						gap: 20px;
+
+						span {
+							color: $contact;
+							font-size: clamp(18px, 1.6vw, 24px);
+							font-family: "caslon-semi-bold";
+						}
+					}
+				}
+				&__description {
+					h6 {
+						color: $tours-black;
+						font-size: 12px;
+						text-decoration: underline;
+						font-family: "caslon-bold";
+						margin-bottom: 30px;
+					}
+					p {
+						color: $tours-black;
+						font-size: 14px;
+						font-family: "montserrat-medium";
+						margin-bottom: 30px;
+					}
+					a {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						color: $tours-black;
+						font-size: 14px;
+						font-family: "caslon-bold";
+					}
+				}
+			}
+			@include tab {
+				flex-wrap: wrap;
+				&__img,
+				&__info {
+					width: 100%;
+				}
+				&__info {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

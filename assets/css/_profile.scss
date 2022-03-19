@@ -1,0 +1,319 @@
+.profile {
+	margin-top: 241px;
+	margin-bottom: 40vh;
+	display: flex;
+	justify-content: space-between;
+	// @include before-line-top-left(min(50vh, 582px), 0, 9vw, $main);
+	@include before-line-top-left(582px, 0, 9vw, $main);
+	@include after-line-top-right(240px, 0, 7vw, $main);
+	@include lg {
+		&::before {
+			display: initial;
+			top: 194px;
+			width: 105px;
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/g12.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: -1;
+		opacity: 0.1;
+		background-attachment: fixed;
+	}
+	@include tab {
+		flex-direction: column;
+		justify-content: start;
+		margin-top: 145px;
+		margin-bottom: 30px;
+		gap: 25px;
+	}
+	&__selectors {
+		ul {
+			li {
+				font-size: clamp(14px, 1.2vw, 24px);
+				font-family: "caslon-semi-bold";
+				margin-bottom: 20px;
+
+				&.active {
+					font-size: clamp(24px, 1.2vw, 32px);
+					position: relative;
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						height: 1px;
+						width: 50%;
+						left: 0;
+						background-color: $contact;
+						@include tab {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		.log-out {
+			color: $contact;
+			font-size: clamp(14px, 1.2vw, 24px);
+			font-family: "caslon-semi-bold";
+		}
+	}
+	&__information {
+		width: 60%;
+		@include tab {
+			width: 100%;
+		}
+		.personal-information {
+			form {
+				.form-row {
+					display: flex;
+					width: 100%;
+					margin-bottom: 20px;
+					gap: 25px;
+					height: 56px;
+					@include sm {
+						flex-direction: column;
+						gap: 10px;
+						margin-bottom: 10px;
+						height: unset;
+					}
+					div {
+						max-width: 341px;
+						width: calc(100% / 2 - 25px);
+						display: flex;
+						border: 1px solid $form-grey;
+						height: 100%;
+						padding: 0 20px;
+						align-items: center;
+						position: relative;
+						@include sm {
+							width: 100%;
+							height: 56px;
+						}
+						&.email {
+							background-color: rgba(226, 226, 226, 0.2);
+							border: none;
+						}
+						img {
+							width: 24px;
+							margin-right: 20px;
+						}
+						input {
+							overflow: hidden;
+							color: $tours-black;
+							font-family: "montserrat-medium";
+							font-size: 14px;
+							&::placeholder {
+								color: $tours-black;
+								font-family: "montserrat-medium";
+								font-size: 14px;
+							}
+							&#ID,
+							&#age {
+								&::-webkit-inner-spin-button,
+								&::-webkit-outer-spin-button {
+									opacity: 0;
+									-webkit-appearance: none;
+									margin: 0;
+									-moz-appearance: textfield;
+								}
+							}
+							&#email {
+								background-color: transparent;
+							}
+						}
+						.arrow-icons {
+							@include centering;
+							flex-direction: column;
+							position: absolute;
+							width: 24px;
+							height: 24px;
+							right: 10px;
+							padding: 0;
+							top: 16px;
+							border: none;
+							gap: 5px;
+							img {
+								margin: 0;
+								width: 8.5px;
+							}
+						}
+						select {
+							width: 100%;
+							color: $tours-black;
+							font-family: "montserrat-medium";
+							font-size: 14px;
+							background: transparent;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							margin: 0;
+							// -moz-appearance: textfield;
+							background: transparent;
+							background-image: url("../img/icons/arr-down.svg");
+							background-repeat: no-repeat;
+							background-position-x: 100%;
+							background-position-y: 5px;
+						}
+					}
+				}
+			}
+		}
+		.info-block {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+		.change-pass {
+			margin-bottom: 100px;
+			div {
+				max-width: 341px;
+				width: calc(100% / 2 - 25px);
+				display: flex;
+				border: 1px solid $form-grey;
+				height: 56px;
+				padding: 0 20px;
+				align-items: center;
+				position: relative;
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				img {
+					width: 24px;
+					margin-right: 20px;
+				}
+				input {
+					overflow: hidden;
+					color: $tours-black;
+					font-family: "montserrat-medium";
+					font-size: 14px;
+					&::placeholder {
+						color: $tours-black;
+						font-family: "montserrat-medium";
+						font-size: 14px;
+					}
+				}
+				@include sm {
+					width: 100%;
+				}
+			}
+		}
+		.personal-information,
+		.change-pass {
+			button {
+				max-width: 341px;
+				width: calc(100% / 2 - 25px);
+				background-color: $contact;
+				height: 56px;
+				color: $white;
+				text-transform: uppercase;
+				margin-top: 30px;
+				font-size: 14px;
+				font-family: "montserrat-semibold";
+				cursor: pointer;
+				@include sm {
+					width: 100%;
+				}
+			}
+		}
+		.tour-history {
+			.history-block {
+				width: 90%;
+				display: flex;
+				gap: 30px;
+				padding: 20px;
+				position: relative;
+				border: 1px solid $form-grey;
+				margin-bottom: 20px;
+				@include rwd(1440) {
+					width: 100%;
+				}
+				@include sm {
+					flex-direction: column;
+				}
+				.img {
+					width: 260px;
+					@include sm {
+						width: 100%;
+					}
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					div {
+						position: absolute;
+						top: 10px;
+						left: 10px;
+						width: 40px;
+						height: 40px;
+						display: flex;
+						justify-content: center;
+						padding-top: 8px;
+						background-color: $main;
+						font-size: clamp(18px, 0.9vw, 24px);
+						font-family: "caslon-semi-bold";
+					}
+				}
+				.info {
+					width: calc(100% - 260px - 30px);
+					@include sm {
+						width: 100%;
+					}
+					&__header {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						margin-bottom: 30px;
+						flex-wrap: wrap;
+						@include sm {
+							flex-direction: column;
+							align-items: flex-start;
+						}
+						h4 {
+							font-size: 24px;
+							font-family: "caslon-semi-bold";
+						}
+						span {
+							color: #6e6e6e;
+							font-size: 14px;
+							font-family: "caslon-bold";
+						}
+					}
+					&__more {
+						display: grid;
+						grid-template-columns: auto auto;
+						row-gap: 9px;
+						column-gap: 30px;
+						width: fit-content;
+						@include sm {
+							column-gap: 55px;
+							row-gap: 16px;
+						}
+						h3 {
+							font-size: clamp(18px, 0.9vw, 24px);
+							font-family: "caslon-semi-bold";
+							color: $contact;
+						}
+						h5 {
+							font-size: 9px;
+							margin-bottom: 8px;
+							text-transform: uppercase;
+							font-family: "montserrat-bold";
+						}
+					}
+				}
+			}
+		}
+	}
+}

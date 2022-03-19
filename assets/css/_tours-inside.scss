@@ -793,13 +793,13 @@
 	position: relative;
 	padding-top: 115px;
 	padding-bottom: 75px;
-	margin-bottom: 160px;
+	margin-bottom: 70px;
 	@include tab {
 		margin-bottom: 50px;
 	}
-	@include sm {
-		display: none;
-	}
+	// @include sm {
+	// 	display: none;
+	// }
 	&__bg {
 		background: url(../img/amphitheatre\ top.jpg);
 		width: 100%;
@@ -808,6 +808,9 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		@include sm {
+			height: 500px;
+		}
 	}
 	@include sm {
 		padding: 0;
@@ -828,6 +831,7 @@
 
 		@include sm {
 			margin-top: 15px;
+			width: 96%;
 		}
 		.calendar-header {
 			@include centering;
@@ -858,6 +862,7 @@
 				grid-template-columns: repeat(7, 1fr);
 				gap: 2px;
 				div {
+					cursor: pointer;
 					max-width: 90px;
 					max-height: 90px;
 					// width: 70px;
@@ -901,6 +906,107 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.book-tour {
+	opacity: 0;
+	transform: scale(0);
+	&.active {
+		opacity: 1;
+		transform: scale(1);
+		margin-bottom: 100px;
+		.book-tour__block {
+			padding: 40px;
+		}
+	}
+
+	@include sm {
+		background-color: $milkWhite;
+	}
+	&__block {
+		gap: 40px;
+		width: 707px;
+		margin: auto;
+		background-color: $milkWhite;
+		@include sm {
+			flex-wrap: wrap;
+			width: 100%;
+		}
+	}
+	&__available {
+		div {
+			span {
+				color: $contact;
+				font-family: "caslon-semi-bold";
+				font-size: 18px;
+				&:first-child {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+	.book-title {
+		display: block;
+		font-family: "montserrat-bold";
+		font-size: 9px;
+		margin-bottom: 8px;
+		text-transform: uppercase;
+	}
+	&__form {
+		width: calc(100% - 40px - 120px);
+		@include sm {
+			width: 100%;
+			flex-wrap: wrap;
+			gap: 40px;
+		}
+		.book-title {
+			margin-bottom: 17px;
+		}
+		label {
+			width: 160px;
+		}
+		input,
+		button {
+			display: block;
+			background-color: transparent;
+			outline: none;
+			border: none;
+		}
+		input:focus,
+		button:focus {
+			outline: none;
+		}
+		input {
+			border-bottom: 1px solid #f0d077;
+			padding: 4px;
+			color: $contact;
+			font-family: "caslon-bold";
+			font-size: 12px;
+			width: 100%;
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				opacity: 0;
+				-webkit-appearance: none;
+				margin: 0;
+				-moz-appearance: textfield;
+			}
+		}
+		input::placeholder {
+			color: $contact;
+			font-family: "caslon-bold";
+			font-size: 12px;
+		}
+		button {
+			span {
+				color: $contact;
+				font-family: "caslon-semi-bold";
+				font-size: 24px;
+				margin-right: 20px;
+			}
+
+			cursor: pointer;
 		}
 	}
 }

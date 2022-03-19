@@ -1,211 +1,211 @@
-.countries{
-    padding-top: 70px;
-    padding-bottom: 130px;
-    position: relative;
-    @include tab{
-        padding-bottom: 50px;
-    }
-    &:before{
-        content:"";
-        position: absolute;
-        left:-215px;
-        top:50%;
-        transform: translateY(-50%);
-        width:500px;
-        height: 500px;
-        border-radius: 50%;
-        border: 1px solid $main;
-        @include xl{
-            left:-240px;
-        }
-        @include lg{
-            display: none;
-        }
-    }    
-    &:after{
-        content: "";
-        width:200px;
-        height: 2px;
-        position: absolute;
-        background-color: $contact;
-        left:10px;
-        top: 50%;
-        transform: translateY(-50%);
-        @include lg{
-            display: none;
-        }
-    }
-    .swiper {
-        width: 100%;
-        height: 100%;
-       
-        &::after{
-            content: "";
-            width:21px;
-            height:21px;
-            background-color: $contact;
-            position: absolute;
-            left:35px;
-            top: 55%;
-            border-radius: 50%;
-            transform: translateY(-50%);
-            @include xl{
-                left:70px;
-            }
-            @include rwd(1440){
-                left:120px;
-            }
-            @include lg{
-                display: none;
-            }
-        }
-    }
-    @include sm{
-        padding-top: 40px;
-        padding-bottom: 52px;
-    }
-    .swiper-wrapper{
-        width:50%;
-        float: right;
-        max-height: 550px;
-        @include lg{
-            width:100%;
-            float:none;
-            margin-top: 65px;
-            height: initial;
-        }
-        .countries__slide{
-            position:relative;
-            @include lg{
-                position: static;
-            }
-            &__img{
-                width:100%;
-                height: calc(100% - 22px);
-                object-fit: cover;
-                @include lg{
-                    height: 210px;
-                }
-            }
-            .tour-status{
-                position: absolute;
-                top: 25px;
-                left:25px;
-                font-family: "montserrat-medium";
-                @include lg{
-                    display: none;
-                }
-            }
-            &__content{
-                position:absolute;
-                bottom: 0px;
-                padding:40px;
-                margin:0 25px;
-                background-color: $milkWhite;
-                p{
-                    font-family: "montserrat-medium";
-                    margin-bottom: 40px;
-                    @include lg{
-                        margin-bottom: 20px;
-                    }
-                }
-                @include lg{
-                    position: static;
-                    margin:0;
-                    padding:0;
-                    margin-top: 20px;
-                    background-color: transparent;
-                }
-            }
-            a{
-                display: inline-flex;
-                align-items: center;
-                font-family: "caslon-bold";
-                img{
-                    margin-left: 16px;
-                    width:18px;
-                }
-            }
+.countries {
+	padding-top: 70px;
+	padding-bottom: 130px;
+	margin-bottom: 40px;
+	position: relative;
+	@include tab {
+		padding-bottom: 50px;
+		margin-bottom: 30px;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: -215px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		border: 1px solid $main;
+		@include xl {
+			left: -240px;
+		}
+		@include lg {
+			display: none;
+		}
+	}
+	&:after {
+		content: "";
+		width: 200px;
+		height: 2px;
+		position: absolute;
+		background-color: $contact;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		@include lg {
+			display: none;
+		}
+	}
+	.swiper {
+		width: 100%;
+		height: 100%;
 
-        }
-    }
-    .countries__pgn{
-        right: initial;
-        left:0 !important;
-        width:30% !important;
-        @include xl{
-            width: 40% !important;
-        }
-        @include rwd(1440){
-            width: 45% !important;
-        }
-        span{
-            display: block !important;
-            text-transform: capitalize;
-            text-align:right;
-            
-            // justify-content: flex-end;  
-        }
-        @include lg{
-            display: flex;
-            align-items: center;
-            top:0 !important;
-            width:100% !important;
-            height: 70px !important;
-            text-align: left;
-            transform: initial !important;
-            overflow-x: auto;
-            span{
-                display: inline-block !important;
-                top: 0 !important;
-                left: 0 !important;
-            }
-        }
-        
-    }
-    .swiper-pagination-bullet {
-        border-radius: 0;
-        width: auto;
-        font-family: "caslon-bold";
-        font-weight: 700;
-        height: fit-content;
-        font-size: 64px;
-        font-size: clamp(35px, 1.2vw, 64px);
-        color: rgba(0, 0, 0, 0.2);
-        opacity: 1;
-        padding: 0;
-        background: transparent;
-        left: -35% !important;
-        @include lg{
-            font-size: 14px;
-            margin: 5px !important;
-        }
-    }
-    .swiper-pagination-bullet-active {
-        position: relative;
-        &:before{
-            display: none;
-        }
-        left: 0 !important;
-        color: $secondary;
-        font-size: clamp(75px, 1.2vw, 144px);
-        // font-size: 90px;
-        @include xl{
-            left: -10% !important;
-        }
-        @include lg{
-            font-size: 32px;
-            left:0 !important;
-        }
-    }
-    .swiper-pagination-bullet-active-main,.swiper-pagination-bullet-active-next{
-        color:rgba(0, 0, 0, 0.5);
-        @include lg{
-            // font-size: clamp(35px, 1.2vw, 64px);
-            color:rgba(0, 0, 0, 0.2);
-        }
-    }
-    [aria-current="true"]{
-        color: $secondary;
-    }
+		&::after {
+			content: "";
+			width: 21px;
+			height: 21px;
+			background-color: $contact;
+			position: absolute;
+			left: 35px;
+			top: 55%;
+			border-radius: 50%;
+			transform: translateY(-50%);
+			@include xl {
+				left: 70px;
+			}
+			@include rwd(1440) {
+				left: 120px;
+			}
+			@include lg {
+				display: none;
+			}
+		}
+	}
+	@include sm {
+		padding-top: 40px;
+		padding-bottom: 52px;
+	}
+	.swiper-wrapper {
+		width: 50%;
+		float: right;
+		max-height: 550px;
+		gap: 50%;
+		@include lg {
+			width: 100%;
+			float: none;
+			margin-top: 65px;
+			height: initial;
+		}
+		.countries__slide {
+			position: relative;
+			@include lg {
+				position: static;
+			}
+			&__img {
+				width: 100%;
+				height: calc(100% - 22px);
+				object-fit: cover;
+				@include lg {
+					height: 210px;
+				}
+			}
+			.tour-status {
+				position: absolute;
+				top: 25px;
+				left: 25px;
+				font-family: "montserrat-medium";
+				@include lg {
+					display: none;
+				}
+			}
+			&__content {
+				position: absolute;
+				bottom: 0px;
+				padding: 40px;
+				margin: 0 25px;
+				background-color: $milkWhite;
+				p {
+					font-family: "montserrat-medium";
+					margin-bottom: 40px;
+					@include lg {
+						margin-bottom: 20px;
+					}
+				}
+				@include lg {
+					position: static;
+					margin: 0;
+					padding: 0;
+					margin-top: 20px;
+					background-color: transparent;
+				}
+			}
+			a {
+				display: inline-flex;
+				align-items: center;
+				font-family: "caslon-bold";
+				img {
+					margin-left: 16px;
+					width: 18px;
+				}
+			}
+		}
+	}
+	.countries__pgn {
+		right: initial;
+		left: 0 !important;
+		left: 10% !important;
+		top: 50px !important;
+		// width: 30% !important;
+		// @include xl {
+		// 	width: 40% !important;
+		// }
+		// @include rwd(1440) {
+		// 	width: 45% !important;
+		// }
+		span {
+			// position: absolute;
+			display: block !important;
+			text-transform: capitalize;
+			text-align: left;
+
+			// justify-content: flex-end;
+		}
+		@include lg {
+			left: 0 !important;
+			display: flex;
+			align-items: center;
+			top: 0 !important;
+			width: 100% !important;
+			height: 70px !important;
+			text-align: left;
+			transform: initial !important;
+			overflow-x: auto;
+			span {
+				display: inline-block !important;
+				top: 0 !important;
+				left: 0 !important;
+			}
+		}
+		span {
+			margin-left: 0;
+			margin-bottom: 20px;
+			font-size: clamp(14px, 1.2vw, 35px);
+			color: rgba(0, 0, 0, 0.2);
+			@include lg {
+				margin-right: 15px;
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+			cursor: pointer;
+			&.next,
+			&.prev {
+				font-size: clamp(20px, 2.5vw, 50px);
+				font-weight: bold;
+				color: rgba(0, 0, 0, 0.8);
+				@include lg {
+					font-size: clamp(22px, 1.2vw, 30px);
+				}
+			}
+			&.next-next,
+			&.prev-prev {
+				font-size: clamp(18px, 2.2vw, 40px);
+				color: rgba(0, 0, 0, 0.5);
+				@include lg {
+					font-size: clamp(16px, 1.2vw, 24px);
+				}
+			}
+			&.active {
+				font-size: clamp(75px, 1.2vw, 144px);
+				font-weight: bolder;
+				color: rgba(0, 0, 0, 1);
+				@include lg {
+					font-size: clamp(28px, 1.2vw, 36px);
+				}
+			}
+		}
+	}
+	[aria-current="true"] {
+		color: $secondary;
+	}
 }

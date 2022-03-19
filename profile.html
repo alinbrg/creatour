@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<title>Profile</title>
+	</head>
+	<body>
+		<header class="container flex header__dark">
+			<div class="slogan">
+				<p>
+					Know <span class="colored-word-red">Yourself</span>, Know the
+					<span class="colored-word-red">World</span>
+				</p>
+			</div>
+			<div class="header__burger">
+				<span></span>
+				<span></span>
+			</div>
+			<nav>
+				<ul class="nav-options flex">
+					<li class="nav-option-item">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="nav-option-item">
+						<a href="concept.html">Concept</a>
+					</li>
+					<li class="nav-option-item">
+						<a href="tours.html">Tours</a>
+					</li>
+					<li class="nav-option-item country-list-web">
+						<a href="">
+							<img
+								class="nav-site-logo"
+								src="assets/img/icons/logo.svg"
+								alt="creatour logo"
+							/>
+						</a>
+						<div>
+							<ul>
+								<li><a href="">England</a></li>
+								<li><a href="">France</a></li>
+								<li><a href="">Georgia</a></li>
+								<li><a href="">Germany</a></li>
+								<li><a href="">Greece</a></li>
+								<li><a href="">Israel</a></li>
+								<li><a href="">Italy</a></li>
+								<li><a href="">Spain</a></li>
+								<li><a href="">Turkey</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-option-item">
+						<a href="about-us.html">About</a>
+					</li>
+					<li class="nav-option-item">
+						<a href="contact.html">Contact</a>
+					</li>
+					<li class="nav-option-item">
+						<a href="rules.html">Terms</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="mob-logo">
+				<a href="index.html">
+					<img src="assets/img/icons/logo.svg" alt="" />
+				</a>
+			</div>
+			<div class="reg-auth btn">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="21"
+					viewBox="0 0 16 21"
+				>
+					<path
+						id="Path_2942"
+						data-name="Path 2942"
+						d="M20,22H18V20a3,3,0,0,0-3-3H9a3,3,0,0,0-3,3v2H4V20a5,5,0,0,1,5-5h6a5,5,0,0,1,5,5Zm-8-9a6,6,0,1,1,6-6A6,6,0,0,1,12,13Zm0-2A4,4,0,1,0,8,7,4,4,0,0,0,12,11Z"
+						transform="translate(-4 -1)"
+						fill="#fff"
+					/>
+				</svg>
+				<span>Login</span>
+			</div>
+		</header>
+
+		<aside class="mob-menu">
+			<ul class="nav-list">
+				<li class="nav-li-item">
+					<a href="index.html">Home</a>
+				</li>
+				<li class="nav-li-item">
+					<a href="concept.html">Concept</a>
+				</li>
+				<li class="nav-li-item">
+					<a href="tours.html">Tours</a>
+				</li>
+				<li class="nav-li-item">
+					<a href="about-us.html">About</a>
+				</li>
+				<li class="nav-li-item country__list">
+					<a href="">Countries</a>
+					<div>
+						<ul>
+							<li><a href="">England</a></li>
+							<li><a href="">France</a></li>
+							<li><a href="">Georgia</a></li>
+							<li><a href="">Germany</a></li>
+							<li><a href="">Greece</a></li>
+							<li><a href="">Israel</a></li>
+							<li><a href="">Italy</a></li>
+							<li><a href="">Spain</a></li>
+							<li><a href="">Turkey</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav-li-item">
+					<a href="contact.html">Contact</a>
+				</li>
+				<li class="nav-li-item">
+					<a href="rules.html">Terms</a>
+				</li>
+			</ul>
+		</aside>
+
+		<section class="profile container">
+			<div class="profile__bg"></div>
+			<div class="profile__selectors">
+				<ul>
+					<li class="active">Personal Information</li>
+					<li>Tour History</li>
+					<li>Change Password</li>
+				</ul>
+				<a href="#" class="log-out">Log Out</a>
+			</div>
+			<div class="profile__information">
+				<div class="personal-information info-block active">
+					<form action="#">
+						<div class="form-row">
+							<div>
+								<img src="assets/img/icons/user-3-line.svg" alt="" />
+								<input
+									type="text"
+									placeholder="Name"
+									name="name"
+									id="name"
+									required
+									value="Michael"
+								/>
+							</div>
+							<div>
+								<img src="assets/img/icons/user-3-line.svg" alt="" />
+								<input
+									type="text"
+									placeholder="Surname"
+									name="surname"
+									id="surname"
+									required
+									value="Gabson"
+								/>
+							</div>
+						</div>
+						<div class="form-row">
+							<div>
+								<img src="assets/img/icons/genderless-line.svg" alt="" />
+								<select name="gender" id="gender">
+									<option>Gender</option>
+									<option value="1">Female</option>
+									<option value="2">Male</option>
+									<option value="3">Other</option>
+								</select>
+							</div>
+							<div class="email">
+								<img src="assets/img/icons/mail-line-white.svg" alt="" />
+								<input
+									type="email"
+									name="email"
+									id="email"
+									placeholder="E-Mail"
+									required
+									value="example@mail.com"
+									readonly
+								/>
+							</div>
+						</div>
+						<div class="form-row">
+							<div>
+								<img src="assets/img/icons/smartphone-line-white.svg" alt="" />
+								<input
+									type="tel"
+									name="mobile"
+									id="mobile"
+									placeholder="Phone"
+									value="1234567"
+								/>
+							</div>
+							<div>
+								<img src="assets/img/icons/user-heart-line.svg" alt="" />
+								<input
+									type="number"
+									name="age"
+									id="age"
+									placeholder="Age"
+									min="17"
+									max="100"
+									step="1"
+									required
+									value="24"
+								/>
+								<div class="arrow-icons">
+									<img
+										src="assets/img/icons/arr-up.svg"
+										alt=""
+										class="arrow-up"
+									/>
+									<img
+										src="assets/img/icons/arr-down.svg"
+										alt=""
+										class="arrow-down"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div>
+								<img src="assets/img/icons/global-line.svg" alt="" />
+								<select name="country" id="country">
+									<option>Country</option>
+									<option value="1">Georgia</option>
+									<option value="2">England</option>
+									<option value="3">France</option>
+									<option value="4">Germany</option>
+								</select>
+							</div>
+							<div>
+								<img src="assets/img/icons/account-box-line.svg" alt="" />
+								<input
+									type="number"
+									name="ID"
+									id="ID"
+									placeholder="Personal ID"
+									required
+									value="123455678"
+								/>
+							</div>
+						</div>
+						<button type="submit">SAVE</button>
+					</form>
+				</div>
+				<div class="tour-history info-block">
+					<div class="history-block">
+						<div class="img">
+							<div class="tour-num">#1</div>
+							<img src="assets/img/1.jpg" alt="" />
+						</div>
+						<div class="info">
+							<div class="info__header">
+								<h4>France Revolution Tour</h4>
+								<span>#121231</span>
+							</div>
+							<div class="info__more">
+								<div class="location">
+									<h5>Location</h5>
+									<h3>France</h3>
+								</div>
+								<div class="duration">
+									<h5>TOUR DURACTION</h5>
+									<h3>7 august -14 august (2020)</h3>
+								</div>
+								<div class="persons">
+									<h5>PERSONS</h5>
+									<h3>10</h3>
+								</div>
+								<div class="price">
+									<h5>PRICE</h5>
+									<h3>699.00 $</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="history-block">
+						<div class="img">
+							<div class="tour-num">#2</div>
+							<img src="assets/img/1.jpg" alt="" />
+						</div>
+						<div class="info">
+							<div class="info__header">
+								<h4>France Revolution Tour</h4>
+								<span>#121231</span>
+							</div>
+							<div class="info__more">
+								<div class="location">
+									<h5>Location</h5>
+									<h3>France</h3>
+								</div>
+								<div class="duration">
+									<h5>TOUR DURACTION</h5>
+									<h3>7 august -14 august (2020)</h3>
+								</div>
+								<div class="persons">
+									<h5>PERSONS</h5>
+									<h3>10</h3>
+								</div>
+								<div class="price">
+									<h5>PRICE</h5>
+									<h3>699.00 $</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="change-pass info-block">
+					<form action="#">
+						<div>
+							<img src="assets/img/icons/lock-line.svg" alt="" />
+							<input
+								type="password"
+								name="password"
+								id="password"
+								placeholder="Password"
+								required
+							/>
+						</div>
+						<div>
+							<img src="assets/img/icons/lock-line.svg" alt="" />
+							<input
+								type="password"
+								name="new-password"
+								id="new-password"
+								placeholder="New Password"
+								required
+							/>
+						</div>
+						<div>
+							<img src="assets/img/icons/lock-line.svg" alt="" />
+							<input
+								type="password"
+								name="confirn--new-password"
+								id="confirn-new-password"
+								placeholder="Confirn New Password"
+								required
+							/>
+						</div>
+
+						<button type="submit">Change Password</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer class="container">
+			<div class="flex footer-div">
+				<div class="nav">
+					<ul class="nav-options flex">
+						<li class="nav-option-item">
+							<a href="index.html">Home</a>
+						</li>
+						<li class="nav-option-item">
+							<a href="concept.html">Concept</a>
+						</li>
+						<li class="nav-option-item">
+							<a href="tours.html">Tours</a>
+						</li>
+						<li class="nav-option-item">
+							<a href="#">Countries</a>
+						</li>
+						<li class="nav-option-item">
+							<a href="about-us.html">About</a>
+						</li>
+						<li class="nav-option-item">
+							<a href="contact.html">Contact</a>
+						</li>
+						<li class="nav-option-item">
+							<a href="rules.html">Terms</a>
+						</li>
+					</ul>
+				</div>
+				<div class="add-info flex">
+					<div class="soc-icons">
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+							>
+								<path
+									id="facebook"
+									d="M19.01,2H2.99A.99.99,0,0,0,2,2.99V19.01a.99.99,0,0,0,.99.99h8.622V13.025H9.272v-2.7h2.34V8.3A3.276,3.276,0,0,1,15.1,4.7a18.234,18.234,0,0,1,2.1.108v2.43H15.77c-1.134,0-1.35.54-1.35,1.323V10.3h2.7L16.769,13H14.42v7h4.59a.99.99,0,0,0,.99-.99V2.99A.99.99,0,0,0,19.01,2Z"
+									transform="translate(-2 -2)"
+									fill="#cbcbcb"
+								/>
+							</svg>
+						</a>
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+							>
+								<path
+									id="instagram-alt"
+									d="M11,8.768A2.232,2.232,0,1,0,13.232,11,2.232,2.232,0,0,0,11,8.768Zm8.937-2.2a5.877,5.877,0,0,0-.378-2.034,3.6,3.6,0,0,0-2.088-2.088,5.877,5.877,0,0,0-2.034-.378C14.276,2,13.934,2,11,2s-3.276,0-4.437.063a5.877,5.877,0,0,0-2.034.378A3.6,3.6,0,0,0,2.441,4.529a5.877,5.877,0,0,0-.378,2.034C2,7.724,2,8.066,2,11s0,3.276.063,4.437a6.174,6.174,0,0,0,.378,2.043,3.546,3.546,0,0,0,.819,1.26,3.5,3.5,0,0,0,1.269.819,5.877,5.877,0,0,0,2.034.378C7.724,20,8.066,20,11,20s3.276,0,4.437-.063a5.877,5.877,0,0,0,2.034-.378,3.5,3.5,0,0,0,1.269-.819,3.546,3.546,0,0,0,.819-1.26,5.94,5.94,0,0,0,.378-2.043C20,14.276,20,13.934,20,11s0-3.276-.063-4.437Zm-2.286,7.2a5.157,5.157,0,0,1-.351,1.62A3.474,3.474,0,0,1,15.383,17.3a5.157,5.157,0,0,1-1.629.315H8.246A5.157,5.157,0,0,1,6.617,17.3,3.35,3.35,0,0,1,4.7,15.383a4.941,4.941,0,0,1-.306-1.629c0-.711,0-.9,0-2.754V8.246A4.941,4.941,0,0,1,4.7,6.617a3.159,3.159,0,0,1,.774-1.179A3.231,3.231,0,0,1,6.617,4.7a5.157,5.157,0,0,1,1.629-.315h5.508a5.157,5.157,0,0,1,1.629.315A3.35,3.35,0,0,1,17.3,6.617a5.157,5.157,0,0,1,.315,1.629c0,.711,0,.9,0,2.754s.063,2.043.036,2.754Zm-1.44-6.7A2.142,2.142,0,0,0,14.942,5.8,3.6,3.6,0,0,0,13.7,5.6H8.3a3.6,3.6,0,0,0-1.242.234A2.142,2.142,0,0,0,5.789,7.058,3.843,3.843,0,0,0,5.6,8.3v5.4a3.843,3.843,0,0,0,.234,1.242A2.142,2.142,0,0,0,7.1,16.211a3.843,3.843,0,0,0,1.2.234h5.4a3.6,3.6,0,0,0,1.242-.234,2.142,2.142,0,0,0,1.269-1.269,3.6,3.6,0,0,0,.234-1.242V8.3a3.4,3.4,0,0,0-.234-1.242ZM11,14.438A3.429,3.429,0,0,1,7.571,11h0A3.438,3.438,0,1,1,11,14.438Zm3.6-6.2a.81.81,0,0,1,0-1.611h0a.81.81,0,0,1,0,1.611Z"
+									transform="translate(-2 -2)"
+									fill="#cbcbcb"
+								/>
+							</svg>
+						</a>
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="13"
+								viewBox="0 0 18 13"
+							>
+								<path
+									id="youtube"
+									d="M18.987,8.84a7.309,7.309,0,0,0-.744-3.471,2.375,2.375,0,0,0-1.406-.84,62.35,62.35,0,0,0-6.844-.261,62.416,62.416,0,0,0-6.819.252,2.324,2.324,0,0,0-1.194.622,4.417,4.417,0,0,0-.9,2.9,41.707,41.707,0,0,0,0,5.446,8.233,8.233,0,0,0,.245,1.681,2.665,2.665,0,0,0,.581,1.143,2.318,2.318,0,0,0,1.218.656,35.953,35.953,0,0,0,5.315.277c2.862.042,5.372,0,8.34-.235a2.333,2.333,0,0,0,1.251-.656,2.1,2.1,0,0,0,.5-.84,9.119,9.119,0,0,0,.425-2.857C18.987,12.185,18.987,9.344,18.987,8.84ZM8.145,13.16v-5.2l4.841,2.614C11.628,11.344,9.837,12.218,8.145,13.16Z"
+									transform="translate(-0.991 -4.258)"
+									fill="#cbcbcb"
+								/>
+							</svg>
+						</a>
+					</div>
+					<div class="smartweb">
+						<p>Created By <span class="colored-word-yellow">Smartweb</span></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="assets/js/script.js"></script>
+		<script src="assets/js/profile.js"></script>
+	</body>
+</html>

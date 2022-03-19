@@ -82,3 +82,32 @@ let curr_month = { value: currDate.getMonth() };
 let curr_year = { value: currDate.getFullYear() };
 
 generateCalendar(curr_month.value, curr_year.value);
+
+let calendarDays = [
+	...document.querySelectorAll(
+		".calendar-section .calendar .calendar-body .calendar-days div"
+	),
+];
+let bookTourSection = document.querySelector(".book-tour");
+let daysToBook = calendarDays.filter((day) => day.textContent !== "");
+// console.log(daysToBook);
+daysToBook.forEach((day) => {
+	day.addEventListener("click", () => {
+		if (day.classList.contains("filled")) {
+			bookTourSection.classList.remove("active");
+			return;
+		}
+		if (!bookTourSection.classList.contains("active")) {
+			bookTourSection.classList.add("active");
+			bookTourSection.scrollIntoView({
+				behavior: "smooth",
+			});
+		} else {
+			bookTourSection.classList.remove("active");
+			bookTourSection.classList.add("active");
+			bookTourSection.scrollIntoView({
+				behavior: "smooth",
+			});
+		}
+	});
+});

@@ -294,7 +294,15 @@
 			</div>
 			<div class="swiper tour-countries__swiper">
 				<!-- If we need pagination -->
-				<div class="swiper-pagination tour-countries__pgn"></div>
+				<div class="swiper-pagination tour-countries__pgn">
+					<span>england</span>
+					<span>greece</span>
+					<span>georgia</span>
+					<span>france</span>
+					<span>spain</span>
+					<span>germany</span>
+					<span>russia</span>
+				</div>
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					<!-- Slides -->
@@ -516,8 +524,13 @@
 				<h3>Getting in touch is easy!</h3>
 				<form action="#">
 					<div class="form-row">
-						<label for="user-name"> Hello, My Name is </label>
-						<input type="text" id="user-name" name="user-name" required />
+						<label for="user-name-contact"> Hello, My Name is </label>
+						<input
+							type="text"
+							id="user-name-contact"
+							name="user-name-contact"
+							required
+						/>
 						<span>,</span>
 					</div>
 					<div class="form-row">
@@ -829,39 +842,12 @@
 
 		<script>
 			let countriesList = [
+				...document.querySelectorAll(".tour-countries__pgn span"),
+			];
+			let countrySlides = [
 				...document.querySelectorAll(".tour-countries__slide"),
 			];
-			const countries = new Swiper(".tour-countries__swiper", {
-				spaceBetween: 10,
-
-				pagination: {
-					el: ".tour-countries__pgn",
-					clickable: true,
-					dynamicBullets: true,
-					dynamicMainBullets: 3,
-					renderBullet: function (index, className) {
-						return (
-							'<span class="' +
-							className +
-							'">' +
-							countriesList[index].id +
-							"</span>"
-						);
-					},
-				},
-
-				breakpoints: {
-					// when window width is >= 320px
-					320: {
-						allowTouchMove: false,
-						direction: "vertical",
-						pagination: {
-							dynamicBullets: true,
-							dynamicMainBullets: 3,
-						},
-					},
-				},
-			});
+			countrySlider(countrySlides, countriesList);
 		</script>
 		<script src="assets/js/reg-auth.js"></script>
 	</body>
