@@ -1080,41 +1080,42 @@ aside.shown {
 }
 .countries .countries__pgn span {
   margin-left: 0;
-  margin-bottom: 20px;
   font-size: clamp(14px, 1.2vw, 35px);
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(18, 18, 18, 0.2);
+  font-family: "caslon-semi-bold";
   cursor: pointer;
 }
 @media screen and (max-width: 1280px) {
   .countries .countries__pgn span {
     margin-right: 15px;
     font-size: 14px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }
 .countries .countries__pgn span.next, .countries .countries__pgn span.prev {
   font-size: clamp(20px, 2.5vw, 50px);
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(18, 18, 18, 0.5);
 }
 @media screen and (max-width: 1280px) {
   .countries .countries__pgn span.next, .countries .countries__pgn span.prev {
-    font-size: clamp(22px, 1.2vw, 30px);
+    font-size: 14px;
+    color: rgba(18, 18, 18, 0.2);
   }
 }
 .countries .countries__pgn span.next-next, .countries .countries__pgn span.prev-prev {
   font-size: clamp(18px, 2.2vw, 40px);
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(18, 18, 18, 0.5);
 }
 @media screen and (max-width: 1280px) {
   .countries .countries__pgn span.next-next, .countries .countries__pgn span.prev-prev {
-    font-size: clamp(16px, 1.2vw, 24px);
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.2);
   }
 }
 .countries .countries__pgn span.active {
   font-size: clamp(75px, 1.2vw, 144px);
   font-weight: bolder;
-  color: black;
+  color: #121212;
 }
 @media screen and (max-width: 1280px) {
   .countries .countries__pgn span.active {
@@ -2915,15 +2916,14 @@ aside.shown {
 }
 .tour-countries .tour-countries__pgn span {
   margin-left: 0;
-  margin-bottom: 20px;
+  font-family: "caslon-semi-bold";
   font-size: clamp(14px, 1.2vw, 35px);
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(18, 18, 18, 0.2);
   cursor: pointer;
 }
 .tour-countries .tour-countries__pgn span.next, .tour-countries .tour-countries__pgn span.prev {
   font-size: clamp(20px, 2.5vw, 50px);
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(18, 18, 18, 0.5);
 }
 @media screen and (max-width: 700px) {
   .tour-countries .tour-countries__pgn span.next, .tour-countries .tour-countries__pgn span.prev {
@@ -2932,7 +2932,7 @@ aside.shown {
 }
 .tour-countries .tour-countries__pgn span.next-next, .tour-countries .tour-countries__pgn span.prev-prev {
   font-size: clamp(18px, 2.2vw, 40px);
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(18, 18, 18, 0.5);
 }
 @media screen and (max-width: 700px) {
   .tour-countries .tour-countries__pgn span.next-next, .tour-countries .tour-countries__pgn span.prev-prev {
@@ -2941,8 +2941,7 @@ aside.shown {
 }
 .tour-countries .tour-countries__pgn span.active {
   font-size: clamp(75px, 1.2vw, 144px);
-  font-weight: bolder;
-  color: black;
+  color: #121212;
 }
 @media screen and (max-width: 700px) {
   .tour-countries .tour-countries__pgn span.active {

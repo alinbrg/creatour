@@ -72,11 +72,15 @@ function countrySlider(countries, pgn) {
 			countries.forEach((el) => {
 				el.style.position = `relative`;
 				el.style.opacity = `0`;
+				el.style.left = `unset`;
+				el.style.top = `unset`;
+				el.style.transform = `translateX(100%)`;
 			});
 			countries[index].style.position = `absolute`;
 			countries[index].style.left = `0`;
 			countries[index].style.top = `0`;
 			countries[index].style.opacity = `1`;
+			countries[index].style.transform = `translateX(0%)`;
 
 			clearClassList(pgn);
 			country.classList.add("active");
